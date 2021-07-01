@@ -7,31 +7,29 @@ class HomeDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    return Scaffold(
-      body: Stack(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              SizedBox(
-                width: size.width * 0.45,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    HeaderWidget(),
-                    SizedBox(height: size.height * 0.05),
-                    LinkButtons(),
-                  ],
-                ),
+    return Stack(
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SizedBox(
+              width: size.width * 0.45,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  HeaderWidget(),
+                  SizedBox(height: size.height * 0.05),
+                  LinkButtons(),
+                ],
               ),
-              SizedBox(width: size.width * 0.03),
-              ProfilePicture(),
-            ],
-          ),
-        ],
-      ),
+            ),
+            SizedBox(width: size.width * 0.03),
+            ProfilePicture(),
+          ],
+        ),
+      ],
     );
   }
 }

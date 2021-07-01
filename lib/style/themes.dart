@@ -12,6 +12,7 @@ class MyThemes {
         backgroundColor: Colors.transparent,
         elevation: 0,
       ),
+      indicatorColor: MyColors.indicator,
     );
     return _dark;
   }

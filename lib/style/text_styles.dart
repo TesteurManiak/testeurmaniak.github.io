@@ -22,4 +22,6 @@ class TextStyles {
         ? textTheme.subtitle1!
         : textTheme.subtitle2!;
   }
+
+  static const tab = TextStyle(fontSize: 16);
 }

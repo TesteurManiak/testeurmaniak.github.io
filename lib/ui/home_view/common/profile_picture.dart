@@ -6,7 +6,7 @@ class ProfilePicture extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final imgSize = ResponsiveLayout.isDesktop(context) ? 400.0 : 250.0;
-    return Container(
+    return SizedBox(
       height: imgSize,
       width: imgSize,
       child: ClipRRect(
