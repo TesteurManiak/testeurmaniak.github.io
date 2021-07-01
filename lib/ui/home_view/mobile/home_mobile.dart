@@ -10,7 +10,6 @@ class HomeMobile extends StatelessWidget {
     return SingleChildScrollView(
       padding: const EdgeInsets.all(16),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           ProfilePicture(),
           SizedBox(height: size.height * 0.02),
