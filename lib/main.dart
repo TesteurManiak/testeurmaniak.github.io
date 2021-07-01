@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/bloc/bloc.dart';
 import 'package:my_portfolio/bloc/bloc_provider.dart';
+import 'package:my_portfolio/style/themes.dart';
 import 'package:my_portfolio/ui/home_view/home_view.dart';
 
 void main() {
@@ -15,9 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'My Portfolio',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: MyThemes.dark,
       home: HomeView(),
     );
   }
