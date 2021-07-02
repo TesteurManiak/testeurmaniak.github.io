@@ -7,7 +7,7 @@ import 'package:my_portfolio/ui/home_view/home_view.dart';
 import 'package:my_portfolio/ui/projects_view/projects_view.dart';
 import 'package:rxdart/rxdart.dart';
 
-enum NavigationIndex { home, about, projects }
+enum NavigationIndex { home, about, articles, projects }
 
 class _NavigationElement {
   final NavigationIndex index;
@@ -41,6 +41,12 @@ class NavigationBloc extends BlocBase {
       label: 'About',
       page: AboutView(),
       icon: Icons.info,
+    ),
+    _NavigationElement(
+      index: NavigationIndex.articles,
+      label: 'Articles',
+      page: Container(child: Center(child: Text('Page in construction'))),
+      icon: Icons.article,
     ),
     _NavigationElement(
       index: NavigationIndex.projects,

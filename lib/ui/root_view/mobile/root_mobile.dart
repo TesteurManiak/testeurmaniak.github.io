@@ -12,6 +12,7 @@ class RootMobile extends StatelessWidget {
         stream: navigationBloc.onIndexChanged,
         initialData: navigationBloc.currentIndex,
         builder: (_, snapshot) => BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
           currentIndex: snapshot.data!.index,
           items: navigationBloc.navigationElements
               .map<BottomNavigationBarItem>(
