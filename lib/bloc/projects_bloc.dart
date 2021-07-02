@@ -40,6 +40,19 @@ class ProjectsBloc extends BlocBase {
       imageAsset: 'assets/m.png',
     ),
     ProjectModel(
+      title: 'Drin\'King',
+      description:
+          "Plus besoin de jeux de cartes de dés ou encore de télécharger une application par jeux pour s'amuser ! Voici Drin'King !",
+      links: [
+        LinkData(
+          icon: FontAwesomeIcons.android,
+          url:
+              'https://play.google.com/store/apps/details?id=com.drinkingdev.drinking&hl=fr&gl=US',
+        ),
+      ],
+      imageAsset: 'assets/drinking.png',
+    ),
+    ProjectModel(
       title: 'iCalendar Parser',
       description:
           'Package to parse iCalendar (.ics) files written in pure Dart.',

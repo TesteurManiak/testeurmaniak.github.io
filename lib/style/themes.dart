@@ -18,6 +18,30 @@ class MyThemes {
         unselectedItemColor: Colors.white,
         backgroundColor: MyColors.darkBlue,
       ),
+      dialogBackgroundColor: MyColors.scaffold,
+      dialogTheme: _baseDark.dialogTheme.copyWith(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      ),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          primary: MyColors.indicator,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(60),
+          ),
+        ),
+      ),
+      outlinedButtonTheme: OutlinedButtonThemeData(
+        style: OutlinedButton.styleFrom(
+          side: BorderSide(color: Colors.white),
+          primary: Colors.white,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(60),
+          ),
+        ),
+      ),
+      textButtonTheme: TextButtonThemeData(
+        style: TextButton.styleFrom(primary: MyColors.indicator),
+      ),
     );
     return _dark;
   }
