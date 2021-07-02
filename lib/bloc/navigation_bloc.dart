@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/bloc/bloc.dart';
+import 'package:my_portfolio/ui/about_view/about_view.dart';
 import 'package:my_portfolio/ui/home_view/home_view.dart';
 import 'package:my_portfolio/ui/projects_view/projects_view.dart';
 import 'package:rxdart/rxdart.dart';
@@ -33,7 +34,7 @@ class NavigationBloc extends BlocBase {
     _NavigationElement(
       index: NavigationIndex.about,
       label: 'About',
-      page: Container(),
+      page: AboutView(),
     ),
     _NavigationElement(
       index: NavigationIndex.projects,
