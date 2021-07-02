@@ -18,6 +18,10 @@ class MyThemes {
         unselectedItemColor: Colors.white,
         backgroundColor: MyColors.darkBlue,
       ),
+      dialogBackgroundColor: MyColors.scaffold,
+      dialogTheme: _baseDark.dialogTheme.copyWith(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      ),
     );
     return _dark;
   }

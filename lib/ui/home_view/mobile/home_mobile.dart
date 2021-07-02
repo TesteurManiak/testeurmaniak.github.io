@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/ui/home_view/common/header_widget.dart';
 import 'package:my_portfolio/ui/home_view/common/link_buttons.dart';
+import 'package:my_portfolio/ui/home_view/common/my_buttons.dart';
 import 'package:my_portfolio/ui/home_view/common/profile_picture.dart';
 
 class HomeMobile extends StatelessWidget {
@@ -16,6 +17,8 @@ class HomeMobile extends StatelessWidget {
           HeaderWidget(),
           SizedBox(height: size.height * 0.02),
           LinkButtons(),
+          SizedBox(height: size.height * 0.02),
+          MyButtons(),
         ],
       ),
     );

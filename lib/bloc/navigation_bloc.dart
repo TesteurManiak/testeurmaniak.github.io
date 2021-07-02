@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/bloc/bloc.dart';
 import 'package:my_portfolio/ui/about_view/about_view.dart';
@@ -51,25 +53,32 @@ class NavigationBloc extends BlocBase {
 
   late final TabController tabController;
 
+  late final StreamSubscription<NavigationIndex> _streamlistener;
+
   @override
   void dispose() {
+    _streamlistener.cancel();
     _navigationController.close();
+    tabController.removeListener(_tabListener);
+    tabController.dispose();
   }
 
   @override
   void initState() {
-    _navigationController.listen((value) {
+    _streamlistener = _navigationController.listen((value) {
       tabController.animateTo(value.index);
     });
   }
 
+  void _tabListener() {
+    if (tabController.index != currentIndex.index) {
+      goToPage(NavigationIndex.values.elementAt(tabController.index));
+    }
+  }
+
   void initTabController(TabController controller) {
     tabController = controller;
-    tabController.addListener(() {
-      if (tabController.index != currentIndex.index) {
-        goToPage(NavigationIndex.values.elementAt(tabController.index));
-      }
-    });
+    tabController.addListener(_tabListener);
   }
 
   void goToPage(NavigationIndex index) {

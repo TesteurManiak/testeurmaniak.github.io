@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/ui/home_view/common/header_widget.dart';
 import 'package:my_portfolio/ui/home_view/common/link_buttons.dart';
+import 'package:my_portfolio/ui/home_view/common/my_buttons.dart';
 import 'package:my_portfolio/ui/home_view/common/profile_picture.dart';
 
 class HomeDesktop extends StatelessWidget {
@@ -22,6 +23,8 @@ class HomeDesktop extends StatelessWidget {
                   HeaderWidget(),
                   SizedBox(height: size.height * 0.05),
                   LinkButtons(),
+                  SizedBox(height: size.height * 0.05),
+                  MyButtons(),
                 ],
               ),
             ),
