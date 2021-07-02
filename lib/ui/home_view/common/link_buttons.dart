@@ -1,33 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:my_portfolio/models/link_data.dart';
 import 'package:my_portfolio/style/text_styles.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class _Link {
-  final IconData icon;
-  final String url;
-
-  const _Link({required this.icon, required this.url});
-}
-
-const _links = <_Link>[
-  _Link(
+const _links = <LinkData>[
+  LinkData(
     icon: FontAwesomeIcons.mediumM,
     url: 'https://rouxguillaume.medium.com/',
   ),
-  _Link(
+  LinkData(
     icon: FontAwesomeIcons.stackOverflow,
     url: 'https://stackoverflow.com/users/9942346/guillaume-roux?tab=profile',
   ),
-  _Link(
+  LinkData(
     icon: FontAwesomeIcons.linkedinIn,
     url: 'https://www.linkedin.com/in/guillaume2-roux/?locale=en_US',
   ),
-  _Link(
+  LinkData(
     icon: FontAwesomeIcons.github,
     url: 'https://github.com/TesteurManiak',
   ),
-  _Link(
+  LinkData(
     icon: FontAwesomeIcons.gitlab,
     url: 'https://gitlab.com/G_Roux',
   ),

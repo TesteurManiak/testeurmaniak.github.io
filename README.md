@@ -1,6 +1,6 @@
 # my_portfolio
 
-A new Flutter project.
+[Access the latest release](https://testeurmaniak.github.io/)
 
 ## Credits
 

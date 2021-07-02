@@ -16,7 +16,7 @@ class HeaderWidget extends StatelessWidget {
             style: TextStyles.headerName(context),
           ),
           TextSpan(
-            text: 'Mobile Developer & Flutter Enthusiast',
+            text: 'Flutter Developer',
             style: TextStyles.selectSubHeadline(context),
           ),
         ],
