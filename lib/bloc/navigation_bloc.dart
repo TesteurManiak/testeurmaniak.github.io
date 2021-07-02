@@ -11,11 +11,13 @@ class _NavigationElement {
   final NavigationIndex index;
   final String label;
   final Widget page;
+  final IconData icon;
 
   const _NavigationElement({
     required this.index,
     required this.label,
     required this.page,
+    required this.icon,
   });
 }
 
@@ -30,16 +32,19 @@ class NavigationBloc extends BlocBase {
       index: NavigationIndex.home,
       label: 'Home',
       page: HomeView(),
+      icon: Icons.home,
     ),
     _NavigationElement(
       index: NavigationIndex.about,
       label: 'About',
       page: AboutView(),
+      icon: Icons.info,
     ),
     _NavigationElement(
       index: NavigationIndex.projects,
       label: 'Projects',
       page: ProjectsView(),
+      icon: Icons.laptop,
     ),
   ];
   List<_NavigationElement> get navigationElements => _navElements;

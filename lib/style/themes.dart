@@ -13,6 +13,11 @@ class MyThemes {
         elevation: 0,
       ),
       indicatorColor: MyColors.indicator,
+      bottomNavigationBarTheme: _baseDark.bottomNavigationBarTheme.copyWith(
+        selectedItemColor: MyColors.indicator,
+        unselectedItemColor: Colors.white,
+        backgroundColor: MyColors.darkBlue,
+      ),
     );
     return _dark;
   }

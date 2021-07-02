@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_portfolio/bloc/bloc_provider.dart';
 import 'package:my_portfolio/bloc/navigation_bloc.dart';
 import 'package:my_portfolio/ui/common/custom_tab_bar.dart';
+import 'package:my_portfolio/ui/root_view/common/credits_widget.dart';
 
 class RootDesktop extends StatelessWidget {
   @override
@@ -24,6 +25,10 @@ class RootDesktop extends StatelessWidget {
                   .map<Widget>((e) => e.page)
                   .toList(),
             ),
+          ),
+          Align(
+            alignment: Alignment.bottomRight,
+            child: CreditsWidget(),
           ),
         ],
       ),

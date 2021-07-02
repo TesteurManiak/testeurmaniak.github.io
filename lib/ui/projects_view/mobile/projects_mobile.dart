@@ -15,7 +15,7 @@ class ProjectsMobile extends StatelessWidget {
         horizontal: size.width * 0.05,
       ),
       shrinkWrap: true,
-      crossAxisCount: 3,
+      crossAxisCount: 2,
       mainAxisSpacing: size.width * 0.05,
       crossAxisSpacing: size.width * 0.05,
       itemCount: projectsBloc.projects.length,
