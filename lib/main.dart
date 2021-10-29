@@ -9,22 +9,26 @@ import 'package:url_strategy/url_strategy.dart';
 
 void main() {
   setPathUrlStrategy();
-  runApp(BlocProvider(
-    blocs: <BlocBase>[
-      NavigationBloc(),
-      ProjectsBloc(),
-    ],
-    child: MyApp(),
-  ));
+  runApp(
+    BlocProvider(
+      blocs: <BlocBase>[
+        NavigationBloc(),
+        ProjectsBloc(),
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'My Portfolio',
       theme: MyThemes.dark,
-      home: RootView(),
+      home: const RootView(),
     );
   }
 }

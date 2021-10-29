@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/ui/about_view/common/about_section.dart';
+
+import '../common/about_section.dart';
 
 class AboutDesktop extends StatelessWidget {
+  const AboutDesktop({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -11,10 +14,10 @@ class AboutDesktop extends StatelessWidget {
       children: [
         SizedBox(
           width: size.width * 0.45,
-          child: AboutSection(),
+          child: const AboutSection(),
         ),
         SizedBox(width: size.width * 0.03),
-        FlutterLogo(size: 400),
+        const FlutterLogo(size: 400),
       ],
     );
   }

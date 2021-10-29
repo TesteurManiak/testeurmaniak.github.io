@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/bloc/bloc_provider.dart';
-import 'package:my_portfolio/bloc/navigation_bloc.dart';
-import 'package:my_portfolio/ui/common/custom_tab_bar.dart';
-import 'package:my_portfolio/ui/root_view/common/credits_widget.dart';
+
+import '../../../bloc/bloc_provider.dart';
+import '../../../bloc/navigation_bloc.dart';
+import '../../common/custom_tab_bar.dart';
+import '../common/credits_widget.dart';
 
 class RootDesktop extends StatelessWidget {
+  const RootDesktop({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -14,7 +17,7 @@ class RootDesktop extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-          Container(
+          SizedBox(
             height: size.height * 0.05,
             child: CustomTabBar(controller: navigationBloc.tabController),
           ),
@@ -26,7 +29,7 @@ class RootDesktop extends StatelessWidget {
                   .toList(),
             ),
           ),
-          Align(
+          const Align(
             alignment: Alignment.bottomRight,
             child: CreditsWidget(),
           ),

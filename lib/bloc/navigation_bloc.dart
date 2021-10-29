@@ -1,11 +1,12 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/bloc/bloc.dart';
-import 'package:my_portfolio/ui/about_view/about_view.dart';
-import 'package:my_portfolio/ui/home_view/home_view.dart';
-import 'package:my_portfolio/ui/projects_view/projects_view.dart';
 import 'package:rxdart/rxdart.dart';
+
+import '../ui/about_view/about_view.dart';
+import '../ui/home_view/home_view.dart';
+import '../ui/projects_view/projects_view.dart';
+import 'bloc.dart';
 
 enum NavigationIndex { home, about, articles, projects }
 
@@ -30,25 +31,25 @@ class NavigationBloc extends BlocBase {
   NavigationIndex get currentIndex => _navigationController.value;
 
   static final _navElements = <_NavigationElement>[
-    _NavigationElement(
+    const _NavigationElement(
       index: NavigationIndex.home,
       label: 'Home',
       page: HomeView(),
       icon: Icons.home,
     ),
-    _NavigationElement(
+    const _NavigationElement(
       index: NavigationIndex.about,
       label: 'About',
       page: AboutView(),
       icon: Icons.info,
     ),
-    _NavigationElement(
+    const _NavigationElement(
       index: NavigationIndex.articles,
       label: 'Articles',
-      page: Container(child: Center(child: Text('Page in construction'))),
+      page: Center(child: Text('Page in construction')),
       icon: Icons.article,
     ),
-    _NavigationElement(
+    const _NavigationElement(
       index: NavigationIndex.projects,
       label: 'Projects',
       page: ProjectsView(),

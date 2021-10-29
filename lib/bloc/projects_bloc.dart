@@ -1,7 +1,8 @@
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:my_portfolio/bloc/bloc.dart';
-import 'package:my_portfolio/models/link_data.dart';
-import 'package:my_portfolio/models/project_model.dart';
+
+import '../models/link_data.dart';
+import '../models/project_model.dart';
+import 'bloc.dart';
 
 class ProjectsBloc extends BlocBase {
   final _projects = <ProjectModel>[
@@ -9,7 +10,7 @@ class ProjectsBloc extends BlocBase {
       title: 'MyUCA - Université Clermont Auvergne',
       description:
           "L’application mobile MyUCA dédiée aux étudiants de l’UCA s’offre une nouvelle ergonomie et de nouvelles fonctionnalités.",
-      links: [
+      links: const [
         LinkData(
           icon: FontAwesomeIcons.android,
           url:
@@ -26,7 +27,7 @@ class ProjectsBloc extends BlocBase {
       title: 'M - Infos voyageur, Mobilités à Grenoble',
       description:
           "M facilite vos trajets du quotidien. Grâce aux nombreux services embarqués dans l'application, retrouvez toutes les informations utiles à vos déplacements.",
-      links: [
+      links: const [
         LinkData(
           icon: FontAwesomeIcons.android,
           url:
@@ -40,10 +41,10 @@ class ProjectsBloc extends BlocBase {
       imageAsset: 'assets/m.png',
     ),
     ProjectModel(
-      title: 'Drin\'King',
+      title: "Drin'King",
       description:
           "Plus besoin de jeux de cartes de dés ou encore de télécharger une application par jeux pour s'amuser ! Voici Drin'King !",
-      links: [
+      links: const [
         LinkData(
           icon: FontAwesomeIcons.android,
           url:
@@ -56,7 +57,7 @@ class ProjectsBloc extends BlocBase {
       title: 'iCalendar Parser',
       description:
           'Package to parse iCalendar (.ics) files written in pure Dart.',
-      links: [
+      links: const [
         LinkData(
           icon: FontAwesomeIcons.github,
           url: 'https://github.com/TesteurManiak/icalendar_parser',
@@ -71,7 +72,7 @@ class ProjectsBloc extends BlocBase {
       title: 'Flutter Web Twitch Auth',
       description:
           "A Flutter Web project to illustrate OAuth2 authentication flow using Twitch's API.",
-      links: [
+      links: const [
         LinkData(
           icon: FontAwesomeIcons.github,
           url:
@@ -83,7 +84,7 @@ class ProjectsBloc extends BlocBase {
       title: 'Image Picker Web',
       description:
           'Flutter Web Plugin to pick Images (as Widget, File or Uint8List) and Videos (as File or Uint8List)',
-      links: [
+      links: const [
         LinkData(
           icon: FontAwesomeIcons.github,
           url: 'https://github.com/Ahmadre/image_picker_web',
@@ -98,7 +99,7 @@ class ProjectsBloc extends BlocBase {
       title: 'Maniak Game Deals',
       description:
           'A cross-platform application using CheapShark API to display videogames deals on different websites.',
-      links: [
+      links: const [
         LinkData(
           icon: FontAwesomeIcons.github,
           url: 'https://github.com/TesteurManiak/game_deals_flutter',
@@ -113,7 +114,7 @@ class ProjectsBloc extends BlocBase {
       title: 'Twitch API',
       description:
           'A wrapper in pure Dart to connect to Twitch.tv using OAuth implicit authentication.',
-      links: [
+      links: const [
         LinkData(
           icon: FontAwesomeIcons.github,
           url: 'https://github.com/TesteurManiak/twitch_api_flutter',
@@ -128,7 +129,7 @@ class ProjectsBloc extends BlocBase {
       title: 'Text Chunk Styling',
       description:
           'Flutter package which allows to style specific parts of a String.',
-      links: [
+      links: const [
         LinkData(
           icon: FontAwesomeIcons.github,
           url: 'https://github.com/TesteurManiak/text_chunk_styling',
@@ -143,7 +144,7 @@ class ProjectsBloc extends BlocBase {
       title: 'ToDoList Flutter',
       description:
           'ToDo list made in flutter for training purpose in the use of local SQLite database and UI.',
-      links: [
+      links: const [
         LinkData(
           icon: FontAwesomeIcons.gitlab,
           url: 'https://gitlab.com/G_Roux/todolist-flutter',
@@ -160,7 +161,7 @@ class ProjectsBloc extends BlocBase {
       title: 'Temopedia',
       description:
           "Mobile app companion for Temtem to get an easy access to creature's information.",
-      links: [
+      links: const [
         LinkData(
           icon: FontAwesomeIcons.gitlab,
           url: 'https://gitlab.com/G_Roux/temopedia',
@@ -177,7 +178,7 @@ class ProjectsBloc extends BlocBase {
       title: 'Photo UI Challenge',
       description:
           "Personnal challenge, recreation of some designs found on dribbble in Flutter.",
-      links: [
+      links: const [
         LinkData(
           icon: FontAwesomeIcons.gitlab,
           url: 'https://gitlab.com/G_Roux/photo-ui-challenge',
@@ -188,7 +189,7 @@ class ProjectsBloc extends BlocBase {
     ProjectModel(
       title: 'Flutter Pokedex',
       description: "Pokedex app built with Flutter (with lots of animations)",
-      links: [
+      links: const [
         LinkData(
           icon: FontAwesomeIcons.gitlab,
           url: 'https://gitlab.com/G_Roux/flutter_pokedex',
@@ -200,7 +201,7 @@ class ProjectsBloc extends BlocBase {
       title: 'My Manga Collection',
       description:
           "Follow and track your manga collection easily with a simple Flutter application using Kitsu API.",
-      links: [
+      links: const [
         LinkData(
           icon: FontAwesomeIcons.gitlab,
           url: 'https://gitlab.com/G_Roux/mymangacollection',

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:my_portfolio/models/link_data.dart';
-import 'package:my_portfolio/style/text_styles.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import '../../../models/link_data.dart';
+import '../../../style/text_styles.dart';
 
 const _links = <LinkData>[
   LinkData(
@@ -28,6 +29,8 @@ const _links = <LinkData>[
 ];
 
 class LinkButtons extends StatelessWidget {
+  const LinkButtons({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Column(

@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/style/my_colors.dart';
-import 'package:my_portfolio/ui/common/responsive_layout.dart';
+
+import '../../../style/my_colors.dart';
+import '../../common/responsive_layout.dart';
 
 class ProfilePicture extends StatelessWidget {
+  const ProfilePicture({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     final imgSize = ResponsiveLayout.isDesktop(context) ? 400.0 : 250.0;
@@ -12,7 +15,7 @@ class ProfilePicture extends StatelessWidget {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(imgSize / 2),
         child: ColorFiltered(
-          colorFilter: ColorFilter.mode(
+          colorFilter: const ColorFilter.mode(
             MyColors.scaffold,
             BlendMode.color,
           ),

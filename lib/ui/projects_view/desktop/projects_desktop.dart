@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/bloc/bloc_provider.dart';
-import 'package:my_portfolio/bloc/projects_bloc.dart';
-import 'package:my_portfolio/ui/projects_view/common/project_widget.dart';
+
+import '../../../bloc/bloc_provider.dart';
+import '../../../bloc/projects_bloc.dart';
+import '../common/project_widget.dart';
 
 class ProjectsDesktop extends StatelessWidget {
+  const ProjectsDesktop({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
