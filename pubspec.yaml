@@ -4,7 +4,7 @@ publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.14.0 <3.0.0"
+  sdk: ">=2.13.0 <3.0.0"
 
 dependencies:
   cupertino_icons: ^1.0.2
@@ -13,7 +13,7 @@ dependencies:
   font_awesome_flutter: ^9.2.0
   google_fonts: ^2.1.0
   rxdart: ^0.27.2
-  url_launcher: ^6.0.12
+  url_launcher: ^6.0.10
   url_strategy: ^0.2.0
 
 dev_dependencies:
