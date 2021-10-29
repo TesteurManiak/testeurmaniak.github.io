@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/utils/consts.dart';
 
-import '../../../bloc/bloc_provider.dart';
-import '../../../bloc/projects_bloc.dart';
 import '../common/project_widget.dart';
 
 class ProjectsDesktop extends StatelessWidget {
@@ -10,7 +9,6 @@ class ProjectsDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    final projectsBloc = BlocProvider.of<ProjectsBloc>(context);
     return GridView.count(
       padding: EdgeInsets.symmetric(
         vertical: size.height * 0.05,
@@ -20,8 +18,7 @@ class ProjectsDesktop extends StatelessWidget {
       mainAxisSpacing: size.width * 0.05,
       crossAxisSpacing: size.width * 0.05,
       crossAxisCount: 3,
-      children:
-          projectsBloc.projects.map<Widget>((e) => ProjectWidget(e)).toList(),
+      children: projects.map<Widget>((e) => ProjectWidget(e)).toList(),
     );
   }
 }

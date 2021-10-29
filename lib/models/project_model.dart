@@ -6,7 +6,7 @@ class ProjectModel {
   final List<LinkData> links;
   final String? imageAsset;
 
-  ProjectModel({
+  const ProjectModel({
     required this.title,
     required this.links,
     this.description,
