@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/ui/home_view/common/header_widget.dart';
-import 'package:my_portfolio/ui/home_view/common/link_buttons.dart';
-import 'package:my_portfolio/ui/home_view/common/my_buttons.dart';
-import 'package:my_portfolio/ui/home_view/common/profile_picture.dart';
+
+import '../common/header_widget.dart';
+import '../common/link_buttons.dart';
+import '../common/my_buttons.dart';
+import '../common/profile_picture.dart';
 
 class HomeDesktop extends StatelessWidget {
+  const HomeDesktop({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -18,16 +21,16 @@ class HomeDesktop extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              HeaderWidget(),
+              const HeaderWidget(),
               SizedBox(height: size.height * 0.05),
-              LinkButtons(),
+              const LinkButtons(),
               SizedBox(height: size.height * 0.05),
-              MyButtons(),
+              const MyButtons(),
             ],
           ),
         ),
         SizedBox(width: size.width * 0.03),
-        ProfilePicture(),
+        const ProfilePicture(),
       ],
     );
   }

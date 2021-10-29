@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/style/text_styles.dart';
+
+import '../../style/text_styles.dart';
 
 class CustomTab extends StatelessWidget {
   final String label;
 
-  CustomTab({required this.label});
+  const CustomTab({Key? key, required this.label}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

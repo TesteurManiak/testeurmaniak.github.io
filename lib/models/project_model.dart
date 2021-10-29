@@ -1,4 +1,4 @@
-import 'package:my_portfolio/models/link_data.dart';
+import 'link_data.dart';
 
 class ProjectModel {
   final String title;

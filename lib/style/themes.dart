@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/style/my_colors.dart';
+
+import 'my_colors.dart';
 
 class MyThemes {
   static final _baseDark = ThemeData.dark();
@@ -32,7 +33,7 @@ class MyThemes {
       ),
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
-          side: BorderSide(color: Colors.white),
+          side: const BorderSide(color: Colors.white),
           primary: Colors.white,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(60),

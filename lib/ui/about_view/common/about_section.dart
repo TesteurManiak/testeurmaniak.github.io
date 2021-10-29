@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/style/my_colors.dart';
-import 'package:my_portfolio/style/text_styles.dart';
-import 'package:my_portfolio/utils/size_utils.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../../style/my_colors.dart';
+import '../../../style/text_styles.dart';
+import '../../../utils/size_utils.dart';
+
 class AboutSection extends StatelessWidget {
+  const AboutSection({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -41,7 +44,8 @@ class AboutSection extends StatelessWidget {
             ),
           ),
           onPressed: () => launch(
-              'https://drive.google.com/file/d/1aeMIfW6Ee7u8HQJaqIGWYXOeiicvUP1t/view?usp=sharing'),
+            'https://drive.google.com/file/d/1aeMIfW6Ee7u8HQJaqIGWYXOeiicvUP1t/view?usp=sharing',
+          ),
           child: const Text('Get my Resume'),
         ),
       ],

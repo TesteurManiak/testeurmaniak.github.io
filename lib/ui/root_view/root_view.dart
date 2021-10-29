@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/bloc/bloc_provider.dart';
-import 'package:my_portfolio/bloc/navigation_bloc.dart';
-import 'package:my_portfolio/ui/common/responsive_layout.dart';
-import 'package:my_portfolio/ui/root_view/desktop/root_desktop.dart';
-import 'package:my_portfolio/ui/root_view/mobile/root_mobile.dart';
+
+import '../../bloc/bloc_provider.dart';
+import '../../bloc/navigation_bloc.dart';
+import '../common/responsive_layout.dart';
+import 'desktop/root_desktop.dart';
+import 'mobile/root_mobile.dart';
 
 class RootView extends StatefulWidget {
   static const routeName = '/root';
+
+  const RootView({Key? key}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() => _RootViewState();
@@ -30,7 +33,7 @@ class _RootViewState extends State<RootView>
 
   @override
   Widget build(BuildContext context) {
-    return ResponsiveLayout(
+    return const ResponsiveLayout(
       mobile: RootMobile(),
       desktop: RootDesktop(),
     );

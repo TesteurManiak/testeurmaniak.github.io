@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/ui/common/responsive_layout.dart';
-import 'package:my_portfolio/ui/home_view/desktop/home_desktop.dart';
-import 'package:my_portfolio/ui/home_view/mobile/home_mobile.dart';
+
+import '../common/responsive_layout.dart';
+import 'desktop/home_desktop.dart';
+import 'mobile/home_mobile.dart';
 
 class HomeView extends StatelessWidget {
+  const HomeView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return ResponsiveLayout(
+    return const ResponsiveLayout(
       mobile: HomeMobile(),
       desktop: HomeDesktop(),
     );

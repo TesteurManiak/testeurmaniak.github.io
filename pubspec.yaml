@@ -10,13 +10,14 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
-  font_awesome_flutter: ^9.1.0
+  font_awesome_flutter: ^9.2.0
   google_fonts: ^2.1.0
-  rxdart: ^0.27.1
-  url_launcher: ^6.0.7
+  rxdart: ^0.27.2
+  url_launcher: ^6.0.12
   url_strategy: ^0.2.0
 
 dev_dependencies:
+  flutter_lints: ^1.0.4
   flutter_test:
     sdk: flutter
 

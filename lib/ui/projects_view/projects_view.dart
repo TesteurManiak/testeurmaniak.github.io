@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/style/my_colors.dart';
-import 'package:my_portfolio/ui/common/responsive_layout.dart';
-import 'package:my_portfolio/ui/projects_view/desktop/projects_desktop.dart';
-import 'package:my_portfolio/ui/projects_view/mobile/projects_mobile.dart';
+
+import '../../style/my_colors.dart';
+import '../common/responsive_layout.dart';
+import 'desktop/projects_desktop.dart';
+import 'mobile/projects_mobile.dart';
 
 class ProjectsView extends StatelessWidget {
+  const ProjectsView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: MyColors.darkBlue,
       body: ResponsiveLayout(
         mobile: ProjectsMobile(),

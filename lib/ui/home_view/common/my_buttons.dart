@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/bloc/bloc_provider.dart';
-import 'package:my_portfolio/bloc/navigation_bloc.dart';
-import 'package:my_portfolio/utils/size_utils.dart';
+
+import '../../../bloc/bloc_provider.dart';
+import '../../../bloc/navigation_bloc.dart';
+import '../../../utils/size_utils.dart';
 
 class MyButtons extends StatelessWidget {
+  const MyButtons({Key? key}) : super(key: key);
+
   void _openContactDialog(BuildContext context) {
     showDialog(
       context: context,
       builder: (_) => AlertDialog(
-        title: Text('Contact me'),
+        title: const Text('Contact me'),
         content: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
@@ -33,7 +36,7 @@ class MyButtons extends StatelessWidget {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: Text('Close'),
+            child: const Text('Close'),
           )
         ],
       ),
@@ -55,7 +58,7 @@ class MyButtons extends StatelessWidget {
             ),
           ),
           onPressed: () => _openContactDialog(context),
-          child: Text('Contact me'),
+          child: const Text('Contact me'),
         ),
         SizedBox(width: spacing(size.width)),
         OutlinedButton(
@@ -66,7 +69,7 @@ class MyButtons extends StatelessWidget {
             ),
           ),
           onPressed: () => navigationBloc.goToPage(NavigationIndex.projects),
-          child: Text('Portfolio'),
+          child: const Text('Portfolio'),
         ),
       ],
     );
