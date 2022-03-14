@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/utils/consts.dart';
 
+import '../../../core/projects.dart';
 import '../common/project_widget.dart';
 
 class ProjectsDesktop extends StatelessWidget {
@@ -18,7 +18,7 @@ class ProjectsDesktop extends StatelessWidget {
       mainAxisSpacing: size.width * 0.05,
       crossAxisSpacing: size.width * 0.05,
       crossAxisCount: 3,
-      children: projects.map<Widget>((e) => ProjectWidget(e)).toList(),
+      children: projects.map<Widget>(ProjectWidget.new).toList(),
     );
   }
 }

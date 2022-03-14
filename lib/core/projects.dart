@@ -5,6 +5,23 @@ import '../models/project_model.dart';
 
 const projects = <ProjectModel>[
   ProjectModel(
+    title: 'StrasApp',
+    description: "Toute l'Eurométropole de Strasbourg dans une appli",
+    links: [
+      LinkData(
+        icon: FontAwesomeIcons.android,
+        url:
+            'https://play.google.com/store/apps/details?id=eu.strasbourg.strasapp',
+      ),
+      LinkData(
+        icon: FontAwesomeIcons.appStore,
+        url: 'https://apps.apple.com/fr/app/strasapp/id1610325996',
+      ),
+      LinkData(icon: FontAwesomeIcons.link, url: 'https://strasapp.eu/'),
+    ],
+    imageAsset: 'assets/strasapp.png',
+  ),
+  ProjectModel(
     title: 'MyUCA - Université Clermont Auvergne',
     description:
         "L’application mobile MyUCA dédiée aux étudiants de l’UCA s’offre une nouvelle ergonomie et de nouvelles fonctionnalités.",

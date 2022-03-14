@@ -7,7 +7,7 @@ import 'desktop/root_desktop.dart';
 import 'mobile/root_mobile.dart';
 
 class RootView extends StatefulWidget {
-  static const routeName = '/root';
+  static const routeName = 'root';
 
   const RootView({Key? key}) : super(key: key);
 
