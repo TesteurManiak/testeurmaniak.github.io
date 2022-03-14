@@ -4,11 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:rxdart/rxdart.dart';
 
 import '../ui/about_view/about_view.dart';
+import '../ui/contact_view/contact_view.dart';
 import '../ui/home_view/home_view.dart';
 import '../ui/projects_view/projects_view.dart';
 import 'bloc.dart';
 
-enum NavigationIndex { home, about, articles, projects }
+enum NavigationIndex { home, about, articles, projects, contact }
 
 class _NavigationElement {
   final NavigationIndex index;
@@ -54,6 +55,12 @@ class NavigationBloc extends BlocBase {
       label: 'Projects',
       page: ProjectsView(),
       icon: Icons.laptop,
+    ),
+    _NavigationElement(
+      index: NavigationIndex.contact,
+      label: 'Contact',
+      page: ContactView(),
+      icon: Icons.mail,
     ),
   ];
   List<_NavigationElement> get navigationElements => _navElements;

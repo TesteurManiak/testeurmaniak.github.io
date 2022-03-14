@@ -4,7 +4,6 @@ import 'my_colors.dart';
 
 class MyThemes {
   static final _baseDark = ThemeData.dark();
-  static final _baseLight = ThemeData.light();
 
   static ThemeData get dark {
     final _dark = _baseDark.copyWith(
@@ -43,12 +42,15 @@ class MyThemes {
       textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(primary: MyColors.indicator),
       ),
+      inputDecorationTheme: InputDecorationTheme(
+        fillColor: MyColors.darkBlue,
+        filled: true,
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
+          borderSide: BorderSide.none,
+        ),
+      ),
     );
     return _dark;
-  }
-
-  static ThemeData get light {
-    final _light = _baseLight.copyWith();
-    return _light;
   }
 }
