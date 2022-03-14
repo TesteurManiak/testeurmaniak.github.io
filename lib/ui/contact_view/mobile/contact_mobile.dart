@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../common/first_name_field.dart';
 import '../common/last_name_field.dart';
 import '../common/mail_field.dart';
+import '../common/message_field.dart';
 import '../common/phone_field.dart';
 import '../common/submit_button.dart';
 
@@ -26,6 +27,7 @@ class _ContactMobileState extends State<ContactMobile> {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
     return Form(
       key: _formKey,
       child: SingleChildScrollView(
@@ -33,6 +35,13 @@ class _ContactMobileState extends State<ContactMobile> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            Padding(
+              padding: const EdgeInsets.only(bottom: 32),
+              child: Text(
+                "Let's get in touch!",
+                style: theme.textTheme.headline3,
+              ),
+            ),
             Row(
               children: const [
                 Expanded(child: FirstNameField()),
@@ -44,8 +53,13 @@ class _ContactMobileState extends State<ContactMobile> {
             const MailField(),
             const SizedBox(height: 8),
             const PhoneField(),
+            const SizedBox(height: 8),
+            const MessageField(),
             const SizedBox(height: 16),
-            SubmitButton(onPressed: _validateForm),
+            SizedBox(
+              width: double.maxFinite,
+              child: SubmitButton(onPressed: _validateForm),
+            ),
           ],
         ),
       ),

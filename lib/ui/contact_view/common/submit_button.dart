@@ -8,8 +8,14 @@ class SubmitButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        padding: const EdgeInsets.symmetric(vertical: 16),
+      ),
       onPressed: onPressed,
-      child: const Text('SUBMIT'),
+      child: const Text(
+        'SUBMIT',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
     );
   }
 }

@@ -8,7 +8,7 @@ class FirstNameField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MyInputField(
-      label: 'First name',
+      label: 'First Name',
       hint: 'John',
       required: true,
     );
