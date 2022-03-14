@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../../core/size_utils.dart';
 import '../../../style/my_colors.dart';
 import '../../../style/text_styles.dart';
-import '../../../utils/size_utils.dart';
 
 class AboutSection extends StatelessWidget {
   const AboutSection({Key? key}) : super(key: key);

@@ -6,7 +6,9 @@ import '../../common/custom_tab_bar.dart';
 import '../common/credits_widget.dart';
 
 class RootDesktop extends StatelessWidget {
-  const RootDesktop({Key? key}) : super(key: key);
+  final TabController controller;
+
+  const RootDesktop({Key? key, required this.controller}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,11 +21,11 @@ class RootDesktop extends StatelessWidget {
         children: [
           SizedBox(
             height: size.height * 0.05,
-            child: CustomTabBar(controller: navigationBloc.tabController),
+            child: CustomTabBar(controller: controller),
           ),
           Expanded(
             child: TabBarView(
-              controller: navigationBloc.tabController,
+              controller: controller,
               children: navigationBloc.navigationElements
                   .map<Widget>((e) => e.page)
                   .toList(),

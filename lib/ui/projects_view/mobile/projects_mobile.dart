@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/utils/consts.dart';
 
+import '../../../core/projects.dart';
 import '../common/project_widget.dart';
 
 class ProjectsMobile extends StatelessWidget {

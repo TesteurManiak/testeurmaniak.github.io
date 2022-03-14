@@ -1,23 +1,28 @@
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
 import '../models/link_data.dart';
 import '../models/project_model.dart';
 
 const projects = <ProjectModel>[
   ProjectModel(
+    title: 'StrasApp',
+    description: "Toute l'Eurométropole de Strasbourg dans une appli",
+    links: [
+      LinkData.android(
+        'https://play.google.com/store/apps/details?id=eu.strasbourg.strasapp',
+      ),
+      LinkData.appStore('https://apps.apple.com/fr/app/strasapp/id1610325996'),
+      LinkData(url: 'https://strasapp.eu/'),
+    ],
+    imageAsset: 'assets/strasapp.png',
+  ),
+  ProjectModel(
     title: 'MyUCA - Université Clermont Auvergne',
     description:
         "L’application mobile MyUCA dédiée aux étudiants de l’UCA s’offre une nouvelle ergonomie et de nouvelles fonctionnalités.",
     links: [
-      LinkData(
-        icon: FontAwesomeIcons.android,
-        url:
-            'https://play.google.com/store/apps/details?id=fr.uca.mobile&hl=fr&gl=US',
+      LinkData.android(
+        'https://play.google.com/store/apps/details?id=fr.uca.mobile&hl=fr&gl=US',
       ),
-      LinkData(
-        icon: FontAwesomeIcons.appStore,
-        url: 'https://apps.apple.com/fr/app/myuca/id1061989308',
-      ),
+      LinkData.appStore('https://apps.apple.com/fr/app/myuca/id1061989308'),
     ],
     imageAsset: 'assets/myuca.png',
   ),
@@ -26,14 +31,11 @@ const projects = <ProjectModel>[
     description:
         "M facilite vos trajets du quotidien. Grâce aux nombreux services embarqués dans l'application, retrouvez toutes les informations utiles à vos déplacements.",
     links: [
-      LinkData(
-        icon: FontAwesomeIcons.android,
-        url:
-            'https://play.google.com/store/apps/details?id=org.lametro.metromobilite&hl=fr&gl=US',
+      LinkData.android(
+        'https://play.google.com/store/apps/details?id=org.lametro.metromobilite&hl=fr&gl=US',
       ),
-      LinkData(
-        icon: FontAwesomeIcons.appStore,
-        url: 'https://apps.apple.com/fr/app/m-infos-voyageurs/id966169282',
+      LinkData.appStore(
+        'https://apps.apple.com/fr/app/m-infos-voyageurs/id966169282',
       ),
     ],
     imageAsset: 'assets/m.png',
@@ -43,14 +45,8 @@ const projects = <ProjectModel>[
     description:
         'Add decoration capabilities for the Icon widget with shadows, borders, gradients.',
     links: [
-      LinkData(
-        icon: FontAwesomeIcons.github,
-        url: 'https://github.com/TesteurManiak/icon_decoration',
-      ),
-      LinkData(
-        icon: FontAwesomeIcons.boxOpen,
-        url: 'https://pub.dev/packages/icon_decoration',
-      ),
+      LinkData.github('https://github.com/TesteurManiak/icon_decoration'),
+      LinkData.package('https://pub.dev/packages/icon_decoration'),
     ],
   ),
   ProjectModel(
@@ -58,14 +54,8 @@ const projects = <ProjectModel>[
     description:
         'Package to parse iCalendar (.ics) files written in pure Dart.',
     links: [
-      LinkData(
-        icon: FontAwesomeIcons.github,
-        url: 'https://github.com/TesteurManiak/icalendar_parser',
-      ),
-      LinkData(
-        icon: FontAwesomeIcons.boxOpen,
-        url: 'https://pub.dev/packages/icalendar_parser',
-      ),
+      LinkData.github('https://github.com/TesteurManiak/icalendar_parser'),
+      LinkData.package('https://pub.dev/packages/icalendar_parser'),
     ],
   ),
   ProjectModel(
@@ -73,10 +63,8 @@ const projects = <ProjectModel>[
     description:
         "A Flutter Web project to illustrate OAuth2 authentication flow using Twitch's API.",
     links: [
-      LinkData(
-        icon: FontAwesomeIcons.github,
-        url:
-            'https://github.com/TesteurManiak/flutter_web_twitch_auth/tree/use-external-win',
+      LinkData.github(
+        'https://github.com/TesteurManiak/flutter_web_twitch_auth',
       ),
     ],
   ),
@@ -85,23 +73,16 @@ const projects = <ProjectModel>[
     description:
         'Flutter Web Plugin to pick Images (as Widget, File or Uint8List) and Videos (as File or Uint8List)',
     links: [
-      LinkData(
-        icon: FontAwesomeIcons.github,
-        url: 'https://github.com/Ahmadre/image_picker_web',
-      ),
-      LinkData(
-        icon: FontAwesomeIcons.boxOpen,
-        url: 'https://pub.dev/packages/image_picker_web',
-      ),
+      LinkData.github('https://github.com/Ahmadre/image_picker_web'),
+      LinkData.package('https://pub.dev/packages/image_picker_web'),
     ],
   ),
   ProjectModel(
     title: 'YGO Collection Manager',
     description: 'Collection manager for Yu-Gi-Oh! TCG',
     links: [
-      LinkData(
-        url: 'https://github.com/TesteurManiak/ygo_collection_manager',
-        icon: FontAwesomeIcons.github,
+      LinkData.github(
+        'https://github.com/TesteurManiak/ygo_collection_manager',
       ),
     ],
     imageAsset: 'assets/ygo_collection_manager.png',
@@ -111,10 +92,7 @@ const projects = <ProjectModel>[
     description:
         'A cross-platform application using CheapShark API to display videogames deals on different websites.',
     links: [
-      LinkData(
-        icon: FontAwesomeIcons.github,
-        url: 'https://github.com/TesteurManiak/game_deals_flutter',
-      ),
+      LinkData.github('https://github.com/TesteurManiak/game_deals_flutter'),
       LinkData(
         url: 'https://testeurmaniak.github.io/game_deals_flutter/#/',
       ),
@@ -126,14 +104,8 @@ const projects = <ProjectModel>[
     description:
         'A wrapper in pure Dart to connect to Twitch.tv using OAuth implicit authentication.',
     links: [
-      LinkData(
-        icon: FontAwesomeIcons.github,
-        url: 'https://github.com/TesteurManiak/twitch_api_flutter',
-      ),
-      LinkData(
-        icon: FontAwesomeIcons.boxOpen,
-        url: 'https://pub.dev/packages/twitch_api',
-      ),
+      LinkData.github('https://github.com/TesteurManiak/twitch_api_flutter'),
+      LinkData.package('https://pub.dev/packages/twitch_api'),
     ],
   ),
   ProjectModel(
@@ -141,14 +113,8 @@ const projects = <ProjectModel>[
     description:
         'Flutter package which allows to style specific parts of a String.',
     links: [
-      LinkData(
-        icon: FontAwesomeIcons.github,
-        url: 'https://github.com/TesteurManiak/text_chunk_styling',
-      ),
-      LinkData(
-        icon: FontAwesomeIcons.boxOpen,
-        url: 'https://pub.dev/packages/text_chunk_styling',
-      ),
+      LinkData.github('https://github.com/TesteurManiak/text_chunk_styling'),
+      LinkData.package('https://pub.dev/packages/text_chunk_styling'),
     ],
   ),
   ProjectModel(
@@ -156,10 +122,8 @@ const projects = <ProjectModel>[
     description:
         "Plus besoin de jeux de cartes de dés ou encore de télécharger une application par jeux pour s'amuser ! Voici Drin'King !",
     links: [
-      LinkData(
-        icon: FontAwesomeIcons.android,
-        url:
-            'https://play.google.com/store/apps/details?id=com.drinkingdev.drinking&hl=fr&gl=US',
+      LinkData.android(
+        'https://play.google.com/store/apps/details?id=com.drinkingdev.drinking&hl=fr&gl=US',
       ),
     ],
     imageAsset: 'assets/drinking.png',
@@ -169,14 +133,9 @@ const projects = <ProjectModel>[
     description:
         'ToDo list made in flutter for training purpose in the use of local SQLite database and UI.',
     links: [
-      LinkData(
-        icon: FontAwesomeIcons.gitlab,
-        url: 'https://gitlab.com/G_Roux/todolist-flutter',
-      ),
-      LinkData(
-        icon: FontAwesomeIcons.android,
-        url:
-            'https://play.google.com/store/apps/details?id=com.maniak.todo_list',
+      LinkData.gitlab('https://gitlab.com/G_Roux/todolist-flutter'),
+      LinkData.android(
+        'https://play.google.com/store/apps/details?id=com.maniak.todo_list',
       ),
     ],
     imageAsset: 'assets/todo.png',
@@ -186,14 +145,9 @@ const projects = <ProjectModel>[
     description:
         "Mobile app companion for Temtem to get an easy access to creature's information.",
     links: [
-      LinkData(
-        icon: FontAwesomeIcons.gitlab,
-        url: 'https://gitlab.com/G_Roux/temopedia',
-      ),
-      LinkData(
-        icon: FontAwesomeIcons.android,
-        url:
-            'https://play.google.com/store/apps/details?id=com.maniak.temopedia',
+      LinkData.gitlab('https://gitlab.com/G_Roux/temopedia'),
+      LinkData.android(
+        'https://play.google.com/store/apps/details?id=com.maniak.temopedia',
       ),
     ],
     imageAsset: 'assets/temopedia.png',
@@ -203,10 +157,7 @@ const projects = <ProjectModel>[
     description:
         "Personnal challenge, recreation of some designs found on dribbble in Flutter.",
     links: [
-      LinkData(
-        icon: FontAwesomeIcons.gitlab,
-        url: 'https://gitlab.com/G_Roux/photo-ui-challenge',
-      ),
+      LinkData.gitlab('https://gitlab.com/G_Roux/photo-ui-challenge'),
     ],
     imageAsset: 'assets/ui_chall.png',
   ),
@@ -214,10 +165,7 @@ const projects = <ProjectModel>[
     title: 'Flutter Pokedex',
     description: "Pokedex app built with Flutter (with lots of animations)",
     links: [
-      LinkData(
-        icon: FontAwesomeIcons.gitlab,
-        url: 'https://gitlab.com/G_Roux/flutter_pokedex',
-      ),
+      LinkData.gitlab('https://gitlab.com/G_Roux/flutter_pokedex'),
     ],
     imageAsset: 'assets/pokedex.png',
   ),
@@ -226,13 +174,8 @@ const projects = <ProjectModel>[
     description:
         "Follow and track your manga collection easily with a simple Flutter application using Kitsu API.",
     links: [
-      LinkData(
-        icon: FontAwesomeIcons.gitlab,
-        url: 'https://gitlab.com/G_Roux/mymangacollection',
-      ),
-      LinkData(
-        url: 'https://itsallwidgets.com/mymangacollection',
-      ),
+      LinkData.gitlab('https://gitlab.com/G_Roux/mymangacollection'),
+      LinkData(url: 'https://itsallwidgets.com/mymangacollection'),
     ],
     imageAsset: 'assets/manga.png',
   ),
