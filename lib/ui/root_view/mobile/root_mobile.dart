@@ -5,7 +5,9 @@ import '../../../bloc/navigation_bloc.dart';
 import '../common/credits_widget.dart';
 
 class RootMobile extends StatelessWidget {
-  const RootMobile({Key? key}) : super(key: key);
+  final TabController? controller;
+
+  const RootMobile({Key? key, this.controller}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,15 +27,14 @@ class RootMobile extends StatelessWidget {
                 ),
               )
               .toList(),
-          onTap: (index) =>
-              navigationBloc.goToPage(NavigationIndex.values[index]),
+          onTap: (index) => controller?.animateTo(index),
         ),
       ),
       body: Column(
         children: [
           Expanded(
             child: TabBarView(
-              controller: navigationBloc.tabController,
+              controller: controller,
               children: navigationBloc.navigationElements
                   .map<Widget>((e) => e.page)
                   .toList(),
