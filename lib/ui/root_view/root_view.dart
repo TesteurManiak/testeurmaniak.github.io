@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 import '../../bloc/bloc_provider.dart';
@@ -19,9 +21,16 @@ class _RootViewState extends State<RootView>
     with SingleTickerProviderStateMixin {
   late final TabController _tabController;
   late final _navigationBloc = BlocProvider.of<NavigationBloc>(context);
+  late final StreamSubscription<NavigationIndex> _navSubscription;
 
   void _tabListener() => _navigationBloc
       .goToPage(NavigationIndex.values.elementAt(_tabController.index));
+
+  void _indexChangeListener(NavigationIndex index) {
+    if (index.index != _tabController.index) {
+      _tabController.animateTo(index.index);
+    }
+  }
 
   @override
   void initState() {
@@ -31,10 +40,14 @@ class _RootViewState extends State<RootView>
       vsync: this,
       initialIndex: _navigationBloc.currentIndex.index,
     )..addListener(_tabListener);
+
+    _navSubscription =
+        _navigationBloc.onIndexChanged.listen(_indexChangeListener);
   }
 
   @override
   void dispose() {
+    _navSubscription.cancel();
     _tabController.removeListener(_tabListener);
     _tabController.dispose();
     super.dispose();
