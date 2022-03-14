@@ -6,6 +6,7 @@ class MyInputField extends StatelessWidget {
   final bool required;
   final TextInputType? keyboardType;
   final int? maxLines;
+  final FormFieldValidator<String>? validator;
 
   const MyInputField({
     Key? key,
@@ -14,6 +15,7 @@ class MyInputField extends StatelessWidget {
     this.keyboardType,
     this.required = false,
     this.maxLines,
+    this.validator,
   }) : super(key: key);
 
   @override
@@ -29,6 +31,7 @@ class MyInputField extends StatelessWidget {
         if (required && (value == null || value.isEmpty)) {
           return '${label ?? "This field"} is required';
         }
+        if (validator != null) return validator?.call(value);
         return null;
       },
     );
