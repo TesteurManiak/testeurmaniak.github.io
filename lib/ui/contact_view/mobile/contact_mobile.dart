@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import '../common/first_name_field.dart';
 import '../common/last_name_field.dart';
 import '../common/mail_field.dart';
-import '../common/submit_btn.dart';
+import '../common/phone_field.dart';
+import '../common/submit_button.dart';
 
 class ContactMobile extends StatefulWidget {
   const ContactMobile({Key? key}) : super(key: key);
@@ -41,6 +42,8 @@ class _ContactMobileState extends State<ContactMobile> {
             ),
             const SizedBox(height: 8),
             const MailField(),
+            const SizedBox(height: 8),
+            const PhoneField(),
             const SizedBox(height: 16),
             SubmitButton(onPressed: _validateForm),
           ],
