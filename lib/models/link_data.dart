@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import '../core/icons/my_portfolio_icons.dart';
 
 class LinkData {
   final IconData icon;
   final String url;
 
-  const LinkData({this.icon = FontAwesomeIcons.link, required this.url});
+  const LinkData({this.icon = MyPortfolio.link, required this.url});
+  const LinkData.android(this.url) : icon = MyPortfolio.android;
+  const LinkData.appStore(this.url) : icon = MyPortfolio.app_store;
+  const LinkData.github(this.url) : icon = MyPortfolio.github;
+  const LinkData.gitlab(this.url) : icon = MyPortfolio.gitlab;
+  const LinkData.linkedIn(this.url) : icon = MyPortfolio.linkedin_in;
+  const LinkData.medium(this.url) : icon = MyPortfolio.medium_m;
+  const LinkData.package(this.url) : icon = MyPortfolio.box_open;
+  const LinkData.stackOverflow(this.url) : icon = MyPortfolio.stack_overflow;
 }
