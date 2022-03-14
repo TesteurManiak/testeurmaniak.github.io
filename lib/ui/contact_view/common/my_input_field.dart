@@ -14,11 +14,17 @@ class MyInputField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
       decoration: InputDecoration(
         labelText: '$label${required ? " *" : ""}',
         hintText: hint,
       ),
+      validator: (value) {
+        if (required && (value == null || value.isEmpty)) {
+          return '$label is required';
+        }
+        return null;
+      },
     );
   }
 }
