@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../core/icons/my_portfolio_icons.dart';
 
@@ -15,4 +16,7 @@ class LinkData {
   const LinkData.medium(this.url) : icon = MyPortfolio.medium_m;
   const LinkData.package(this.url) : icon = MyPortfolio.box_open;
   const LinkData.stackOverflow(this.url) : icon = MyPortfolio.stack_overflow;
+  const LinkData.twitter(this.url) : icon = MyPortfolio.twitter;
+
+  Future<bool> openLink() => launch(url);
 }
