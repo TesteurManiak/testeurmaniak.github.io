@@ -12,6 +12,7 @@ class MailField extends StatelessWidget {
       label: 'Mail',
       hint: 'myemail@mail.com',
       required: true,
+      keyboardType: TextInputType.emailAddress,
       validator: Validators.email,
     );
   }

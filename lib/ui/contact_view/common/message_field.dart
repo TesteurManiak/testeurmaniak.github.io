@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../common/responsive_layout.dart';
 import 'my_input_field.dart';
 
 class MessageField extends StatelessWidget {
@@ -7,11 +8,12 @@ class MessageField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MyInputField(
+    final isDesktop = ResponsiveLayout.isDesktop(context);
+    return MyInputField(
       hint: 'Type your message here',
       required: true,
       keyboardType: TextInputType.multiline,
-      maxLines: 7,
+      maxLines: isDesktop ? 9 : 7,
     );
   }
 }

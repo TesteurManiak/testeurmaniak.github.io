@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../common/responsive_layout.dart';
+
 class SubmitButton extends StatelessWidget {
   final VoidCallback onPressed;
 
@@ -7,14 +9,20 @@ class SubmitButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDesktop = ResponsiveLayout.isDesktop(context);
+    String label = 'Submit';
+    if (!isDesktop) {
+      label = label.toUpperCase();
+    }
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        padding: const EdgeInsets.symmetric(vertical: 16),
+        padding:
+            EdgeInsets.symmetric(vertical: 16, horizontal: isDesktop ? 32 : 16),
       ),
       onPressed: onPressed,
-      child: const Text(
-        'SUBMIT',
-        style: TextStyle(fontWeight: FontWeight.bold),
+      child: Text(
+        label,
+        style: const TextStyle(fontWeight: FontWeight.bold),
       ),
     );
   }

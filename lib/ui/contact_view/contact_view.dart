@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../common/responsive_layout.dart';
+import 'desktop/contact_desktop.dart';
 import 'mobile/contact_mobile.dart';
 
 class ContactView extends StatelessWidget {
@@ -10,7 +11,7 @@ class ContactView extends StatelessWidget {
   Widget build(BuildContext context) {
     return const ResponsiveLayout(
       mobile: ContactMobile(),
-      desktop: SizedBox(),
+      desktop: ContactDesktop(),
     );
   }
 }
