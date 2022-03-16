@@ -12,7 +12,7 @@ const projects = <ProjectModel>[
       LinkData.appStore('https://apps.apple.com/fr/app/strasapp/id1610325996'),
       LinkData(url: 'https://strasapp.eu/'),
     ],
-    imageAsset: 'assets/strasapp.png',
+    imageAsset: 'strasapp.png',
   ),
   ProjectModel(
     title: 'MyUCA - Université Clermont Auvergne',
@@ -24,7 +24,7 @@ const projects = <ProjectModel>[
       ),
       LinkData.appStore('https://apps.apple.com/fr/app/myuca/id1061989308'),
     ],
-    imageAsset: 'assets/myuca.png',
+    imageAsset: 'myuca.png',
   ),
   ProjectModel(
     title: 'M - Infos voyageur, Mobilités à Grenoble',
@@ -38,7 +38,7 @@ const projects = <ProjectModel>[
         'https://apps.apple.com/fr/app/m-infos-voyageurs/id966169282',
       ),
     ],
-    imageAsset: 'assets/m.png',
+    imageAsset: 'm.png',
   ),
   ProjectModel(
     title: 'icon_decoration',
@@ -85,7 +85,7 @@ const projects = <ProjectModel>[
         'https://github.com/TesteurManiak/ygo_collection_manager',
       ),
     ],
-    imageAsset: 'assets/ygo_collection_manager.png',
+    imageAsset: 'ygo_collection_manager.png',
   ),
   ProjectModel(
     title: 'Maniak Game Deals',
@@ -97,7 +97,7 @@ const projects = <ProjectModel>[
         url: 'https://testeurmaniak.github.io/game_deals_flutter/#/',
       ),
     ],
-    imageAsset: 'assets/game_deals.png',
+    imageAsset: 'game_deals.png',
   ),
   ProjectModel(
     title: 'twitch_api_flutter',
@@ -126,7 +126,7 @@ const projects = <ProjectModel>[
         'https://play.google.com/store/apps/details?id=com.drinkingdev.drinking&hl=fr&gl=US',
       ),
     ],
-    imageAsset: 'assets/drinking.png',
+    imageAsset: 'drinking.png',
   ),
   ProjectModel(
     title: 'ToDoList Flutter',
@@ -138,7 +138,7 @@ const projects = <ProjectModel>[
         'https://play.google.com/store/apps/details?id=com.maniak.todo_list',
       ),
     ],
-    imageAsset: 'assets/todo.png',
+    imageAsset: 'todo.png',
   ),
   ProjectModel(
     title: 'Temopedia',
@@ -150,7 +150,7 @@ const projects = <ProjectModel>[
         'https://play.google.com/store/apps/details?id=com.maniak.temopedia',
       ),
     ],
-    imageAsset: 'assets/temopedia.png',
+    imageAsset: 'temopedia.png',
   ),
   ProjectModel(
     title: 'Photo UI Challenge',
@@ -159,7 +159,7 @@ const projects = <ProjectModel>[
     links: [
       LinkData.gitlab('https://gitlab.com/G_Roux/photo-ui-challenge'),
     ],
-    imageAsset: 'assets/ui_chall.png',
+    imageAsset: 'ui_chall.png',
   ),
   ProjectModel(
     title: 'Flutter Pokedex',
@@ -167,7 +167,7 @@ const projects = <ProjectModel>[
     links: [
       LinkData.gitlab('https://gitlab.com/G_Roux/flutter_pokedex'),
     ],
-    imageAsset: 'assets/pokedex.png',
+    imageAsset: 'pokedex.png',
   ),
   ProjectModel(
     title: 'My Manga Collection',
@@ -177,6 +177,6 @@ const projects = <ProjectModel>[
       LinkData.gitlab('https://gitlab.com/G_Roux/mymangacollection'),
       LinkData(url: 'https://itsallwidgets.com/mymangacollection'),
     ],
-    imageAsset: 'assets/manga.png',
+    imageAsset: 'manga.png',
   ),
 ];

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 import '../../../models/link_data.dart';
 import '../../../style/text_styles.dart';
@@ -14,6 +13,7 @@ const _links = <LinkData>[
   ),
   LinkData.github('https://github.com/TesteurManiak'),
   LinkData.gitlab('https://gitlab.com/G_Roux'),
+  LinkData.twitter('https://twitter.com/TesteurManiak'),
 ];
 
 class LinkButtons extends StatelessWidget {
@@ -33,7 +33,7 @@ class LinkButtons extends StatelessWidget {
           children: _links
               .map<Widget>(
                 (e) => IconButton(
-                  onPressed: () => launch(e.url),
+                  onPressed: e.openLink,
                   icon: Icon(e.icon),
                 ),
               )

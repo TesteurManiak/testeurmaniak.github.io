@@ -25,6 +25,7 @@ class RootDesktop extends StatelessWidget {
           ),
           Expanded(
             child: TabBarView(
+              physics: const NeverScrollableScrollPhysics(),
               controller: controller,
               children: navigationBloc.navigationElements
                   .map<Widget>((e) => e.page)

@@ -25,6 +25,7 @@ class MyPortfolio {
   static const _kFontFam = 'MyPortfolio';
   static const String? _kFontPkg = null;
 
+  static const IconData twitter = IconData(0xf099, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData github = IconData(0xf09b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData link = IconData(0xf0c1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData linkedin_in = IconData(0xf0e1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
