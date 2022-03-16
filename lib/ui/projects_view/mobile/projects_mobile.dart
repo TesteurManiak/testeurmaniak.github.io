@@ -14,7 +14,6 @@ class ProjectsMobile extends StatelessWidget {
         vertical: size.height * 0.05,
         horizontal: size.width * 0.05,
       ),
-      shrinkWrap: true,
       itemCount: projects.length,
       itemBuilder: (_, index) => ProjectWidget(projects[index]),
       separatorBuilder: (_, __) => const SizedBox(height: 16),
