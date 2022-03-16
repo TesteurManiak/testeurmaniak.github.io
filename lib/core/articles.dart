@@ -9,6 +9,8 @@ const articles = <ArticleModel>[
     link: LinkData.medium(
       'https://itnext.io/tdd-in-flutter-part-3-testing-your-widgets-c5e87d76a864',
     ),
+    date: '2021-12-20',
+    assetImage: 'tdd_in_flutter.png',
   ),
   ArticleModel(
     title: 'TDD in Flutter Part 2: How to write a unit test ?',
@@ -17,6 +19,8 @@ const articles = <ArticleModel>[
     link: LinkData.medium(
       'https://itnext.io/tdd-in-flutter-part-2-how-to-write-a-unit-test-8493044792f',
     ),
+    date: '2021-07-12',
+    assetImage: 'tdd_in_flutter.png',
   ),
   ArticleModel(
     title: 'TDD in Flutter Part 1: Introduction to Test Driven Development',
@@ -25,6 +29,8 @@ const articles = <ArticleModel>[
     link: LinkData.medium(
       'https://itnext.io/tdd-in-flutter-part-1-introduction-to-test-driven-development-c130b9e82f36',
     ),
+    date: '2021-07-04',
+    assetImage: 'tdd_in_flutter.png',
   ),
   ArticleModel(
     title: 'Flutter Web: OAuth authentication through external window',
@@ -49,5 +55,6 @@ const articles = <ArticleModel>[
     link: LinkData.medium(
       'https://rouxguillaume.medium.com/flutter-fcm-notifications-on-mobile-and-web-3a23db50d61d',
     ),
+    date: '2020-10-15',
   ),
 ];

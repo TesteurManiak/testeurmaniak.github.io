@@ -10,6 +10,6 @@ class ProjectModel {
     required this.title,
     required this.links,
     this.description,
-    this.imageAsset,
-  });
+    String? imageAsset,
+  }) : imageAsset = imageAsset != null ? 'assets/projects/$imageAsset' : null;
 }
