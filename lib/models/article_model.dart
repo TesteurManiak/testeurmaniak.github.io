@@ -5,21 +5,21 @@ class ArticleModel {
   final String title;
 
   /// Description of the article
-  final String? description;
+  final String description;
 
   /// Link to the article
   final LinkData link;
 
-  final String? assetImage;
+  final String assetImage;
 
   /// Release date of the article
-  final String? date;
+  final String date;
 
   const ArticleModel({
     required this.title,
     required this.link,
-    this.description,
-    String? assetImage,
-    this.date,
-  }) : assetImage = assetImage != null ? 'assets/articles/$assetImage' : null;
+    required this.description,
+    required String assetImage,
+    required this.date,
+  }) : assetImage = 'assets/articles/$assetImage';
 }

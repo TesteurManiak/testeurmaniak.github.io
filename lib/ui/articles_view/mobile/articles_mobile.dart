@@ -3,14 +3,9 @@ import 'package:flutter/material.dart';
 import '../../../core/articles.dart';
 import 'widgets/article_tile.dart';
 
-class ArticlesMobile extends StatefulWidget {
+class ArticlesMobile extends StatelessWidget {
   const ArticlesMobile({Key? key}) : super(key: key);
 
-  @override
-  State<ArticlesMobile> createState() => _ArticlesMobileState();
-}
-
-class _ArticlesMobileState extends State<ArticlesMobile> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;

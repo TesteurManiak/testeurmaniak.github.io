@@ -5,7 +5,7 @@
 
 ## TODO
 
-* [ ] Finish "Articles" section
+* [x] Finish "Articles" section
 * [ ] Improve design for "Projects" section
 * [ ] Add animations
 * [ ] Deep linking with [go_router](https://pub.dev/packages/go_router)

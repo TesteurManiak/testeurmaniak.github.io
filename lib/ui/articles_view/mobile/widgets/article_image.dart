@@ -16,7 +16,7 @@ class ArticleImage extends StatelessWidget {
           imageAsset,
           height: size,
           width: size,
-          fit: BoxFit.fill,
+          fit: BoxFit.cover,
         ),
       ),
     );

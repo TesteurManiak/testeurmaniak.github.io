@@ -39,6 +39,8 @@ const articles = <ArticleModel>[
     link: LinkData.medium(
       'https://itnext.io/flutter-web-oauth-authentication-through-external-window-d890a7ff6463',
     ),
+    assetImage: 'oauth.png',
+    date: '2021-06-27',
   ),
   ArticleModel(
     title: 'Flutter Web: Twitch OAuth2 authentication flow implementation',
@@ -47,6 +49,8 @@ const articles = <ArticleModel>[
     link: LinkData.medium(
       'https://itnext.io/flutter-web-twitch-oauth2-authentication-flow-implementation-77d239c72be5',
     ),
+    assetImage: 'twitch.jpeg',
+    date: '2021-02-20',
   ),
   ArticleModel(
     title: 'Flutter: FCM notifications on Mobile and Web',
@@ -56,5 +60,6 @@ const articles = <ArticleModel>[
       'https://rouxguillaume.medium.com/flutter-fcm-notifications-on-mobile-and-web-3a23db50d61d',
     ),
     date: '2020-10-15',
+    assetImage: 'firebase.png',
   ),
 ];
