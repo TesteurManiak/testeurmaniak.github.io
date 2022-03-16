@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:rxdart/rxdart.dart';
 
 import '../ui/about_view/about_view.dart';
+import '../ui/articles_view/articles_view.dart';
 import '../ui/contact_view/contact_view.dart';
 import '../ui/home_view/home_view.dart';
 import '../ui/projects_view/projects_view.dart';
@@ -47,7 +48,7 @@ class NavigationBloc extends BlocBase {
     _NavigationElement(
       index: NavigationIndex.articles,
       label: 'Articles',
-      page: Center(child: Text('Page in construction')),
+      page: ArticlesView(),
       icon: Icons.article,
     ),
     _NavigationElement(
