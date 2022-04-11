@@ -3,6 +3,16 @@ import '../models/link_data.dart';
 
 const articles = <ArticleModel>[
   ArticleModel(
+    title: 'TDD in Flutter - Special: Golden tests with Alchemist 🧙🏼',
+    description:
+        "One of the subjects covered in my previous article was “Golden Testing” with an example made using the package golden_toolkit. It is a great package to perform snapshot comparisons in your tests but, it has one major caveat which was the non consistency between the generated files depending on the platform used.",
+    link: LinkData.medium(
+      'https://itnext.io/tdd-in-flutter-special-golden-tests-with-alchemist-ea8c96ff4dfe',
+    ),
+    date: '2022-04-04',
+    assetImage: 'tdd_in_flutter.png',
+  ),
+  ArticleModel(
     title: 'TDD in Flutter Part 3: Testing your widgets',
     description:
         "Hi everyone, it has been a while since the last episode but finally here it is, and I am ready to explain to you how to test your widgets. In this 3rd part I will explain you how to use testWidgets and how to use snapshot comparison for your widget rendering with the package golden_toolkit.",
