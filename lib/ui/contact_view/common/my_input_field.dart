@@ -7,6 +7,7 @@ class MyInputField extends StatelessWidget {
   final TextInputType? keyboardType;
   final int? maxLines;
   final FormFieldValidator<String>? validator;
+  final TextEditingController? controller;
 
   const MyInputField({
     Key? key,
@@ -16,6 +17,7 @@ class MyInputField extends StatelessWidget {
     this.required = false,
     this.maxLines,
     this.validator,
+    this.controller,
   }) : super(key: key);
 
   @override
@@ -23,9 +25,11 @@ class MyInputField extends StatelessWidget {
     return TextFormField(
       maxLines: maxLines,
       keyboardType: keyboardType,
+      controller: controller,
       decoration: InputDecoration(
         labelText: label != null ? '$label${required ? " *" : ""}' : null,
         hintText: hint,
+        alignLabelWithHint: true,
       ),
       validator: (value) {
         if (required && (value == null || value.isEmpty)) {

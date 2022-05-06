@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../common/responsive_layout.dart';
 import 'desktop/contact_desktop.dart';
@@ -14,10 +15,34 @@ class ContactView extends StatefulWidget {
 class _ContactViewState extends State<ContactView> {
   final _formKey = GlobalKey<FormState>();
 
+  final _firstNameController = TextEditingController();
+  final _lastNameController = TextEditingController();
+  final _messageController = TextEditingController();
+
+  @override
+  void dispose() {
+    _firstNameController.dispose();
+    _lastNameController.dispose();
+    _messageController.dispose();
+    super.dispose();
+  }
+
   void _validateForm() {
     final formState = _formKey.currentState;
     if (formState != null) {
-      formState.validate();
+      final isValid = formState.validate();
+      if (isValid) {
+        final emailLaunchUri = Uri(
+          scheme: 'mailto',
+          path: 'guillaume@floating-dartists.dev',
+          queryParameters: <String, String>{
+            'subject':
+                'A mail from ${_firstNameController.text} ${_lastNameController.text}',
+            'body': _messageController.text,
+          },
+        );
+        launch(emailLaunchUri.toString());
+      }
     }
   }
 
@@ -26,8 +51,18 @@ class _ContactViewState extends State<ContactView> {
     return Form(
       key: _formKey,
       child: ResponsiveLayout(
-        mobile: ContactMobile(submitForm: _validateForm),
-        desktop: ContactDesktop(submitForm: _validateForm),
+        mobile: ContactMobile(
+          firstNameController: _firstNameController,
+          lastNameController: _lastNameController,
+          messageController: _messageController,
+          submitForm: _validateForm,
+        ),
+        desktop: ContactDesktop(
+          firstNameController: _firstNameController,
+          lastNameController: _lastNameController,
+          messageController: _messageController,
+          submitForm: _validateForm,
+        ),
       ),
     );
   }
