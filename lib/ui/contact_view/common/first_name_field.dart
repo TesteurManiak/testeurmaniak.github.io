@@ -3,11 +3,14 @@ import 'package:flutter/material.dart';
 import 'my_input_field.dart';
 
 class FirstNameField extends StatelessWidget {
-  const FirstNameField({Key? key}) : super(key: key);
+  final TextEditingController controller;
+
+  const FirstNameField({Key? key, required this.controller}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const MyInputField(
+    return MyInputField(
+      controller: controller,
       label: 'First Name',
       hint: 'John',
       required: true,
