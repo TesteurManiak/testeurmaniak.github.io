@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../../core/size_utils.dart';
 import '../../../style/my_colors.dart';
@@ -43,7 +43,7 @@ class AboutSection extends StatelessWidget {
               horizontal: paddingHorizontal(size.width),
             ),
           ),
-          onPressed: () => launch(
+          onPressed: () => launchUrlString(
             'https://drive.google.com/file/d/1aeMIfW6Ee7u8HQJaqIGWYXOeiicvUP1t/view?usp=sharing',
           ),
           child: const Text('Get my Resume'),

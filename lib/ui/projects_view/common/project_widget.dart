@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../../models/project_model.dart';
 import '../../../style/text_styles.dart';
@@ -51,6 +51,18 @@ class _ProjectWidgetState extends State<ProjectWidget> {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
+          if (widget.projectModel.iconAsset != null)
+            Padding(
+              padding: const EdgeInsets.only(bottom: 8.0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(12),
+                child: Image.asset(
+                  widget.projectModel.iconAsset!,
+                  width: isDesktop ? 100 : 50,
+                  height: isDesktop ? 100 : 50,
+                ),
+              ),
+            ),
           Text(
             widget.projectModel.title,
             style: TextStyles.headerLine(context),
@@ -71,7 +83,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
             children: widget.projectModel.links
                 .map<Widget>(
                   (e) => IconButton(
-                    onPressed: () => launch(e.url),
+                    onPressed: () => launchUrlString(e.url),
                     icon: Icon(e.icon),
                   ),
                 )

@@ -19,7 +19,7 @@ class BlocProvider<T extends BlocBase> extends StatefulWidget {
   }
 
   @override
-  _BlocProviderState createState() => _BlocProviderState();
+  State<BlocProvider> createState() => _BlocProviderState();
 
   static T of<T extends BlocBase>(BuildContext context) {
     final _BlocProviderInherited provider = context

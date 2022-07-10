@@ -12,13 +12,13 @@ import 'bloc.dart';
 
 enum NavigationIndex { home, about, articles, projects, contact }
 
-class _NavigationElement {
+class NavigationElement {
   final NavigationIndex index;
   final String label;
   final Widget page;
   final IconData icon;
 
-  const _NavigationElement({
+  const NavigationElement({
     required this.index,
     required this.label,
     required this.page,
@@ -32,39 +32,39 @@ class NavigationBloc extends BlocBase {
   Stream<NavigationIndex> get onIndexChanged => _navigationController.stream;
   NavigationIndex get currentIndex => _navigationController.value;
 
-  static const _navElements = <_NavigationElement>[
-    _NavigationElement(
+  static const _navElements = <NavigationElement>[
+    NavigationElement(
       index: NavigationIndex.home,
       label: 'Home',
       page: HomeView(),
       icon: Icons.home,
     ),
-    _NavigationElement(
+    NavigationElement(
       index: NavigationIndex.about,
       label: 'About',
       page: AboutView(),
       icon: Icons.info,
     ),
-    _NavigationElement(
+    NavigationElement(
       index: NavigationIndex.articles,
       label: 'Articles',
       page: ArticlesView(),
       icon: Icons.article,
     ),
-    _NavigationElement(
+    NavigationElement(
       index: NavigationIndex.projects,
       label: 'Projects',
       page: ProjectsView(),
       icon: Icons.laptop,
     ),
-    _NavigationElement(
+    NavigationElement(
       index: NavigationIndex.contact,
       label: 'Contact',
       page: ContactView(),
       icon: Icons.mail,
     ),
   ];
-  List<_NavigationElement> get navigationElements => _navElements;
+  List<NavigationElement> get navigationElements => _navElements;
 
   @override
   void dispose() {
