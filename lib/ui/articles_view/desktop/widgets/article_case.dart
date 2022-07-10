@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../../../models/article_model.dart';
 
@@ -18,14 +18,14 @@ class ArticleCase extends StatelessWidget {
     final date = article.date;
 
     final theme = Theme.of(context);
-    final _width = width ?? MediaQuery.of(context).size.width * 0.2;
+    final widgetWidth = width ?? MediaQuery.of(context).size.width * 0.2;
 
     return InkWell(
       borderRadius: BorderRadius.circular(12),
-      onTap: () => launch(article.link.url),
+      onTap: () => launchUrlString(article.link.url),
       child: Container(
         padding: const EdgeInsets.all(16),
-        constraints: BoxConstraints(maxWidth: _width),
+        constraints: BoxConstraints(maxWidth: widgetWidth),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 import '../common/responsive_layout.dart';
 import 'desktop/contact_desktop.dart';
@@ -41,7 +41,7 @@ class _ContactViewState extends State<ContactView> {
             'body': _messageController.text,
           },
         );
-        launch(emailLaunchUri.toString());
+        launchUrlString(emailLaunchUri.toString());
       }
     }
   }

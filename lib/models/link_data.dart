@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 import '../core/icons/my_portfolio_icons.dart';
 
+@immutable
 class LinkData {
   final IconData icon;
   final String url;
@@ -18,5 +19,5 @@ class LinkData {
   const LinkData.stackOverflow(this.url) : icon = MyPortfolio.stack_overflow;
   const LinkData.twitter(this.url) : icon = MyPortfolio.twitter;
 
-  Future<bool> openLink() => launch(url);
+  Future<bool> openLink() => launchUrlString(url);
 }

@@ -4,9 +4,10 @@ import 'my_colors.dart';
 
 class MyThemes {
   static final _baseDark = ThemeData.dark();
+  static final dark = _buildDarkTheme();
 
-  static ThemeData get dark {
-    final _dark = _baseDark.copyWith(
+  static ThemeData _buildDarkTheme() {
+    final darkTheme = _baseDark.copyWith(
       scaffoldBackgroundColor: MyColors.scaffold,
       appBarTheme: _baseDark.appBarTheme.copyWith(
         backgroundColor: Colors.transparent,
@@ -51,6 +52,6 @@ class MyThemes {
         ),
       ),
     );
-    return _dark;
+    return darkTheme;
   }
 }

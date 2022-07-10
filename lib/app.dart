@@ -26,6 +26,7 @@ class _MyAppState extends State<MyApp> {
       theme: MyThemes.dark,
       routerDelegate: _router.routerDelegate,
       routeInformationParser: _router.routeInformationParser,
+      routeInformationProvider: _router.routeInformationProvider,
     );
   }
 }

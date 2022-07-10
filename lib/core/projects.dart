@@ -13,6 +13,7 @@ const projects = <ProjectModel>[
       LinkData(url: 'https://strasapp.eu/'),
     ],
     imageAsset: 'strasapp.png',
+    iconAsset: 'strasapp.png',
   ),
   ProjectModel(
     title: 'MyUCA - Université Clermont Auvergne',
@@ -25,6 +26,7 @@ const projects = <ProjectModel>[
       LinkData.appStore('https://apps.apple.com/fr/app/myuca/id1061989308'),
     ],
     imageAsset: 'myuca.png',
+    iconAsset: 'myuca.png',
   ),
   ProjectModel(
     title: 'M - Infos voyageur, Mobilités à Grenoble',
@@ -39,6 +41,18 @@ const projects = <ProjectModel>[
       ),
     ],
     imageAsset: 'm.png',
+    iconAsset: 'm.png',
+  ),
+  ProjectModel(
+    title: 'My Manga Collection',
+    description:
+        "Follow and track your manga collection easily with a simple Flutter application using Kitsu API.",
+    links: [
+      LinkData.github('https://github.com/TesteurManiak/my-manga-collection'),
+      LinkData(url: 'https://itsallwidgets.com/mymangacollection'),
+    ],
+    imageAsset: 'manga.png',
+    iconAsset: 'manga.png',
   ),
   ProjectModel(
     title: 'icon_decoration',
@@ -168,15 +182,5 @@ const projects = <ProjectModel>[
       LinkData.gitlab('https://gitlab.com/G_Roux/flutter_pokedex'),
     ],
     imageAsset: 'pokedex.png',
-  ),
-  ProjectModel(
-    title: 'My Manga Collection',
-    description:
-        "Follow and track your manga collection easily with a simple Flutter application using Kitsu API.",
-    links: [
-      LinkData.gitlab('https://gitlab.com/G_Roux/mymangacollection'),
-      LinkData(url: 'https://itsallwidgets.com/mymangacollection'),
-    ],
-    imageAsset: 'manga.png',
   ),
 ];

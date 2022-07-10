@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../../../models/article_model.dart';
 import 'article_image.dart';
@@ -19,7 +19,7 @@ class ArticleTile extends StatelessWidget {
 
     return InkWell(
       borderRadius: BorderRadius.circular(12),
-      onTap: () => launch(article.link.url),
+      onTap: () => launchUrlString(article.link.url),
       child: Padding(
         padding: const EdgeInsets.all(16),
         child: Row(

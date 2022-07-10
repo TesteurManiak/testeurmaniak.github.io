@@ -1,5 +1,8 @@
+import 'package:flutter/material.dart';
+
 import 'link_data.dart';
 
+@immutable
 class ArticleModel {
   /// Title of the article
   final String title;
