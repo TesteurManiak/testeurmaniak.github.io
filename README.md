@@ -7,8 +7,6 @@
 
 * Improve design for "Projects" section
 * Add animations
-* Deep linking with [go_router](https://pub.dev/packages/go_router)
-* Add SEO with [seo_renderer](https://pub.dev/packages/seo_renderer)
 
 ## Credits
 
