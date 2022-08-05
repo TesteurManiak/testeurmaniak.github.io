@@ -3,6 +3,16 @@ import '../models/link_data.dart';
 
 const articles = <ArticleModel>[
   ArticleModel(
+    title: "What’s in my VSCode? — For Flutter development",
+    description:
+        "My main editor, when it comes to writing code, has been for several years Visual Studio Code. It’s free, open-source and has a good plugin ecosystem so today, I’m going to showcase the different tools I’ve been using when coding in Dart & Flutter.",
+    link: LinkData.medium(
+      'https://itnext.io/whats-in-my-vscode-for-flutter-development-48ee88e0adaf',
+    ),
+    date: '2022-08-05',
+    assetImage: 'vscode_loves_flutter.png',
+  ),
+  ArticleModel(
     title: 'TDD in Flutter - Special: Golden tests with Alchemist 🧙🏼',
     description:
         "One of the subjects covered in my previous article was “Golden Testing” with an example made using the package golden_toolkit. It is a great package to perform snapshot comparisons in your tests but, it has one major caveat which was the non consistency between the generated files depending on the platform used.",
