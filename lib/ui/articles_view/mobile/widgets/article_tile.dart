@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seo_renderer/renderers/text_renderer/text_renderer_vm.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../../../models/article_model.dart';
@@ -30,18 +31,27 @@ class ArticleTile extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Text(article.title, style: theme.textTheme.titleMedium),
-                  const SizedBox(height: 8),
-                  Text(
-                    desc,
-                    maxLines: 3,
-                    overflow: TextOverflow.ellipsis,
-                    style: theme.textTheme.subtitle2,
+                  TextRenderer(
+                    child: Text(
+                      article.title,
+                      style: theme.textTheme.titleMedium,
+                    ),
                   ),
                   const SizedBox(height: 8),
-                  Text(
-                    date,
-                    style: theme.textTheme.caption,
+                  TextRenderer(
+                    child: Text(
+                      desc,
+                      maxLines: 3,
+                      overflow: TextOverflow.ellipsis,
+                      style: theme.textTheme.subtitle2,
+                    ),
+                  ),
+                  const SizedBox(height: 8),
+                  TextRenderer(
+                    child: Text(
+                      date,
+                      style: theme.textTheme.caption,
+                    ),
                   ),
                 ],
               ),
