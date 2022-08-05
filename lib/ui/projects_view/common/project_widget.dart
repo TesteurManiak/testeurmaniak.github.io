@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seo_renderer/renderers/text_renderer/text_renderer_vm.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../../models/project_model.dart';
@@ -63,20 +64,24 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                 ),
               ),
             ),
-          Text(
-            widget.projectModel.title,
-            style: TextStyles.headerLine(context),
-            maxLines: isDesktop ? 3 : null,
-            textAlign: TextAlign.center,
-            overflow: isDesktop ? TextOverflow.ellipsis : null,
+          TextRenderer(
+            child: Text(
+              widget.projectModel.title,
+              style: TextStyles.headerLine(context),
+              maxLines: isDesktop ? 3 : null,
+              textAlign: TextAlign.center,
+              overflow: isDesktop ? TextOverflow.ellipsis : null,
+            ),
           ),
           if (description != null)
-            Text(
-              description,
-              style: TextStyles.selectSubHeadline(context),
-              textAlign: TextAlign.center,
-              maxLines: isDesktop ? 2 : null,
-              overflow: isDesktop ? TextOverflow.ellipsis : null,
+            TextRenderer(
+              child: Text(
+                description,
+                style: TextStyles.selectSubHeadline(context),
+                textAlign: TextAlign.center,
+                maxLines: isDesktop ? 2 : null,
+                overflow: isDesktop ? TextOverflow.ellipsis : null,
+              ),
             ),
           const SizedBox(height: 8),
           Wrap(
