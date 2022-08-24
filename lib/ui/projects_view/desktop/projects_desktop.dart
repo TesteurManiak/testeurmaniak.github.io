@@ -4,14 +4,27 @@ import '../../../core/projects.dart';
 import '../../common/smooth_scroll.dart';
 import '../common/project_widget.dart';
 
-class ProjectsDesktop extends StatelessWidget {
+class ProjectsDesktop extends StatefulWidget {
   const ProjectsDesktop({Key? key}) : super(key: key);
+
+  @override
+  State<ProjectsDesktop> createState() => _ProjectsDesktopState();
+}
+
+class _ProjectsDesktopState extends State<ProjectsDesktop> {
+  final _controller = SmoothScrollController();
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return GridView.count(
-      controller: SmoothScrollController(),
+      controller: _controller,
       padding: EdgeInsets.symmetric(
         vertical: size.height * 0.05,
         horizontal: size.width * 0.05,
