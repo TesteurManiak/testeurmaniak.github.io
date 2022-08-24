@@ -30,15 +30,13 @@ class RootMobile extends StatelessWidget {
           onTap: (index) => controller?.animateTo(index),
         ),
       ),
-      body: Column(
+      body: Stack(
         children: [
-          Expanded(
-            child: TabBarView(
-              controller: controller,
-              children: navigationBloc.navigationElements
-                  .map<Widget>((e) => e.page)
-                  .toList(),
-            ),
+          TabBarView(
+            controller: controller,
+            children: navigationBloc.navigationElements
+                .map<Widget>((e) => e.page)
+                .toList(),
           ),
           const CreditsWidget(),
         ],

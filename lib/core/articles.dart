@@ -3,6 +3,16 @@ import '../models/link_data.dart';
 
 const articles = <ArticleModel>[
   ArticleModel(
+    title: "TDD in Flutter Part 4: Creating Mocks",
+    link: LinkData.medium(
+      'https://itnext.io/tdd-in-flutter-part-4-creating-mocks-eb3b0a38bae0',
+    ),
+    description:
+        "Welcome to this 4th episode of the “Test Driven Development in Flutter” series, today I’m going to explain the concept of “Mocking” classes and methods. Then I will be comparing different ways of mocking your class, including two popular mocking packages mockito, maintained by the Dart team, and mocktail, maintained by Very Good Ventures.",
+    assetImage: 'tdd_in_flutter.png',
+    date: '2022-08-24',
+  ),
+  ArticleModel(
     title: "What’s in my VSCode? — For Flutter development",
     description:
         "My main editor, when it comes to writing code, has been for several years Visual Studio Code. It’s free, open-source and has a good plugin ecosystem so today, I’m going to showcase the different tools I’ve been using when coding in Dart & Flutter.",

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:seo_renderer/renderers/text_renderer/text_renderer_vm.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../../../models/article_model.dart';
@@ -31,11 +30,9 @@ class ArticleCase extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
           children: [
-            TextRenderer(
-              child: Text(
-                article.title,
-                style: theme.textTheme.titleLarge,
-              ),
+            Text(
+              article.title,
+              style: theme.textTheme.titleLarge,
             ),
             const SizedBox(height: _kSpacing),
             Expanded(
@@ -49,21 +46,14 @@ class ArticleCase extends StatelessWidget {
               ),
             ),
             const SizedBox(height: _kSpacing),
-            TextRenderer(
-              child: Text(
-                desc,
-                overflow: TextOverflow.ellipsis,
-                style: theme.textTheme.subtitle2,
-                maxLines: 3,
-              ),
+            Text(
+              desc,
+              overflow: TextOverflow.ellipsis,
+              style: theme.textTheme.subtitle2,
+              maxLines: 3,
             ),
             const SizedBox(height: _kSpacing * 2),
-            TextRenderer(
-              child: Text(
-                date,
-                style: theme.textTheme.caption,
-              ),
-            ),
+            Text(date, style: theme.textTheme.caption),
           ],
         ),
       ),

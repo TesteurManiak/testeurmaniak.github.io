@@ -15,27 +15,28 @@ class RootDesktop extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     final navigationBloc = BlocProvider.of<NavigationBloc>(context);
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.end,
+      body: Stack(
         children: [
-          SizedBox(
-            height: size.height * 0.05,
-            child: CustomTabBar(controller: controller),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              SizedBox(
+                height: size.height * 0.05,
+                child: CustomTabBar(controller: controller),
+              ),
+              Expanded(
+                child: TabBarView(
+                  physics: const NeverScrollableScrollPhysics(),
+                  controller: controller,
+                  children: navigationBloc.navigationElements
+                      .map<Widget>((e) => e.page)
+                      .toList(),
+                ),
+              ),
+            ],
           ),
-          Expanded(
-            child: TabBarView(
-              physics: const NeverScrollableScrollPhysics(),
-              controller: controller,
-              children: navigationBloc.navigationElements
-                  .map<Widget>((e) => e.page)
-                  .toList(),
-            ),
-          ),
-          const Align(
-            alignment: Alignment.bottomRight,
-            child: CreditsWidget(),
-          ),
+          const CreditsWidget(),
         ],
       ),
     );
