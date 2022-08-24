@@ -6,8 +6,21 @@ import 'widgets/article_case.dart';
 
 const _kSpacing = 12.0;
 
-class ArticlesDesktop extends StatelessWidget {
+class ArticlesDesktop extends StatefulWidget {
   const ArticlesDesktop({Key? key}) : super(key: key);
+
+  @override
+  State<ArticlesDesktop> createState() => _ArticlesDesktopState();
+}
+
+class _ArticlesDesktopState extends State<ArticlesDesktop> {
+  final _controller = SmoothScrollController();
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
