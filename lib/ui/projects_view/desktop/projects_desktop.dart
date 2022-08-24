@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../core/projects.dart';
+import '../../common/smooth_scroll.dart';
 import '../common/project_widget.dart';
 
 class ProjectsDesktop extends StatelessWidget {
@@ -10,6 +11,7 @@ class ProjectsDesktop extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return GridView.count(
+      controller: SmoothScrollController(),
       padding: EdgeInsets.symmetric(
         vertical: size.height * 0.05,
         horizontal: size.width * 0.05,

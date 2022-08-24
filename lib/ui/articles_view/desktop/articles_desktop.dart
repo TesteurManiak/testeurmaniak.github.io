@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../core/articles.dart';
+import '../../common/smooth_scroll.dart';
 import 'widgets/article_case.dart';
 
 const _kSpacing = 12.0;
@@ -16,6 +17,7 @@ class ArticlesDesktop extends StatelessWidget {
     final crossAxisCount = (size.width / caseWidth).floor();
 
     return GridView.count(
+      controller: SmoothScrollController(),
       padding: const EdgeInsets.all(32),
       mainAxisSpacing: _kSpacing,
       crossAxisSpacing: _kSpacing,
