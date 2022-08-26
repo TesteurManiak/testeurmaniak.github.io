@@ -10,7 +10,7 @@ const projects = <ProjectModel>[
         'https://play.google.com/store/apps/details?id=eu.strasbourg.strasapp',
       ),
       LinkData.appStore('https://apps.apple.com/fr/app/strasapp/id1610325996'),
-      LinkData(url: 'https://strasapp.eu/'),
+      LinkData(url: 'https://strasapp.eu/', name: 'StrasApp.eu'),
     ],
     imageAsset: 'strasapp.png',
     iconAsset: 'strasapp.png',
@@ -49,7 +49,10 @@ const projects = <ProjectModel>[
         "Follow and track your manga collection easily with a simple Flutter application using Kitsu API.",
     links: [
       LinkData.github('https://github.com/TesteurManiak/my-manga-collection'),
-      LinkData(url: 'https://itsallwidgets.com/mymangacollection'),
+      LinkData(
+        url: 'https://itsallwidgets.com/mymangacollection',
+        name: 'ItsAllWidgets',
+      ),
     ],
     imageAsset: 'manga.png',
     iconAsset: 'manga.png',
@@ -109,6 +112,7 @@ const projects = <ProjectModel>[
       LinkData.github('https://github.com/TesteurManiak/game_deals_flutter'),
       LinkData(
         url: 'https://testeurmaniak.github.io/game_deals_flutter/#/',
+        name: 'Game Deals Flutter',
       ),
     ],
     imageAsset: 'game_deals.png',

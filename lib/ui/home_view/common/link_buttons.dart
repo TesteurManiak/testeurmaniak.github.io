@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seo_renderer/seo_renderer.dart';
 
 import '../../../models/link_data.dart';
 import '../../../style/text_styles.dart';
@@ -25,16 +26,22 @@ class LinkButtons extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text(
-          'Find Me on',
-          style: TextStyles.selectSubHeadline(context),
+        TextRenderer(
+          child: Text(
+            'Find Me on',
+            style: TextStyles.selectSubHeadline(context),
+          ),
         ),
         Wrap(
           children: _links
               .map<Widget>(
-                (e) => IconButton(
-                  onPressed: e.openLink,
-                  icon: Icon(e.icon),
+                (e) => LinkRenderer(
+                  text: e.name,
+                  href: e.url,
+                  child: IconButton(
+                    onPressed: e.openLink,
+                    icon: Icon(e.icon),
+                  ),
                 ),
               )
               .toList(),
