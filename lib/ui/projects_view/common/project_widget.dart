@@ -38,13 +38,14 @@ class ProjectWidget extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                if (projectModel.iconAsset != null)
+                if (projectModel.hasIcon)
                   Padding(
                     padding: const EdgeInsets.only(bottom: 8.0),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(12),
-                      child: Image.asset(
-                        projectModel.iconAsset!,
+                      child: BlurredImage(
+                        imageUrl: projectModel.iconUrl!,
+                        blurHash: projectModel.iconBlurHash!,
                         width: isDesktop ? 100 : 50,
                         height: isDesktop ? 100 : 50,
                       ),

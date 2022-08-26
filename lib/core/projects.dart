@@ -14,8 +14,10 @@ const projects = <ProjectModel>[
     ],
     imageUrl:
         'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/projects/strasapp.png',
-    iconAsset: 'strasapp.png',
+    iconUrl:
+        'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/icons/strasapp.png',
     imageBlurHash: r'LFJv~C0c0zRQ7X}HI:J60f=|$ixF',
+    iconBlurHash: 'LBD.zWqG00,IqruzNs9a00xs~VI:',
   ),
   ProjectModel(
     title: 'MyUCA - Université Clermont Auvergne',
@@ -29,8 +31,10 @@ const projects = <ProjectModel>[
     ],
     imageUrl:
         'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/projects/myuca.png',
-    iconAsset: 'myuca.png',
+    iconUrl:
+        'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/icons/myuca.png',
     imageBlurHash: 'L3GAj}3WKfMI00_2tmDi8wIB_M#R',
+    iconBlurHash: 'LnKVQ[kC~Wj[ozayaeof-;jt%2ay',
   ),
   ProjectModel(
     title: 'M - Infos voyageur, Mobilités à Grenoble',
@@ -46,8 +50,10 @@ const projects = <ProjectModel>[
     ],
     imageUrl:
         'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/projects/m.png',
-    iconAsset: 'm.png',
+    iconUrl:
+        'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/icons/m.png',
     imageBlurHash: r'LYL|$i?Kxt4n-;M{tQjw%4Injbxu',
+    iconBlurHash: r'LpO|X^X8~qn%s:WXWVoI~qn$IUj[',
   ),
   ProjectModel(
     title: 'My Manga Collection',
@@ -62,8 +68,10 @@ const projects = <ProjectModel>[
     ],
     imageUrl:
         'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/projects/manga.png',
-    iconAsset: 'manga.png',
+    iconUrl:
+        'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/icons/manga.png',
     imageBlurHash: 'LDFFEU~CR6In^5Z~X8o~00w[adM}',
+    iconBlurHash: r'LEHpJftS0Eo$p1ocxTj?0Daw~Qad',
   ),
   ProjectModel(
     title: 'icon_decoration',
