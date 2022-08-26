@@ -9,6 +9,7 @@ class HeaderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextRenderer(
+      text: 'Hello, I am Guillaume Roux, Flutter Software Engineer',
       child: Text.rich(
         TextSpan(
           children: [
