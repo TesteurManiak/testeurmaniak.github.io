@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:seo_renderer/seo_renderer.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../../../models/article_model.dart';
+import '../../common/article_date.dart';
+import '../../common/article_description.dart';
 import 'article_image.dart';
 
 class ArticleTile extends StatelessWidget {
@@ -11,9 +14,6 @@ class ArticleTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final desc = article.description;
-    final date = article.date;
-
     final theme = Theme.of(context);
 
     return InkWell(
@@ -32,19 +32,17 @@ class ArticleTile extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Text(
-                    article.title,
-                    style: theme.textTheme.titleMedium,
+                  TextRenderer(
+                    text: article.title,
+                    child: Text(
+                      article.title,
+                      style: theme.textTheme.titleMedium,
+                    ),
                   ),
                   const SizedBox(height: 8),
-                  Text(
-                    desc,
-                    maxLines: 3,
-                    overflow: TextOverflow.ellipsis,
-                    style: theme.textTheme.subtitle2,
-                  ),
+                  ArticleDescription(article.description),
                   const SizedBox(height: 8),
-                  Text(date, style: theme.textTheme.caption),
+                  ArticleDate(article.date),
                 ],
               ),
             ),
