@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seo_renderer/helpers/robot_detector_vm.dart';
 
 import 'core/router.dart';
 import 'style/themes.dart';
@@ -21,12 +22,14 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      title: 'Guillaume Roux - Flutter Developer',
-      theme: MyThemes.dark,
-      routerDelegate: _router.routerDelegate,
-      routeInformationParser: _router.routeInformationParser,
-      routeInformationProvider: _router.routeInformationProvider,
+    return RobotDetector(
+      child: MaterialApp.router(
+        title: 'Guillaume Roux - Flutter Developer',
+        theme: MyThemes.dark,
+        routerDelegate: _router.routerDelegate,
+        routeInformationParser: _router.routeInformationParser,
+        routeInformationProvider: _router.routeInformationProvider,
+      ),
     );
   }
 }
