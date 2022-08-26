@@ -12,6 +12,7 @@ dependencies:
     sdk: flutter
   go_router: ^4.2.8
   rxdart: ^0.27.5
+  seo_renderer: ^0.6.0
   super_banners: ^0.0.1
   url_launcher: ^6.1.5
 

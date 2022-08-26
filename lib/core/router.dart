@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:seo_renderer/seo_renderer.dart';
 
 import '../ui/root_view/root_view.dart';
 
 GoRouter routerGenerator({String? initialLocation}) => GoRouter(
-      initialLocation: initialLocation ?? Routes.root,
+      initialLocation: initialLocation ?? AppRoute.root.path,
       debugLogDiagnostics: true,
       urlPathStrategy: UrlPathStrategy.path,
       routes: [
         GoRoute(
-          name: RootView.routeName,
-          path: Routes.root,
+          name: AppRoute.root.name,
+          path: AppRoute.root.path,
           builder: (_, __) => const RootView(),
         ),
       ],
@@ -19,8 +20,12 @@ GoRouter routerGenerator({String? initialLocation}) => GoRouter(
           child: Text(state.error.toString(), textAlign: TextAlign.center),
         ),
       ),
+      observers: [seoRouteObserver],
     );
 
-class Routes {
-  static const root = '/';
+enum AppRoute {
+  root('/');
+
+  final String path;
+  const AppRoute(this.path);
 }
