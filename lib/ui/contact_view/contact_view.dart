@@ -12,7 +12,8 @@ class ContactView extends StatefulWidget {
   State<ContactView> createState() => _ContactViewState();
 }
 
-class _ContactViewState extends State<ContactView> {
+class _ContactViewState extends State<ContactView>
+    with AutomaticKeepAliveClientMixin {
   final _formKey = GlobalKey<FormState>();
 
   final _firstNameController = TextEditingController();
@@ -48,6 +49,7 @@ class _ContactViewState extends State<ContactView> {
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return Form(
       key: _formKey,
       child: ResponsiveLayout(
@@ -66,4 +68,7 @@ class _ContactViewState extends State<ContactView> {
       ),
     );
   }
+
+  @override
+  bool get wantKeepAlive => true;
 }
