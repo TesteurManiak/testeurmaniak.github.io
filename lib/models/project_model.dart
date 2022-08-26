@@ -7,15 +7,22 @@ class ProjectModel {
   final String title;
   final String? description;
   final List<LinkData> links;
-  final String? imageAsset;
+  final String? imageUrl;
   final String? iconAsset;
+  final String? imageBlurHash;
+
+  bool get hasImage => imageUrl != null && imageBlurHash != null;
 
   const ProjectModel({
     required this.title,
     required this.links,
     this.description,
-    String? imageAsset,
+    this.imageUrl,
     String? iconAsset,
-  })  : imageAsset = imageAsset != null ? 'assets/projects/$imageAsset' : null,
-        iconAsset = iconAsset != null ? 'assets/icons/$iconAsset' : null;
+    this.imageBlurHash,
+  })  : iconAsset = iconAsset != null ? 'assets/icons/$iconAsset' : null,
+        assert(
+          (imageUrl != null && imageBlurHash != null) || imageUrl == null,
+          'You must provide both an imageAsset and an imageBlurHash',
+        );
 }
