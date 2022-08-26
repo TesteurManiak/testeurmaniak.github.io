@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:seo_renderer/seo_renderer.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../../../models/article_model.dart';
 import '../../../about_view/common/blurred_image.dart';
+import '../../common/article_date.dart';
+import '../../common/article_description.dart';
 
 const _kSpacing = 16.0;
 
@@ -14,9 +17,6 @@ class ArticleCase extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final desc = article.description;
-    final date = article.date;
-
     final theme = Theme.of(context);
     final widgetWidth = width ?? MediaQuery.of(context).size.width * 0.2;
 
@@ -30,9 +30,12 @@ class ArticleCase extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text(
-              article.title,
-              style: theme.textTheme.titleLarge,
+            TextRenderer(
+              text: article.title,
+              child: Text(
+                article.title,
+                style: theme.textTheme.titleLarge,
+              ),
             ),
             const SizedBox(height: _kSpacing),
             Expanded(
@@ -47,14 +50,9 @@ class ArticleCase extends StatelessWidget {
               ),
             ),
             const SizedBox(height: _kSpacing),
-            Text(
-              desc,
-              overflow: TextOverflow.ellipsis,
-              style: theme.textTheme.subtitle2,
-              maxLines: 3,
-            ),
+            ArticleDescription(article.description),
             const SizedBox(height: _kSpacing * 2),
-            Text(date, style: theme.textTheme.caption),
+            ArticleDate(article.date),
           ],
         ),
       ),

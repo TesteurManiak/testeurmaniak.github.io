@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:seo_renderer/seo_renderer.dart';
 
 import '../../../style/my_colors.dart';
 import '../../about_view/common/blurred_image.dart';
@@ -11,26 +10,21 @@ class ProfilePicture extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final imgSize = ResponsiveLayout.isDesktop(context) ? 400.0 : 250.0;
-    const imageUrl =
-        'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/avatar.png';
-    return ImageRenderer(
-      alt: 'Profile picture',
-      src: imageUrl,
-      child: SizedBox(
-        height: imgSize,
-        width: imgSize,
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(imgSize / 2),
-          child: const ColorFiltered(
-            colorFilter: ColorFilter.mode(
-              MyColors.scaffold,
-              BlendMode.color,
-            ),
-            child: BlurredImage(
-              imageUrl: imageUrl,
-              blurHash: 'LMF%|0tN2~xsHInl-.Na04ay[1n+',
-              fit: BoxFit.cover,
-            ),
+    return SizedBox(
+      height: imgSize,
+      width: imgSize,
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(imgSize / 2),
+        child: const ColorFiltered(
+          colorFilter: ColorFilter.mode(
+            MyColors.scaffold,
+            BlendMode.color,
+          ),
+          child: BlurredImage(
+            imageUrl:
+                'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/avatar.png',
+            blurHash: 'LMF%|0tN2~xsHInl-.Na04ay[1n+',
+            fit: BoxFit.cover,
           ),
         ),
       ),
