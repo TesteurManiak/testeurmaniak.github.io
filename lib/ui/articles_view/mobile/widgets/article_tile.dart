@@ -12,7 +12,6 @@ class ArticleTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final desc = article.description;
-    final asset = article.assetImage;
     final date = article.date;
 
     final theme = Theme.of(context);
@@ -24,7 +23,10 @@ class ArticleTile extends StatelessWidget {
         padding: const EdgeInsets.all(16),
         child: Row(
           children: [
-            ArticleImage(asset),
+            ArticleImage(
+              imageUrl: article.imageUrl,
+              blurHash: article.blurHash,
+            ),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../../../models/article_model.dart';
+import '../../../about_view/common/blurred_image.dart';
 
 const _kSpacing = 16.0;
 
@@ -13,7 +14,6 @@ class ArticleCase extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final asset = article.assetImage;
     final desc = article.description;
     final date = article.date;
 
@@ -38,8 +38,9 @@ class ArticleCase extends StatelessWidget {
             Expanded(
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(12),
-                child: Image.asset(
-                  asset,
+                child: BlurredImage(
+                  blurHash: article.blurHash,
+                  imageUrl: article.imageUrl,
                   width: width,
                   fit: BoxFit.cover,
                 ),

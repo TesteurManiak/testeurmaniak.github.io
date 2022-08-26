@@ -10,6 +10,7 @@ dependencies:
   cupertino_icons: ^1.0.5
   flutter:
     sdk: flutter
+  flutter_blurhash: ^0.7.0
   go_router: ^4.2.8
   rxdart: ^0.27.5
   seo_renderer: ^0.6.0
@@ -26,7 +27,6 @@ flutter:
   assets:
     - assets/
     - assets/projects/
-    - assets/articles/
     - assets/icons/
   fonts:
     - family: MyPortfolio

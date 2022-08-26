@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
 
-class ArticleImage extends StatelessWidget {
-  final String imageAsset;
+import '../../../about_view/common/blurred_image.dart';
 
-  const ArticleImage(this.imageAsset, {Key? key}) : super(key: key);
+class ArticleImage extends StatelessWidget {
+  final String imageUrl;
+  final String blurHash;
+
+  const ArticleImage({
+    Key? key,
+    required this.imageUrl,
+    required this.blurHash,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,8 +19,9 @@ class ArticleImage extends StatelessWidget {
       padding: const EdgeInsets.only(right: 12),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(12),
-        child: Image.asset(
-          imageAsset,
+        child: BlurredImage(
+          blurHash: blurHash,
+          imageUrl: imageUrl,
           height: size,
           width: size,
           fit: BoxFit.cover,

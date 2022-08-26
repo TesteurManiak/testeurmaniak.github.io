@@ -9,7 +9,9 @@ const articles = <ArticleModel>[
     ),
     description:
         "Welcome to this 4th episode of the “Test Driven Development in Flutter” series, today I’m going to explain the concept of “Mocking” classes and methods. Then I will be comparing different ways of mocking your class, including two popular mocking packages mockito, maintained by the Dart team, and mocktail, maintained by Very Good Ventures.",
-    assetImage: 'tdd_in_flutter.png',
+    imageUrl:
+        'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/articles/tdd_in_flutter.png',
+    blurHash: 'LP9a{[kXtKVs*0j[tRazMHV@S6o}',
     date: '2022-08-24',
   ),
   ArticleModel(
@@ -20,7 +22,9 @@ const articles = <ArticleModel>[
       'https://itnext.io/whats-in-my-vscode-for-flutter-development-48ee88e0adaf',
     ),
     date: '2022-08-05',
-    assetImage: 'vscode_loves_flutter.png',
+    imageUrl:
+        'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/articles/vscode_loves_flutter.png',
+    blurHash: 'LFA^kXJC7Z:~*0kCyDj^00xZ+vFz',
   ),
   ArticleModel(
     title: 'TDD in Flutter - Special: Golden tests with Alchemist 🧙🏼',
@@ -29,8 +33,10 @@ const articles = <ArticleModel>[
     link: LinkData.medium(
       'https://itnext.io/tdd-in-flutter-special-golden-tests-with-alchemist-ea8c96ff4dfe',
     ),
+    imageUrl:
+        'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/articles/tdd_in_flutter.png',
+    blurHash: 'LP9a{[kXtKVs*0j[tRazMHV@S6o}',
     date: '2022-04-04',
-    assetImage: 'tdd_in_flutter.png',
   ),
   ArticleModel(
     title: 'TDD in Flutter Part 3: Testing your widgets',
@@ -40,7 +46,9 @@ const articles = <ArticleModel>[
       'https://itnext.io/tdd-in-flutter-part-3-testing-your-widgets-c5e87d76a864',
     ),
     date: '2021-12-20',
-    assetImage: 'tdd_in_flutter.png',
+    imageUrl:
+        'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/articles/tdd_in_flutter.png',
+    blurHash: 'LP9a{[kXtKVs*0j[tRazMHV@S6o}',
   ),
   ArticleModel(
     title: 'TDD in Flutter Part 2: How to write a unit test ?',
@@ -50,7 +58,9 @@ const articles = <ArticleModel>[
       'https://itnext.io/tdd-in-flutter-part-2-how-to-write-a-unit-test-8493044792f',
     ),
     date: '2021-07-12',
-    assetImage: 'tdd_in_flutter.png',
+    imageUrl:
+        'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/articles/tdd_in_flutter.png',
+    blurHash: 'LP9a{[kXtKVs*0j[tRazMHV@S6o}',
   ),
   ArticleModel(
     title: 'TDD in Flutter Part 1: Introduction to Test Driven Development',
@@ -60,7 +70,9 @@ const articles = <ArticleModel>[
       'https://itnext.io/tdd-in-flutter-part-1-introduction-to-test-driven-development-c130b9e82f36',
     ),
     date: '2021-07-04',
-    assetImage: 'tdd_in_flutter.png',
+    imageUrl:
+        'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/articles/tdd_in_flutter.png',
+    blurHash: 'LP9a{[kXtKVs*0j[tRazMHV@S6o}',
   ),
   ArticleModel(
     title: 'Flutter Web: OAuth authentication through external window',
@@ -69,7 +81,9 @@ const articles = <ArticleModel>[
     link: LinkData.medium(
       'https://itnext.io/flutter-web-oauth-authentication-through-external-window-d890a7ff6463',
     ),
-    assetImage: 'oauth.png',
+    imageUrl:
+        'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/articles/oauth.png',
+    blurHash: 'LkOW{R.To#DiozkCayae^*ROn~xt',
     date: '2021-06-27',
   ),
   ArticleModel(
@@ -79,7 +93,9 @@ const articles = <ArticleModel>[
     link: LinkData.medium(
       'https://itnext.io/flutter-web-twitch-oauth2-authentication-flow-implementation-77d239c72be5',
     ),
-    assetImage: 'twitch.jpeg',
+    imageUrl:
+        'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/articles/twitch.jpeg',
+    blurHash: 'LYRV|Za#%Lt6x[kBRkay~oj[M|ay',
     date: '2021-02-20',
   ),
   ArticleModel(
@@ -90,6 +106,8 @@ const articles = <ArticleModel>[
       'https://rouxguillaume.medium.com/flutter-fcm-notifications-on-mobile-and-web-3a23db50d61d',
     ),
     date: '2020-10-15',
-    assetImage: 'firebase.png',
+    blurHash: r'LTOy@R;b=C#jx^RoWZa$?wJCI;S4',
+    imageUrl:
+        'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/articles/firebase.png',
   ),
 ];
