@@ -51,8 +51,10 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
-<body style="background-color:#0E0C38">
-  <div class="loader">Loading...</div>
+<body style="background-color:#0E0C38; overflow:hidden;">
+  <div class="container" id="loading_indicator">
+    <div class="loader">Loading...</div>
+  </div>
 
   <script>
     const regExp = new RegExp("bot|google|baidu|bing|msn|teoma|slurp|yandex", "i");
@@ -126,6 +128,16 @@
     } else {
       // Service workers not supported. Just drop the <script> tag.
       loadMainDartJs();
+    }
+  </script>
+  <script>
+    window.onload = function () {
+      setTimeout(function () {
+        var loadingIndicator = document.getElementById("loading_indicator");
+        if (loadingIndicator) {
+          loadingIndicator.remove();
+        }
+      }, 10000);
     }
   </script>
 </body>
