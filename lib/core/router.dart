@@ -7,7 +7,6 @@ import '../ui/root_view/root_view.dart';
 GoRouter routerGenerator({String? initialLocation}) => GoRouter(
       initialLocation: initialLocation ?? AppRoute.root.path,
       debugLogDiagnostics: true,
-      urlPathStrategy: UrlPathStrategy.path,
       routes: [
         GoRoute(
           name: AppRoute.root.name,

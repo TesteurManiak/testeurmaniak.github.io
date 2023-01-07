@@ -25,7 +25,7 @@ class MyThemes {
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          primary: MyColors.indicator,
+          backgroundColor: MyColors.indicator,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(60),
           ),
@@ -34,14 +34,14 @@ class MyThemes {
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
           side: const BorderSide(color: Colors.white),
-          primary: Colors.white,
+          foregroundColor: Colors.white,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(60),
           ),
         ),
       ),
       textButtonTheme: TextButtonThemeData(
-        style: TextButton.styleFrom(primary: MyColors.indicator),
+        style: TextButton.styleFrom(backgroundColor: MyColors.indicator),
       ),
       inputDecorationTheme: InputDecorationTheme(
         fillColor: MyColors.darkBlue,
