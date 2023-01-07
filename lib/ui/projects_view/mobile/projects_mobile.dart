@@ -3,13 +3,27 @@ import 'package:flutter/material.dart';
 import '../../../core/projects.dart';
 import '../common/project_widget.dart';
 
-class ProjectsMobile extends StatelessWidget {
+class ProjectsMobile extends StatefulWidget {
   const ProjectsMobile({Key? key}) : super(key: key);
+
+  @override
+  State<ProjectsMobile> createState() => _ProjectsMobileState();
+}
+
+class _ProjectsMobileState extends State<ProjectsMobile> {
+  final _scrollController = ScrollController();
+
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return ListView.separated(
+      controller: _scrollController,
       padding: EdgeInsets.symmetric(
         vertical: size.height * 0.05,
         horizontal: size.width * 0.05,

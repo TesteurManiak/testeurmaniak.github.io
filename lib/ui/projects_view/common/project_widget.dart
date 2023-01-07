@@ -20,15 +20,17 @@ class ProjectWidget extends StatelessWidget {
       child: Stack(
         children: [
           if (projectModel.hasImage)
-            ColorFiltered(
-              colorFilter: ColorFilter.mode(
-                Colors.black.withOpacity(0.1),
-                BlendMode.dstATop,
-              ),
-              child: BlurredImage(
-                imageUrl: projectModel.imageUrl!,
-                blurHash: projectModel.imageBlurHash!,
-                fit: BoxFit.cover,
+            Positioned.fill(
+              child: ColorFiltered(
+                colorFilter: ColorFilter.mode(
+                  Colors.black.withOpacity(0.1),
+                  BlendMode.dstATop,
+                ),
+                child: BlurredImage(
+                  imageUrl: projectModel.imageUrl!,
+                  blurHash: projectModel.imageBlurHash!,
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
           Container(
