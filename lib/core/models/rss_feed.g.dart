@@ -22,10 +22,11 @@ Map<String, dynamic> _$$_RssResponseToJson(_$_RssResponse instance) =>
 
 _$_RssItem _$$_RssItemFromJson(Map<String, dynamic> json) => _$_RssItem(
       title: json['title'] as String?,
-      pubDate: json['pubDate'] as String?,
+      pubDate: json['pubDate'] == null
+          ? null
+          : DateTime.parse(json['pubDate'] as String),
       link: json['link'] as String?,
       thumbnail: json['thumbnail'] as String?,
-      description: json['description'] as String?,
       categories: (json['categories'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
@@ -34,9 +35,8 @@ _$_RssItem _$$_RssItemFromJson(Map<String, dynamic> json) => _$_RssItem(
 Map<String, dynamic> _$$_RssItemToJson(_$_RssItem instance) =>
     <String, dynamic>{
       'title': instance.title,
-      'pubDate': instance.pubDate,
+      'pubDate': instance.pubDate?.toIso8601String(),
       'link': instance.link,
       'thumbnail': instance.thumbnail,
-      'description': instance.description,
       'categories': instance.categories,
     };

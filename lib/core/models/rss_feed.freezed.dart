@@ -199,11 +199,12 @@ mixin _$RssItem {
   @JsonKey(name: 'title')
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: 'pubDate')
-  String? get pubDate => throw _privateConstructorUsedError;
+  DateTime? get pubDate => throw _privateConstructorUsedError;
   @JsonKey(name: 'link')
   String? get link => throw _privateConstructorUsedError;
+  @JsonKey(name: 'thumbnail')
   String? get thumbnail => throw _privateConstructorUsedError;
-  String? get description => throw _privateConstructorUsedError;
+  @JsonKey(name: 'categories')
   List<String>? get categories => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -218,11 +219,10 @@ abstract class $RssItemCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: 'title') String? title,
-      @JsonKey(name: 'pubDate') String? pubDate,
+      @JsonKey(name: 'pubDate') DateTime? pubDate,
       @JsonKey(name: 'link') String? link,
-      String? thumbnail,
-      String? description,
-      List<String>? categories});
+      @JsonKey(name: 'thumbnail') String? thumbnail,
+      @JsonKey(name: 'categories') List<String>? categories});
 }
 
 /// @nodoc
@@ -242,7 +242,6 @@ class _$RssItemCopyWithImpl<$Res, $Val extends RssItem>
     Object? pubDate = freezed,
     Object? link = freezed,
     Object? thumbnail = freezed,
-    Object? description = freezed,
     Object? categories = freezed,
   }) {
     return _then(_value.copyWith(
@@ -253,7 +252,7 @@ class _$RssItemCopyWithImpl<$Res, $Val extends RssItem>
       pubDate: freezed == pubDate
           ? _value.pubDate
           : pubDate // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as DateTime?,
       link: freezed == link
           ? _value.link
           : link // ignore: cast_nullable_to_non_nullable
@@ -261,10 +260,6 @@ class _$RssItemCopyWithImpl<$Res, $Val extends RssItem>
       thumbnail: freezed == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as String?,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
               as String?,
       categories: freezed == categories
           ? _value.categories
@@ -283,11 +278,10 @@ abstract class _$$_RssItemCopyWith<$Res> implements $RssItemCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: 'title') String? title,
-      @JsonKey(name: 'pubDate') String? pubDate,
+      @JsonKey(name: 'pubDate') DateTime? pubDate,
       @JsonKey(name: 'link') String? link,
-      String? thumbnail,
-      String? description,
-      List<String>? categories});
+      @JsonKey(name: 'thumbnail') String? thumbnail,
+      @JsonKey(name: 'categories') List<String>? categories});
 }
 
 /// @nodoc
@@ -304,7 +298,6 @@ class __$$_RssItemCopyWithImpl<$Res>
     Object? pubDate = freezed,
     Object? link = freezed,
     Object? thumbnail = freezed,
-    Object? description = freezed,
     Object? categories = freezed,
   }) {
     return _then(_$_RssItem(
@@ -315,7 +308,7 @@ class __$$_RssItemCopyWithImpl<$Res>
       pubDate: freezed == pubDate
           ? _value.pubDate
           : pubDate // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as DateTime?,
       link: freezed == link
           ? _value.link
           : link // ignore: cast_nullable_to_non_nullable
@@ -323,10 +316,6 @@ class __$$_RssItemCopyWithImpl<$Res>
       thumbnail: freezed == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as String?,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
               as String?,
       categories: freezed == categories
           ? _value._categories
@@ -343,9 +332,8 @@ class _$_RssItem extends _RssItem {
       {@JsonKey(name: 'title') required this.title,
       @JsonKey(name: 'pubDate') required this.pubDate,
       @JsonKey(name: 'link') required this.link,
-      required this.thumbnail,
-      required this.description,
-      required final List<String>? categories})
+      @JsonKey(name: 'thumbnail') required this.thumbnail,
+      @JsonKey(name: 'categories') required final List<String>? categories})
       : _categories = categories,
         super._();
 
@@ -357,16 +345,16 @@ class _$_RssItem extends _RssItem {
   final String? title;
   @override
   @JsonKey(name: 'pubDate')
-  final String? pubDate;
+  final DateTime? pubDate;
   @override
   @JsonKey(name: 'link')
   final String? link;
   @override
+  @JsonKey(name: 'thumbnail')
   final String? thumbnail;
-  @override
-  final String? description;
   final List<String>? _categories;
   @override
+  @JsonKey(name: 'categories')
   List<String>? get categories {
     final value = _categories;
     if (value == null) return null;
@@ -377,7 +365,7 @@ class _$_RssItem extends _RssItem {
 
   @override
   String toString() {
-    return 'RssItem(title: $title, pubDate: $pubDate, link: $link, thumbnail: $thumbnail, description: $description, categories: $categories)';
+    return 'RssItem(title: $title, pubDate: $pubDate, link: $link, thumbnail: $thumbnail, categories: $categories)';
   }
 
   @override
@@ -390,8 +378,6 @@ class _$_RssItem extends _RssItem {
             (identical(other.link, link) || other.link == link) &&
             (identical(other.thumbnail, thumbnail) ||
                 other.thumbnail == thumbnail) &&
-            (identical(other.description, description) ||
-                other.description == description) &&
             const DeepCollectionEquality()
                 .equals(other._categories, _categories));
   }
@@ -399,7 +385,7 @@ class _$_RssItem extends _RssItem {
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, title, pubDate, link, thumbnail,
-      description, const DeepCollectionEquality().hash(_categories));
+      const DeepCollectionEquality().hash(_categories));
 
   @JsonKey(ignore: true)
   @override
@@ -417,12 +403,16 @@ class _$_RssItem extends _RssItem {
 
 abstract class _RssItem extends RssItem {
   const factory _RssItem(
-      {@JsonKey(name: 'title') required final String? title,
-      @JsonKey(name: 'pubDate') required final String? pubDate,
-      @JsonKey(name: 'link') required final String? link,
-      required final String? thumbnail,
-      required final String? description,
-      required final List<String>? categories}) = _$_RssItem;
+      {@JsonKey(name: 'title')
+          required final String? title,
+      @JsonKey(name: 'pubDate')
+          required final DateTime? pubDate,
+      @JsonKey(name: 'link')
+          required final String? link,
+      @JsonKey(name: 'thumbnail')
+          required final String? thumbnail,
+      @JsonKey(name: 'categories')
+          required final List<String>? categories}) = _$_RssItem;
   const _RssItem._() : super._();
 
   factory _RssItem.fromJson(Map<String, dynamic> json) = _$_RssItem.fromJson;
@@ -432,15 +422,15 @@ abstract class _RssItem extends RssItem {
   String? get title;
   @override
   @JsonKey(name: 'pubDate')
-  String? get pubDate;
+  DateTime? get pubDate;
   @override
   @JsonKey(name: 'link')
   String? get link;
   @override
+  @JsonKey(name: 'thumbnail')
   String? get thumbnail;
   @override
-  String? get description;
-  @override
+  @JsonKey(name: 'categories')
   List<String>? get categories;
   @override
   @JsonKey(ignore: true)

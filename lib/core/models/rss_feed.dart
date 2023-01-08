@@ -19,11 +19,10 @@ class RssResponse with _$RssResponse {
 class RssItem with _$RssItem {
   const factory RssItem({
     @JsonKey(name: 'title') required String? title,
-    @JsonKey(name: 'pubDate') required String? pubDate,
+    @JsonKey(name: 'pubDate') required DateTime? pubDate,
     @JsonKey(name: 'link') required String? link,
-    required String? thumbnail,
-    required String? description,
-    required List<String>? categories,
+    @JsonKey(name: 'thumbnail') required String? thumbnail,
+    @JsonKey(name: 'categories') required List<String>? categories,
   }) = _RssItem;
 
   const RssItem._();
