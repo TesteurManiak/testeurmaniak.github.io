@@ -107,7 +107,7 @@ class _ShimmerArticleCase extends StatelessWidget {
                 width: double.infinity,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
-                  color: Colors.white.withOpacity(opacity),
+                  color: Colors.white70,
                 ),
               ),
             ),
