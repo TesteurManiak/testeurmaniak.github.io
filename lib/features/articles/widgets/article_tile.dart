@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/core/models/rss_feed.dart';
 import 'package:my_portfolio/features/articles/widgets/article_date.dart';
-import 'package:my_portfolio/features/articles/widgets/article_description.dart';
+import 'package:my_portfolio/features/articles/widgets/article_image.dart';
 import 'package:seo_renderer/seo_renderer.dart';
 
 class ArticleTile extends StatelessWidget {
@@ -13,7 +13,7 @@ class ArticleTile extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final title = article.title;
-    final description = article.description;
+    final thumbnail = article.thumbnail;
     final date = article.pubDate;
 
     return InkWell(
@@ -37,7 +37,7 @@ class ArticleTile extends StatelessWidget {
                       ),
                     ),
                   const SizedBox(height: 8),
-                  if (description != null) ArticleDescription(description),
+                  if (thumbnail != null) ArticleImage(src: thumbnail),
                   const SizedBox(height: 8),
                   if (date != null) ArticleDate(date),
                 ],

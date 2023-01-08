@@ -14,12 +14,10 @@ class ArticlesView extends ConsumerStatefulWidget {
 
 class _ArticlesViewState extends ConsumerState<ArticlesView>
     with AutomaticKeepAliveClientMixin {
-  late final _controller = ref.read(articleListControllerProvider.notifier);
-
   @override
   void initState() {
     super.initState();
-    _controller.fetchArticles();
+    ref.read(articleListControllerProvider.notifier).fetchArticles();
   }
 
   @override
