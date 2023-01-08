@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:my_portfolio/core/sources/projects.dart';
-import 'package:my_portfolio/ui/projects_view/common/project_widget.dart';
+import 'package:my_portfolio/features/projects/widgets/project_widget.dart';
 
 class ProjectsMobile extends ConsumerWidget {
   const ProjectsMobile({super.key});

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/core/widgets/responsive_layout.dart';
+import 'package:my_portfolio/features/projects/views/projects_desktop.dart';
+import 'package:my_portfolio/features/projects/views/projects_mobile.dart';
 import 'package:my_portfolio/style/my_colors.dart';
-import 'package:my_portfolio/ui/projects_view/desktop/projects_desktop.dart';
-import 'package:my_portfolio/ui/projects_view/mobile/projects_mobile.dart';
 
 class ProjectsView extends StatefulWidget {
   const ProjectsView({super.key});
