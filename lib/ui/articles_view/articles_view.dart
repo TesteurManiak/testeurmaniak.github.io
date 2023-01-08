@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:my_portfolio/ui/articles_view/controller/articles_controller.dart';
 import 'package:my_portfolio/ui/articles_view/desktop/articles_desktop.dart';
 import 'package:my_portfolio/ui/articles_view/mobile/articles_mobile.dart';
 import 'package:my_portfolio/ui/common/responsive_layout.dart';
@@ -13,6 +14,14 @@ class ArticlesView extends ConsumerStatefulWidget {
 
 class _ArticlesViewState extends ConsumerState<ArticlesView>
     with AutomaticKeepAliveClientMixin {
+  late final _controller = ref.read(articleListControllerProvider.notifier);
+
+  @override
+  void initState() {
+    super.initState();
+    _controller.fetchArticles();
+  }
+
   @override
   Widget build(BuildContext context) {
     super.build(context);

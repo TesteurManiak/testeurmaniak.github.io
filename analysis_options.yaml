@@ -23,6 +23,7 @@ analyzer:
     unnecessary_null_aware_assignments: warning
     use_string_buffers: warning
     avoid_unnecessary_containers: warning
+    invalid_annotation_target: ignore
 
 linter:
   rules:

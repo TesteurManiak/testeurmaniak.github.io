@@ -1,31 +1,47 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:my_portfolio/core/client/http_client.dart';
+import 'package:my_portfolio/ui/articles_view/services/articles_service.dart';
+import 'package:webfeed/webfeed.dart';
 
-final _articlesFeedUri = Uri.parse(
-  'https://cors-anywhere.herokuapp.com/https://medium.com/feed/@rouxguillaume',
-);
+part 'articles_controller.freezed.dart';
 
 class ArticleListController extends StateNotifier<ArticleListState> {
-  ArticleListController(
-    super.value, {
-    required HttpClient httpClient,
-  }) : _httpClient = httpClient;
+  ArticleListController({
+    required ArticlesService articlesService,
+  })  : _articlesService = articlesService,
+        super(const ArticleListState.loading());
 
-  final HttpClient _httpClient;
+  final ArticlesService _articlesService;
 
   Future<void> fetchArticles() async {
-    final articles = await _httpClient.get(_articlesFeedUri);
+    state = const ArticleListState.loading();
+
+    final result = await _articlesService.fetchArticles();
+    result.map(
+      success: (success) {
+        state = ArticleListState.loaded(success.value);
+      },
+      failure: (failure) {
+        state = ArticleListState.error(failure.error.error ?? '');
+      },
+    );
   }
 }
 
-// final articleListControllerProvider =
-//     StateNotifierProvider<ArticleListController, ArticleListState>(
-//   (ref) {
-//     final httpClient = ref.watch(httpClientProvider);
-//     return ArticleListController();
-//   },
-// );
+final articleListControllerProvider =
+    StateNotifierProvider<ArticleListController, ArticleListState>(
+  (ref) {
+    final articlesService = ref.watch(articlesServiceProvider);
+
+    return ArticleListController(
+      articlesService: articlesService,
+    );
+  },
+);
 
 @freezed
-class ArticleListState {}
+class ArticleListState with _$ArticleListState {
+  const factory ArticleListState.loading() = _Loading;
+  const factory ArticleListState.loaded(List<RssItem> articles) = _Loaded;
+  const factory ArticleListState.error(String message) = _Error;
+}
