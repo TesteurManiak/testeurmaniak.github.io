@@ -12,7 +12,7 @@ class MessageField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isDesktop = ResponsiveLayout.isDesktop(context);
+    final isDesktop = ResponsiveLayoutBuilder.isDesktop(context);
     return MyInputField(
       hint: 'Type your message here',
       label: 'Message',

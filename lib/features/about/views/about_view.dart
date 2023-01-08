@@ -8,9 +8,9 @@ class AboutView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const ResponsiveLayout(
-      mobile: AboutMobile(),
-      desktop: AboutDesktop(),
+    return ResponsiveLayoutBuilder(
+      mobile: (_) => const AboutMobile(),
+      desktop: (_) => const AboutDesktop(),
     );
   }
 }

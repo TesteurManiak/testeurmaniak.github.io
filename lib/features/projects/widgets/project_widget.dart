@@ -12,7 +12,7 @@ class ProjectWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isDesktop = ResponsiveLayout.isDesktop(context);
+    final isDesktop = ResponsiveLayoutBuilder.isDesktop(context);
     final description = projectModel.description;
 
     return ClipRRect(

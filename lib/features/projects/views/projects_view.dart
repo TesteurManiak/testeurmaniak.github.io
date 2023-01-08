@@ -16,11 +16,11 @@ class _ProjectsViewState extends State<ProjectsView>
   @override
   Widget build(BuildContext context) {
     super.build(context);
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: MyColors.darkBlue,
-      body: ResponsiveLayout(
-        mobile: ProjectsMobile(),
-        desktop: ProjectsDesktop(),
+      body: ResponsiveLayoutBuilder(
+        mobile: (_) => const ProjectsMobile(),
+        desktop: (_) => const ProjectsDesktop(),
       ),
     );
   }

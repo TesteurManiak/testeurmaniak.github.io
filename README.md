@@ -9,6 +9,7 @@
 * Add animations
 * Complete localization in french
 * Add language switcher
+* Improve responsiveness
 
 ## Credits
 

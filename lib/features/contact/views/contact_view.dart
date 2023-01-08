@@ -51,14 +51,14 @@ class _ContactViewState extends State<ContactView>
     super.build(context);
     return Form(
       key: _formKey,
-      child: ResponsiveLayout(
-        mobile: ContactMobile(
+      child: ResponsiveLayoutBuilder(
+        mobile: (_) => ContactMobile(
           firstNameController: _firstNameController,
           lastNameController: _lastNameController,
           messageController: _messageController,
           submitForm: _validateForm,
         ),
-        desktop: ContactDesktop(
+        desktop: (_) => ContactDesktop(
           firstNameController: _firstNameController,
           lastNameController: _lastNameController,
           messageController: _messageController,

@@ -8,7 +8,7 @@ class SubmitButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isDesktop = ResponsiveLayout.isDesktop(context);
+    final isDesktop = ResponsiveLayoutBuilder.isDesktop(context);
     String label = 'Submit';
     if (!isDesktop) {
       label = label.toUpperCase();

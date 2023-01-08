@@ -15,9 +15,9 @@ class _HomeViewState extends State<HomeView>
   @override
   Widget build(BuildContext context) {
     super.build(context);
-    return const ResponsiveLayout(
-      mobile: HomeMobile(),
-      desktop: HomeDesktop(),
+    return ResponsiveLayoutBuilder(
+      mobile: (_) => const HomeMobile(),
+      desktop: (_) => const HomeDesktop(),
     );
   }
 

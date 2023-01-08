@@ -24,10 +24,10 @@ class _ArticlesViewState extends ConsumerState<ArticlesView>
   Widget build(BuildContext context) {
     super.build(context);
 
-    return const Scaffold(
-      body: ResponsiveLayout(
-        mobile: ArticlesMobile(),
-        desktop: ArticlesDesktop(),
+    return Scaffold(
+      body: ResponsiveLayoutBuilder(
+        mobile: (_) => const ArticlesMobile(),
+        desktop: (_) => const ArticlesDesktop(),
       ),
     );
   }

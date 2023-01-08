@@ -8,11 +8,11 @@ class RootView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const DefaultTabController(
+    return DefaultTabController(
       length: 5,
-      child: ResponsiveLayout(
-        mobile: RootMobile(),
-        desktop: RootDesktop(),
+      child: ResponsiveLayoutBuilder(
+        mobile: (_) => const RootMobile(),
+        desktop: (_) => const RootDesktop(),
       ),
     );
   }
