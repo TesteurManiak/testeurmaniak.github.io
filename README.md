@@ -7,6 +7,8 @@
 
 * Improve design for "Projects" section
 * Add animations
+* Add language switcher
+* Improve responsiveness
 
 ## Credits
 

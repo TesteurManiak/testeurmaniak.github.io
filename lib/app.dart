@@ -1,32 +1,39 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:my_portfolio/core/router.dart';
+import 'package:my_portfolio/features/localization/providers/app_localizations_providers.dart';
+import 'package:my_portfolio/l10n/app_localizations.dart';
+import 'package:my_portfolio/style/themes.dart';
 
-import 'core/router.dart';
-import 'style/themes.dart';
-
-class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  late final _router = routerGenerator();
+class MyApp extends ConsumerWidget {
+  const MyApp({super.key});
 
   @override
-  void dispose() {
-    _router.dispose();
-    super.dispose();
-  }
+  Widget build(BuildContext context, WidgetRef ref) {
+    final locale = ref.watch(appLocalizationsControllerProvider);
+    final supportedLocales = ref.watch(supportedLocalesProvider);
 
-  @override
-  Widget build(BuildContext context) {
     return MaterialApp.router(
       title: 'Guillaume Roux - Flutter Developer',
       theme: MyThemes.dark,
-      routerDelegate: _router.routerDelegate,
-      routeInformationParser: _router.routeInformationParser,
-      routeInformationProvider: _router.routeInformationProvider,
+      routerDelegate: router.routerDelegate,
+      routeInformationParser: router.routeInformationParser,
+      routeInformationProvider: router.routeInformationProvider,
+      localizationsDelegates: const [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      locale: locale,
+      supportedLocales: supportedLocales,
+      localeResolutionCallback: (locale, supportedLocales) {
+        return supportedLocales.firstWhere(
+          (l) => l.languageCode == locale?.languageCode,
+          orElse: () => supportedLocales.first,
+        );
+      },
     );
   }
 }

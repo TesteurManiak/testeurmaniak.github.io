@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'my_colors.dart';
+import 'package:my_portfolio/style/my_colors.dart';
 
 class MyThemes {
   static final _baseDark = ThemeData.dark();
@@ -8,6 +7,10 @@ class MyThemes {
 
   static ThemeData _buildDarkTheme() {
     final darkTheme = _baseDark.copyWith(
+      progressIndicatorTheme: _baseDark.progressIndicatorTheme.copyWith(
+        color: Colors.white,
+        circularTrackColor: MyColors.loaderBackground,
+      ),
       scaffoldBackgroundColor: MyColors.scaffold,
       appBarTheme: _baseDark.appBarTheme.copyWith(
         backgroundColor: Colors.transparent,
@@ -25,7 +28,7 @@ class MyThemes {
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          primary: MyColors.indicator,
+          backgroundColor: MyColors.indicator,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(60),
           ),
@@ -34,14 +37,14 @@ class MyThemes {
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
           side: const BorderSide(color: Colors.white),
-          primary: Colors.white,
+          foregroundColor: Colors.white,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(60),
           ),
         ),
       ),
       textButtonTheme: TextButtonThemeData(
-        style: TextButton.styleFrom(primary: MyColors.indicator),
+        style: TextButton.styleFrom(backgroundColor: MyColors.indicator),
       ),
       inputDecorationTheme: InputDecorationTheme(
         fillColor: MyColors.darkBlue,

@@ -1,0 +1,23 @@
+{
+    "@@locale": "en",
+    "home_tab": "Home",
+    "about_tab": "About",
+    "articles_tab": "Articles",
+    "projects_tab": "Projects",
+    "contact_tab": "Contact",
+    "home_header_hello": "Hello, I am",
+    "home_header_position": "Flutter Software Engineer",
+    "global_firstname": "Guillaume",
+    "global_lastname": "Roux",
+    "home_find_me_on": "Find me on",
+    "contact_me": "Contact me",
+    "portfolio": "Portfolio",
+    "about_section_title": "About me",
+    "about_section_description": "I've been using Flutter since September 2018. Since then I've been able to work on a lot of projects each with its own problematics. You will find on this website some applications made during my spare time and some made as part of my job as a mobile developer. You will also find some articles related to Dart and Flutter that I am writting on the site Medium.com and Dart/Flutter packages I have released on Pub.dev.",
+    "contact_section_title": "Let's get in touch!",
+    "contact_section_firstname": "First name",
+    "contact_section_lastname": "Last name",
+    "contact_section_message": "Message",
+    "contact_section_message_hint": "Type your message here",
+    "contact_section_send": "Send"
+}
