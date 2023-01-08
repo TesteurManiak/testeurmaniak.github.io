@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:seo_renderer/seo_renderer.dart';
+import 'package:flutter_html/flutter_html.dart';
 
 class ArticleDescription extends StatelessWidget {
   final String description;
@@ -8,15 +8,8 @@ class ArticleDescription extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    return TextRenderer(
-      text: description,
-      child: Text(
-        description,
-        overflow: TextOverflow.ellipsis,
-        style: theme.textTheme.subtitle2,
-        maxLines: 3,
-      ),
+    return Html(
+      data: description,
     );
   }
 }

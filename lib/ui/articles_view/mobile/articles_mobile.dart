@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/core/articles.dart';
-import 'package:my_portfolio/ui/articles_view/mobile/widgets/article_tile.dart';
 
 class ArticlesMobile extends StatefulWidget {
   const ArticlesMobile({Key? key}) : super(key: key);
@@ -27,9 +25,9 @@ class _ArticlesMobileState extends State<ArticlesMobile> {
         vertical: size.height * 0.05,
         horizontal: size.width * 0.05,
       ),
-      itemBuilder: (_, index) => ArticleTile(articles[index]),
+      itemBuilder: (_, index) => Container(),
       separatorBuilder: (_, __) => const Divider(),
-      itemCount: articles.length,
+      itemCount: 0,
     );
   }
 }
