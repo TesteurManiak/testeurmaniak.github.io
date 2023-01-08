@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/core/widgets/custom_tab.dart';
 import 'package:my_portfolio/features/about/views/about_view.dart';
 import 'package:my_portfolio/features/articles/views/articles_view.dart';
 import 'package:my_portfolio/features/root/widgets/credits_widget.dart';
+import 'package:my_portfolio/style/text_styles.dart';
 import 'package:my_portfolio/ui/contact_view/contact_view.dart';
 import 'package:my_portfolio/ui/home_view/home_view.dart';
 import 'package:my_portfolio/ui/projects_view/projects_view.dart';
@@ -66,14 +66,27 @@ class _CustomTabBar extends StatelessWidget {
           isScrollable: true,
           indicatorSize: TabBarIndicatorSize.tab,
           tabs: [
-            CustomTab(label: 'Home'),
-            CustomTab(label: 'About'),
-            CustomTab(label: 'Articles'),
-            CustomTab(label: 'Projects'),
-            CustomTab(label: 'Contact'),
+            _Tab(label: 'Home'),
+            _Tab(label: 'About'),
+            _Tab(label: 'Articles'),
+            _Tab(label: 'Projects'),
+            _Tab(label: 'Contact'),
           ],
         ),
       ),
+    );
+  }
+}
+
+class _Tab extends StatelessWidget {
+  final String label;
+
+  const _Tab({Key? key, required this.label}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Tab(
+      child: Text(label, style: TextStyles.tab),
     );
   }
 }
