@@ -33,7 +33,7 @@ class _RootViewState extends State<RootView>
   void initState() {
     super.initState();
     _tabController = TabController(
-      length: _navigationBloc.navigationElements.length,
+      length: 5,
       vsync: this,
       initialIndex: _navigationBloc.currentIndex.index,
     )..addListener(_tabListener);

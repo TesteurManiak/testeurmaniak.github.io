@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/bloc/bloc_provider.dart';
-import 'package:my_portfolio/bloc/navigation_bloc.dart';
 import 'package:my_portfolio/core/widgets/custom_tab_bar.dart';
+import 'package:my_portfolio/features/about/views/about_view.dart';
+import 'package:my_portfolio/features/articles/views/articles_view.dart';
 import 'package:my_portfolio/features/root/widgets/credits_widget.dart';
+import 'package:my_portfolio/ui/contact_view/contact_view.dart';
+import 'package:my_portfolio/ui/home_view/home_view.dart';
+import 'package:my_portfolio/ui/projects_view/projects_view.dart';
 
 class RootDesktop extends StatelessWidget {
   final TabController controller;
@@ -12,7 +15,7 @@ class RootDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    final navigationBloc = BlocProvider.of<NavigationBloc>(context);
+
     return Scaffold(
       body: Stack(
         children: [
@@ -28,9 +31,13 @@ class RootDesktop extends StatelessWidget {
                 child: TabBarView(
                   physics: const NeverScrollableScrollPhysics(),
                   controller: controller,
-                  children: navigationBloc.navigationElements
-                      .map<Widget>((e) => e.page)
-                      .toList(),
+                  children: const [
+                    HomeView(),
+                    AboutView(),
+                    ArticlesView(),
+                    ProjectsView(),
+                    ContactView(),
+                  ],
                 ),
               ),
             ],
