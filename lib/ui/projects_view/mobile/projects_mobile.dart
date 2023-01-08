@@ -1,28 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/core/projects.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:my_portfolio/core/sources/projects.dart';
 import 'package:my_portfolio/ui/projects_view/common/project_widget.dart';
 
-class ProjectsMobile extends StatefulWidget {
+class ProjectsMobile extends ConsumerWidget {
   const ProjectsMobile({super.key});
 
   @override
-  State<ProjectsMobile> createState() => _ProjectsMobileState();
-}
-
-class _ProjectsMobileState extends State<ProjectsMobile> {
-  final _scrollController = ScrollController();
-
-  @override
-  void dispose() {
-    _scrollController.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final size = MediaQuery.of(context).size;
+    final projects = ref.watch(projectsProvider);
+
     return ListView.separated(
-      controller: _scrollController,
+      addAutomaticKeepAlives: true,
       padding: EdgeInsets.symmetric(
         vertical: size.height * 0.05,
         horizontal: size.width * 0.05,

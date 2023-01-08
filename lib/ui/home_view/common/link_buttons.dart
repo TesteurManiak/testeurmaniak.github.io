@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/core/extensions/build_context_extensions.dart';
-import 'package:my_portfolio/models/link_data.dart';
+import 'package:my_portfolio/core/models/link_data.dart';
 import 'package:my_portfolio/style/text_styles.dart';
 import 'package:seo_renderer/seo_renderer.dart';
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/core/models/project_model.dart';
 import 'package:my_portfolio/core/widgets/blurred_image.dart';
 import 'package:my_portfolio/core/widgets/responsive_layout.dart';
-import 'package:my_portfolio/models/project_model.dart';
 import 'package:my_portfolio/style/text_styles.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 

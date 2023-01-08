@@ -1,7 +1,8 @@
-import 'package:my_portfolio/models/link_data.dart';
-import 'package:my_portfolio/models/project_model.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:my_portfolio/core/models/link_data.dart';
+import 'package:my_portfolio/core/models/project_model.dart';
 
-const projects = <ProjectModel>[
+const _projects = <ProjectModel>[
   ProjectModel(
     title: 'StrasApp',
     description: "Toute l'Eurométropole de Strasbourg dans une appli",
@@ -214,3 +215,5 @@ const projects = <ProjectModel>[
     imageBlurHash: 'LfNT?pTI%4wc-.jERjWsPEwOV?Sw',
   ),
 ];
+
+final projectsProvider = Provider<List<ProjectModel>>((ref) => _projects);
