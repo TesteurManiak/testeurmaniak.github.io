@@ -31,7 +31,7 @@ class ProfilePicture extends StatelessWidget {
               loadingBuilder: (_, child, progress) {
                 if (progress == null) return child;
 
-                return const _Placeholder();
+                return _Placeholder(imgSize);
               },
               fit: BoxFit.cover,
             ),
@@ -43,11 +43,15 @@ class ProfilePicture extends StatelessWidget {
 }
 
 class _Placeholder extends StatelessWidget {
-  const _Placeholder();
+  const _Placeholder(this.size);
+
+  final double size;
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: size,
+      height: size,
       decoration: const BoxDecoration(
         color: Colors.white,
         shape: BoxShape.circle,
