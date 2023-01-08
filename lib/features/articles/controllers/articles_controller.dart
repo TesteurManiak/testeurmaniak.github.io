@@ -17,6 +17,7 @@ class ArticleListController extends StateNotifier<ArticleListState> {
     state = const ArticleListState.loading();
 
     final result = await _articlesService.fetchArticles();
+
     result.map(
       success: (success) {
         state = ArticleListState.loaded(success.value);

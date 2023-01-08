@@ -7,6 +7,10 @@ class MyThemes {
 
   static ThemeData _buildDarkTheme() {
     final darkTheme = _baseDark.copyWith(
+      progressIndicatorTheme: _baseDark.progressIndicatorTheme.copyWith(
+        color: Colors.white,
+        circularTrackColor: MyColors.loaderBackground,
+      ),
       scaffoldBackgroundColor: MyColors.scaffold,
       appBarTheme: _baseDark.appBarTheme.copyWith(
         backgroundColor: Colors.transparent,
