@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/core/widgets/custom_tab_bar.dart';
+import 'package:my_portfolio/core/widgets/custom_tab.dart';
 import 'package:my_portfolio/features/about/views/about_view.dart';
 import 'package:my_portfolio/features/articles/views/articles_view.dart';
 import 'package:my_portfolio/features/root/widgets/credits_widget.dart';
@@ -8,9 +8,7 @@ import 'package:my_portfolio/ui/home_view/home_view.dart';
 import 'package:my_portfolio/ui/projects_view/projects_view.dart';
 
 class RootDesktop extends StatelessWidget {
-  final TabController controller;
-
-  const RootDesktop({Key? key, required this.controller}) : super(key: key);
+  const RootDesktop({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,13 +23,12 @@ class RootDesktop extends StatelessWidget {
             children: [
               SizedBox(
                 height: size.height * 0.05,
-                child: CustomTabBar(controller: controller),
+                child: const _CustomTabBar(),
               ),
-              Expanded(
+              const Expanded(
                 child: TabBarView(
-                  physics: const NeverScrollableScrollPhysics(),
-                  controller: controller,
-                  children: const [
+                  physics: NeverScrollableScrollPhysics(),
+                  children: [
                     HomeView(),
                     AboutView(),
                     ArticlesView(),
@@ -44,6 +41,38 @@ class RootDesktop extends StatelessWidget {
           ),
           const CreditsWidget(),
         ],
+      ),
+    );
+  }
+}
+
+class _CustomTabBar extends StatelessWidget {
+  const _CustomTabBar();
+
+  @override
+  Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    final currentTheme = Theme.of(context);
+
+    return Padding(
+      padding: EdgeInsets.only(right: size.width * 0.05),
+      child: Theme(
+        data: currentTheme.copyWith(
+          highlightColor: Colors.transparent,
+          splashColor: Colors.transparent,
+          hoverColor: Colors.transparent,
+        ),
+        child: const TabBar(
+          isScrollable: true,
+          indicatorSize: TabBarIndicatorSize.tab,
+          tabs: [
+            CustomTab(label: 'Home'),
+            CustomTab(label: 'About'),
+            CustomTab(label: 'Articles'),
+            CustomTab(label: 'Projects'),
+            CustomTab(label: 'Contact'),
+          ],
+        ),
       ),
     );
   }

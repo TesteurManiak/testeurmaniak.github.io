@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/bloc/bloc_provider.dart';
-import 'package:my_portfolio/bloc/navigation_bloc.dart';
 import 'package:my_portfolio/core/size_utils.dart';
 
 class MyButtons extends StatelessWidget {
@@ -9,7 +7,7 @@ class MyButtons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    final navigationBloc = BlocProvider.of<NavigationBloc>(context);
+
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
@@ -20,7 +18,7 @@ class MyButtons extends StatelessWidget {
               horizontal: paddingHorizontal(size.width),
             ),
           ),
-          onPressed: () => navigationBloc.goToPage(NavigationIndex.contact),
+          onPressed: () => DefaultTabController.of(context)?.animateTo(4),
           child: const Text('Contact me'),
         ),
         SizedBox(width: spacing(size.width)),
@@ -31,7 +29,7 @@ class MyButtons extends StatelessWidget {
               horizontal: paddingHorizontal(size.width),
             ),
           ),
-          onPressed: () => navigationBloc.goToPage(NavigationIndex.projects),
+          onPressed: () => DefaultTabController.of(context)?.animateTo(3),
           child: const Text('Portfolio'),
         ),
       ],
