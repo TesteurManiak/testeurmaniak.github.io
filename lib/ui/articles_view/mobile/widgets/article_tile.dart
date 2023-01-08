@@ -1,22 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/models/article_model.dart';
+import 'package:my_portfolio/core/models/rss_feed.dart';
 import 'package:my_portfolio/ui/articles_view/common/article_date.dart';
 import 'package:my_portfolio/ui/articles_view/common/article_description.dart';
 import 'package:seo_renderer/seo_renderer.dart';
-import 'package:url_launcher/url_launcher_string.dart';
 
 class ArticleTile extends StatelessWidget {
-  final ArticleModel article;
+  final RssItem article;
 
   const ArticleTile(this.article, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final title = article.title;
+    final description = article.description;
+    final date = article.pubDate;
 
     return InkWell(
       borderRadius: BorderRadius.circular(12),
-      onTap: () => launchUrlString(article.link.url),
+      onTap: article.launch,
       child: Padding(
         padding: const EdgeInsets.all(16),
         child: Row(
@@ -26,17 +28,18 @@ class ArticleTile extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  TextRenderer(
-                    text: article.title,
-                    child: Text(
-                      article.title,
-                      style: theme.textTheme.titleMedium,
+                  if (title != null)
+                    TextRenderer(
+                      text: article.title,
+                      child: Text(
+                        title,
+                        style: theme.textTheme.titleMedium,
+                      ),
                     ),
-                  ),
                   const SizedBox(height: 8),
-                  ArticleDescription(article.description),
+                  if (description != null) ArticleDescription(description),
                   const SizedBox(height: 8),
-                  ArticleDate(article.date),
+                  if (date != null) ArticleDate(date),
                 ],
               ),
             ),

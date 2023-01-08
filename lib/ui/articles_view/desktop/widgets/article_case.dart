@@ -3,7 +3,6 @@ import 'package:my_portfolio/core/models/rss_feed.dart';
 import 'package:my_portfolio/ui/articles_view/common/article_date.dart';
 import 'package:my_portfolio/ui/articles_view/common/article_description.dart';
 import 'package:seo_renderer/seo_renderer.dart';
-import 'package:url_launcher/url_launcher_string.dart';
 
 const _kSpacing = 16.0;
 
@@ -23,12 +22,7 @@ class ArticleCase extends StatelessWidget {
 
     return InkWell(
       borderRadius: BorderRadius.circular(12),
-      onTap: () {
-        final link = article.link;
-        if (link != null) {
-          launchUrlString(link);
-        }
-      },
+      onTap: article.launch,
       child: Container(
         padding: const EdgeInsets.all(16),
         constraints: BoxConstraints(maxWidth: widgetWidth),

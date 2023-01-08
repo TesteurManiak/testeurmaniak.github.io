@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 part 'rss_feed.freezed.dart';
 part 'rss_feed.g.dart';
@@ -7,7 +8,6 @@ part 'rss_feed.g.dart';
 class RssResponse with _$RssResponse {
   const factory RssResponse({
     @JsonKey(name: 'status') required String? status,
-    @JsonKey(name: 'feed') required RssFeed feed,
     @JsonKey(name: 'items') required List<RssItem>? items,
   }) = _RssResponse;
 
@@ -16,34 +16,25 @@ class RssResponse with _$RssResponse {
 }
 
 @freezed
-class RssFeed with _$RssFeed {
-  const factory RssFeed({
-    @JsonKey(name: 'url') required String? url,
-    @JsonKey(name: 'title') required String? title,
-    @JsonKey(name: 'link') required String? link,
-    @JsonKey(name: 'author') required String? author,
-    @JsonKey(name: 'description') required String? description,
-    required String? image,
-  }) = _RssFeed;
-
-  factory RssFeed.fromJson(Map<String, dynamic> json) =>
-      _$RssFeedFromJson(json);
-}
-
-@freezed
 class RssItem with _$RssItem {
   const factory RssItem({
     required String? title,
     @JsonKey(name: 'pubDate') required String? pubDate,
     required String? link,
-    required String? guid,
-    required String? author,
     required String? thumbnail,
     required String? description,
-    required String? content,
     required List<String>? categories,
   }) = _RssItem;
 
+  const RssItem._();
+
   factory RssItem.fromJson(Map<String, dynamic> json) =>
       _$RssItemFromJson(json);
+
+  Future<void> launch() async {
+    final localLink = link;
+    if (localLink != null) {
+      await launchUrlString(localLink);
+    }
+  }
 }
