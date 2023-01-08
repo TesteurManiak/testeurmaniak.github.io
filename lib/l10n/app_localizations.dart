@@ -164,6 +164,54 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Portfolio'**
   String get portfolio;
+
+  /// No description provided for @about_section_title.
+  ///
+  /// In en, this message translates to:
+  /// **'About me'**
+  String get about_section_title;
+
+  /// No description provided for @about_section_description.
+  ///
+  /// In en, this message translates to:
+  /// **'I\'ve been using Flutter since September 2018. Since then I\'ve been able to work on a lot of projects each with its own problematics. You will find on this website some applications made during my spare time and some made as part of my job as a mobile developer. You will also find some articles related to Dart and Flutter that I am writting on the site Medium.com and Dart/Flutter packages I have released on Pub.dev.'**
+  String get about_section_description;
+
+  /// No description provided for @contact_section_title.
+  ///
+  /// In en, this message translates to:
+  /// **'Let\'s get in touch!'**
+  String get contact_section_title;
+
+  /// No description provided for @contact_section_firstname.
+  ///
+  /// In en, this message translates to:
+  /// **'First name'**
+  String get contact_section_firstname;
+
+  /// No description provided for @contact_section_lastname.
+  ///
+  /// In en, this message translates to:
+  /// **'Last name'**
+  String get contact_section_lastname;
+
+  /// No description provided for @contact_section_message.
+  ///
+  /// In en, this message translates to:
+  /// **'Message'**
+  String get contact_section_message;
+
+  /// No description provided for @contact_section_message_hint.
+  ///
+  /// In en, this message translates to:
+  /// **'Type your message here'**
+  String get contact_section_message_hint;
+
+  /// No description provided for @contact_section_send.
+  ///
+  /// In en, this message translates to:
+  /// **'Send'**
+  String get contact_section_send;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

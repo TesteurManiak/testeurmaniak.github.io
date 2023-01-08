@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/core/extensions/build_context_extensions.dart';
 import 'package:my_portfolio/core/widgets/responsive_layout.dart';
 
 class SubmitButton extends StatelessWidget {
@@ -9,10 +10,11 @@ class SubmitButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDesktop = ResponsiveLayoutBuilder.isDesktop(context);
-    String label = 'Submit';
-    if (!isDesktop) {
-      label = label.toUpperCase();
-    }
+    final strings = context.strings;
+    final label = isDesktop
+        ? strings.contact_section_send
+        : strings.contact_section_send.toUpperCase();
+
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         padding:

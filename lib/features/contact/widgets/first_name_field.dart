@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/core/extensions/build_context_extensions.dart';
 import 'package:my_portfolio/features/contact/widgets/my_input_field.dart';
 
 class FirstNameField extends StatelessWidget {
@@ -10,7 +11,7 @@ class FirstNameField extends StatelessWidget {
   Widget build(BuildContext context) {
     return MyInputField(
       controller: controller,
-      label: 'First Name',
+      label: context.strings.contact_section_firstname,
       hint: 'John',
       required: true,
     );

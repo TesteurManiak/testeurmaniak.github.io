@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/core/extensions/build_context_extensions.dart';
 
 class ContactHeader extends StatelessWidget {
   const ContactHeader({super.key});
@@ -9,7 +10,7 @@ class ContactHeader extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 32),
       child: Text(
-        "Let's get in touch!",
+        context.strings.contact_section_title,
         style: theme.textTheme.headline3,
       ),
     );

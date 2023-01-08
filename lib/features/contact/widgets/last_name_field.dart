@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/core/extensions/build_context_extensions.dart';
 import 'package:my_portfolio/features/contact/widgets/my_input_field.dart';
 
 class LastNameField extends StatelessWidget {
@@ -13,7 +14,7 @@ class LastNameField extends StatelessWidget {
   Widget build(BuildContext context) {
     return MyInputField(
       controller: controller,
-      label: 'Last Name',
+      label: context.strings.contact_section_lastname,
       hint: 'Doe',
       required: true,
     );

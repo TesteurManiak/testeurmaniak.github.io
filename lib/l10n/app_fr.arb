@@ -11,5 +11,13 @@
     "global_lastname": "Roux",
     "home_find_me_on": "Vous pouvez me trouver sur",
     "contact_me": "Contactez-moi",
-    "portfolio": "Portfolio"
+    "portfolio": "Portfolio",
+    "about_section_title": "À propos de moi",
+    "about_section_description": "Je suis un développeur Flutter basé à Lyon. Je suis passionné par le développement mobile et j'aime créer des applications qui sont simples et efficaces. J'utilise la technologie Flutter depuis septembre 2018 et j'ai eu l'occasion de travailler sur de nombreux projets personnels et professionnels.",
+    "contact_section_title": "Entrons en contact !",
+    "contact_section_firstname": "Prénom",
+    "contact_section_lastname": "Nom",
+    "contact_section_message": "Message",
+    "contact_section_message_hint": "Votre message",
+    "contact_section_send": "Envoyer"
 }
