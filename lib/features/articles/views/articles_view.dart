@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:my_portfolio/ui/articles_view/controller/articles_controller.dart';
-import 'package:my_portfolio/ui/articles_view/desktop/articles_desktop.dart';
-import 'package:my_portfolio/ui/articles_view/mobile/articles_mobile.dart';
+import 'package:my_portfolio/features/articles/controllers/articles_controller.dart';
+import 'package:my_portfolio/features/articles/views/articles_desktop.dart';
+import 'package:my_portfolio/features/articles/views/articles_mobile.dart';
 import 'package:my_portfolio/ui/common/responsive_layout.dart';
 
 class ArticlesView extends ConsumerStatefulWidget {

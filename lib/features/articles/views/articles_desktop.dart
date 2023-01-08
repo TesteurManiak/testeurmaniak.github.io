@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:my_portfolio/ui/articles_view/controller/articles_controller.dart';
-import 'package:my_portfolio/ui/articles_view/desktop/widgets/article_case.dart';
+import 'package:my_portfolio/features/articles/controllers/articles_controller.dart';
+import 'package:my_portfolio/features/articles/widgets/article_case.dart';
 
 const _kSpacing = 12.0;
 

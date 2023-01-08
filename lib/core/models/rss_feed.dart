@@ -18,9 +18,9 @@ class RssResponse with _$RssResponse {
 @freezed
 class RssItem with _$RssItem {
   const factory RssItem({
-    required String? title,
+    @JsonKey(name: 'title') required String? title,
     @JsonKey(name: 'pubDate') required String? pubDate,
-    required String? link,
+    @JsonKey(name: 'link') required String? link,
     required String? thumbnail,
     required String? description,
     required List<String>? categories,

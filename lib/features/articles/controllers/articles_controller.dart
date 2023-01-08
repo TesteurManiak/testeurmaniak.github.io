@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:my_portfolio/core/models/rss_feed.dart';
-import 'package:my_portfolio/ui/articles_view/services/articles_service.dart';
+import 'package:my_portfolio/features/articles/services/articles_service.dart';
 
 part 'articles_controller.freezed.dart';
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/core/models/rss_feed.dart';
-import 'package:my_portfolio/ui/articles_view/common/article_date.dart';
-import 'package:my_portfolio/ui/articles_view/common/article_description.dart';
+import 'package:my_portfolio/features/articles/widgets/article_date.dart';
+import 'package:my_portfolio/features/articles/widgets/article_description.dart';
 import 'package:seo_renderer/seo_renderer.dart';
 
 const _kSpacing = 16.0;

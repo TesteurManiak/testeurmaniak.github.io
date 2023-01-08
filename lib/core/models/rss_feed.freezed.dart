@@ -196,9 +196,11 @@ RssItem _$RssItemFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$RssItem {
+  @JsonKey(name: 'title')
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: 'pubDate')
   String? get pubDate => throw _privateConstructorUsedError;
+  @JsonKey(name: 'link')
   String? get link => throw _privateConstructorUsedError;
   String? get thumbnail => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
@@ -215,9 +217,9 @@ abstract class $RssItemCopyWith<$Res> {
       _$RssItemCopyWithImpl<$Res, RssItem>;
   @useResult
   $Res call(
-      {String? title,
+      {@JsonKey(name: 'title') String? title,
       @JsonKey(name: 'pubDate') String? pubDate,
-      String? link,
+      @JsonKey(name: 'link') String? link,
       String? thumbnail,
       String? description,
       List<String>? categories});
@@ -280,9 +282,9 @@ abstract class _$$_RssItemCopyWith<$Res> implements $RssItemCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {String? title,
+      {@JsonKey(name: 'title') String? title,
       @JsonKey(name: 'pubDate') String? pubDate,
-      String? link,
+      @JsonKey(name: 'link') String? link,
       String? thumbnail,
       String? description,
       List<String>? categories});
@@ -338,9 +340,9 @@ class __$$_RssItemCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_RssItem extends _RssItem {
   const _$_RssItem(
-      {required this.title,
+      {@JsonKey(name: 'title') required this.title,
       @JsonKey(name: 'pubDate') required this.pubDate,
-      required this.link,
+      @JsonKey(name: 'link') required this.link,
       required this.thumbnail,
       required this.description,
       required final List<String>? categories})
@@ -351,11 +353,13 @@ class _$_RssItem extends _RssItem {
       _$$_RssItemFromJson(json);
 
   @override
+  @JsonKey(name: 'title')
   final String? title;
   @override
   @JsonKey(name: 'pubDate')
   final String? pubDate;
   @override
+  @JsonKey(name: 'link')
   final String? link;
   @override
   final String? thumbnail;
@@ -413,9 +417,9 @@ class _$_RssItem extends _RssItem {
 
 abstract class _RssItem extends RssItem {
   const factory _RssItem(
-      {required final String? title,
+      {@JsonKey(name: 'title') required final String? title,
       @JsonKey(name: 'pubDate') required final String? pubDate,
-      required final String? link,
+      @JsonKey(name: 'link') required final String? link,
       required final String? thumbnail,
       required final String? description,
       required final List<String>? categories}) = _$_RssItem;
@@ -424,11 +428,13 @@ abstract class _RssItem extends RssItem {
   factory _RssItem.fromJson(Map<String, dynamic> json) = _$_RssItem.fromJson;
 
   @override
+  @JsonKey(name: 'title')
   String? get title;
   @override
   @JsonKey(name: 'pubDate')
   String? get pubDate;
   @override
+  @JsonKey(name: 'link')
   String? get link;
   @override
   String? get thumbnail;
