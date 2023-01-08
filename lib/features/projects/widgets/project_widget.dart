@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/core/models/project_model.dart';
-import 'package:my_portfolio/core/widgets/blurred_image.dart';
 import 'package:my_portfolio/core/widgets/responsive_layout.dart';
 import 'package:my_portfolio/style/text_styles.dart';
+import 'package:shimmer/shimmer.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class ProjectWidget extends StatelessWidget {
@@ -14,24 +14,16 @@ class ProjectWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final isDesktop = ResponsiveLayoutBuilder.isDesktop(context);
     final description = projectModel.description;
+    final imageUrl = projectModel.imageUrl;
+    final iconUrl = projectModel.iconUrl;
 
     return ClipRRect(
       borderRadius: BorderRadius.circular(40),
       child: Stack(
         children: [
-          if (projectModel.hasImage)
+          if (imageUrl != null)
             Positioned.fill(
-              child: ColorFiltered(
-                colorFilter: ColorFilter.mode(
-                  Colors.black.withOpacity(0.1),
-                  BlendMode.dstATop,
-                ),
-                child: BlurredImage(
-                  imageUrl: projectModel.imageUrl!,
-                  blurHash: projectModel.imageBlurHash!,
-                  fit: BoxFit.cover,
-                ),
-              ),
+              child: _BackgroundImage(imageUrl),
             ),
           Container(
             padding: const EdgeInsets.all(16),
@@ -40,17 +32,12 @@ class ProjectWidget extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                if (projectModel.hasIcon)
+                if (iconUrl != null)
                   Padding(
                     padding: const EdgeInsets.only(bottom: 8.0),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(12),
-                      child: BlurredImage(
-                        imageUrl: projectModel.iconUrl!,
-                        blurHash: projectModel.iconBlurHash!,
-                        width: isDesktop ? 100 : 50,
-                        height: isDesktop ? 100 : 50,
-                      ),
+                    child: _AppIconImage(
+                      src: iconUrl,
+                      isDesktop: isDesktop,
                     ),
                   ),
                 Text(
@@ -84,6 +71,79 @@ class ProjectWidget extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+class _BackgroundImage extends StatelessWidget {
+  const _BackgroundImage(this.src);
+
+  final String src;
+
+  @override
+  Widget build(BuildContext context) {
+    return ColorFiltered(
+      colorFilter: ColorFilter.mode(
+        Colors.black.withOpacity(0.1),
+        BlendMode.dstATop,
+      ),
+      child: Image.network(
+        src,
+        loadingBuilder: (_, child, progress) {
+          if (progress == null) return child;
+
+          return const _Placeholder(size: double.maxFinite);
+        },
+        fit: BoxFit.cover,
+      ),
+    );
+  }
+}
+
+class _AppIconImage extends StatelessWidget {
+  const _AppIconImage({
+    required this.src,
+    required bool isDesktop,
+  }) : size = isDesktop ? 100 : 50;
+
+  final String src;
+  final double size;
+
+  @override
+  Widget build(BuildContext context) {
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(12),
+      child: Image.network(
+        src,
+        width: size,
+        height: size,
+        loadingBuilder: (_, child, loadingProgress) {
+          if (loadingProgress == null) return child;
+
+          return Shimmer.fromColors(
+            baseColor: Colors.grey[300]!,
+            highlightColor: Colors.grey[100]!,
+            child: _Placeholder(size: size),
+          );
+        },
+      ),
+    );
+  }
+}
+
+class _Placeholder extends StatelessWidget {
+  const _Placeholder({
+    this.size,
+  });
+
+  final double? size;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.white,
+      height: size,
+      width: size,
     );
   }
 }

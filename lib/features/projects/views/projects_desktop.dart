@@ -22,7 +22,7 @@ class ProjectsDesktop extends ConsumerWidget {
         crossAxisCount: 3,
       ),
       itemCount: projects.length,
-      itemBuilder: (context, index) => ProjectWidget(projects[index]),
+      itemBuilder: (_, index) => ProjectWidget(projects[index]),
     );
   }
 }
