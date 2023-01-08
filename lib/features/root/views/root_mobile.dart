@@ -6,14 +6,9 @@ import 'package:my_portfolio/ui/contact_view/contact_view.dart';
 import 'package:my_portfolio/ui/home_view/home_view.dart';
 import 'package:my_portfolio/ui/projects_view/projects_view.dart';
 
-class RootMobile extends StatefulWidget {
+class RootMobile extends StatelessWidget {
   const RootMobile({Key? key}) : super(key: key);
 
-  @override
-  State<RootMobile> createState() => _RootMobileState();
-}
-
-class _RootMobileState extends State<RootMobile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
