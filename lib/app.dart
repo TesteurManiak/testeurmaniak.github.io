@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:my_portfolio/core/router.dart';
-import 'package:my_portfolio/features/localization/controllers/localization_controller.dart';
+import 'package:my_portfolio/features/localization/providers/app_localizations_providers.dart';
+import 'package:my_portfolio/l10n/app_localizations.dart';
 import 'package:my_portfolio/style/themes.dart';
 
 class MyApp extends ConsumerWidget {
@@ -10,6 +11,7 @@ class MyApp extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final locale = ref.watch(appLocalizationsControllerProvider);
     final supportedLocales = ref.watch(supportedLocalesProvider);
 
     return MaterialApp.router(
@@ -19,11 +21,19 @@ class MyApp extends ConsumerWidget {
       routeInformationParser: router.routeInformationParser,
       routeInformationProvider: router.routeInformationProvider,
       localizationsDelegates: const [
+        AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
+      locale: locale,
       supportedLocales: supportedLocales,
+      localeResolutionCallback: (locale, supportedLocales) {
+        return supportedLocales.firstWhere(
+          (l) => l.languageCode == locale?.languageCode,
+          orElse: () => supportedLocales.first,
+        );
+      },
     );
   }
 }

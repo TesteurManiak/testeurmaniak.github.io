@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:my_portfolio/core/size_utils.dart';
 
-class MyButtons extends StatelessWidget {
+class MyButtons extends ConsumerWidget {
   const MyButtons({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final size = MediaQuery.of(context).size;
 
     return Row(
@@ -18,7 +19,9 @@ class MyButtons extends StatelessWidget {
               horizontal: paddingHorizontal(size.width),
             ),
           ),
-          onPressed: () => DefaultTabController.of(context)?.animateTo(4),
+          onPressed: () {
+            DefaultTabController.of(context)?.animateTo(4);
+          },
           child: const Text('Contact me'),
         ),
         SizedBox(width: spacing(size.width)),

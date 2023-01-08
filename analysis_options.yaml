@@ -6,6 +6,7 @@ analyzer:
     - test/**.mocks.dart
     - lib/generated_plugin_registrant.dart
     - lib/**/my_portfolio_icons.dart
+    - lib/l10n/**.dart
   strong-mode:
     implicit-casts: false
   errors:

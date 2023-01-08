@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/core/extensions/build_context_extensions.dart';
 import 'package:my_portfolio/features/about/views/about_view.dart';
 import 'package:my_portfolio/features/articles/views/articles_view.dart';
 import 'package:my_portfolio/features/root/widgets/credits_widget.dart';
@@ -53,6 +54,7 @@ class _CustomTabBar extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     final currentTheme = Theme.of(context);
+    final strings = context.strings;
 
     return Padding(
       padding: EdgeInsets.only(right: size.width * 0.05),
@@ -62,15 +64,15 @@ class _CustomTabBar extends StatelessWidget {
           splashColor: Colors.transparent,
           hoverColor: Colors.transparent,
         ),
-        child: const TabBar(
+        child: TabBar(
           isScrollable: true,
           indicatorSize: TabBarIndicatorSize.tab,
           tabs: [
-            _Tab(label: 'Home'),
-            _Tab(label: 'About'),
-            _Tab(label: 'Articles'),
-            _Tab(label: 'Projects'),
-            _Tab(label: 'Contact'),
+            _Tab(label: strings.home_tab),
+            _Tab(label: strings.about_tab),
+            _Tab(label: strings.articles_tab),
+            _Tab(label: strings.projects_tab),
+            _Tab(label: strings.contact_tab),
           ],
         ),
       ),
