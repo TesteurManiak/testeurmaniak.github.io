@@ -11,7 +11,7 @@ class ArticleDate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final dateFormatter = DateFormat.yMMMMd(context.locale.languageCode);
+    final dateFormatter = DateFormat.yMMMMd(context.localeCode);
     final formattedDate = dateFormatter.format(date);
 
     return TextRenderer(

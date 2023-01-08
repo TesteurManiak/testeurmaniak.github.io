@@ -5,4 +5,6 @@ extension BuildContextExtensions on BuildContext {
   AppLocalizations get strings => AppLocalizations.of(this);
 
   Locale get locale => Localizations.localeOf(this);
+
+  String get localeCode => locale.languageCode;
 }
