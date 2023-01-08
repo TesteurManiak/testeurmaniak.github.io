@@ -2,6 +2,7 @@ import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:my_portfolio/core/extensions/iterable_extensions.dart';
 import 'package:my_portfolio/l10n/app_localizations.dart';
 
 class AppLocalizationsController extends StateNotifier<Locale> {
@@ -12,10 +13,7 @@ class AppLocalizationsController extends StateNotifier<Locale> {
   final List<Locale> supportedLocales;
 
   void setLocale(Locale locale) {
-    state = supportedLocales.firstWhere(
-      (l) => l.languageCode == locale.languageCode,
-      orElse: () => supportedLocales.first,
-    );
+    state = supportedLocales.firstMatch(locale);
   }
 }
 

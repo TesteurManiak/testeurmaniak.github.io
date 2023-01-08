@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/core/models/rss_feed.dart';
+import 'package:my_portfolio/core/widgets/separated_column.dart';
 import 'package:my_portfolio/features/articles/widgets/article_date.dart';
 import 'package:my_portfolio/features/articles/widgets/article_image.dart';
 import 'package:seo_renderer/seo_renderer.dart';
-
-const _kSpacing = 16.0;
 
 class ArticleCase extends StatelessWidget {
   const ArticleCase({
@@ -30,9 +29,10 @@ class ArticleCase extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(16),
         constraints: BoxConstraints(maxWidth: widgetWidth),
-        child: Column(
+        child: SeparatedColumn(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
+          separator: const SizedBox(height: 16),
           children: [
             if (title != null)
               TextRenderer(
@@ -42,12 +42,10 @@ class ArticleCase extends StatelessWidget {
                   style: theme.textTheme.titleLarge,
                 ),
               ),
-            const SizedBox(height: _kSpacing),
             if (thumbnail != null)
               Expanded(
                 child: ArticleImage(src: thumbnail),
               ),
-            const SizedBox(height: _kSpacing * 2),
             if (date != null) ArticleDate(date),
           ],
         ),

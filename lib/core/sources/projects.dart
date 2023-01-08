@@ -17,8 +17,6 @@ const _projects = <ProjectModel>[
         'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/projects/strasapp.png',
     iconUrl:
         'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/icons/strasapp.png',
-    imageBlurHash: r'LFJv~C0c0zRQ7X}HI:J60f=|$ixF',
-    iconBlurHash: 'LBD.zWqG00,IqruzNs9a00xs~VI:',
   ),
   ProjectModel(
     title: 'MyUCA - Université Clermont Auvergne',
@@ -34,8 +32,6 @@ const _projects = <ProjectModel>[
         'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/projects/myuca.png',
     iconUrl:
         'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/icons/myuca.png',
-    imageBlurHash: 'L3GAj}3WKfMI00_2tmDi8wIB_M#R',
-    iconBlurHash: 'LnKVQ[kC~Wj[ozayaeof-;jt%2ay',
   ),
   ProjectModel(
     title: 'M - Infos voyageur, Mobilités à Grenoble',
@@ -53,8 +49,6 @@ const _projects = <ProjectModel>[
         'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/projects/m.png',
     iconUrl:
         'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/icons/m.png',
-    imageBlurHash: r'LYL|$i?Kxt4n-;M{tQjw%4Injbxu',
-    iconBlurHash: r'LpO|X^X8~qn%s:WXWVoI~qn$IUj[',
   ),
   ProjectModel(
     title: 'My Manga Collection',
@@ -71,8 +65,6 @@ const _projects = <ProjectModel>[
         'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/projects/manga.png',
     iconUrl:
         'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/icons/manga.png',
-    imageBlurHash: 'LDFFEU~CR6In^5Z~X8o~00w[adM}',
-    iconBlurHash: r'LEHpJftS0Eo$p1ocxTj?0Daw~Qad',
   ),
   ProjectModel(
     title: 'icon_decoration',
@@ -121,7 +113,6 @@ const _projects = <ProjectModel>[
     ],
     imageUrl:
         'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/projects/ygo_collection_manager.png',
-    imageBlurHash: 'L3EoiN3N00,]00V~?]ng00%3RNNa',
   ),
   ProjectModel(
     title: 'Maniak Game Deals',
@@ -136,7 +127,6 @@ const _projects = <ProjectModel>[
     ],
     imageUrl:
         'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/projects/game_deals.png',
-    imageBlurHash: 'LKOg4*n,~pkraLxZ-;X9Rjs9V@s,',
   ),
   ProjectModel(
     title: 'twitch_api_flutter',
@@ -167,7 +157,6 @@ const _projects = <ProjectModel>[
     ],
     imageUrl:
         'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/projects/drinking.png',
-    imageBlurHash: r'L7O4F.3E00?t02+a~JS$00$%,vIA',
   ),
   ProjectModel(
     title: 'ToDoList Flutter',
@@ -181,7 +170,6 @@ const _projects = <ProjectModel>[
     ],
     imageUrl:
         'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/projects/todo.png',
-    imageBlurHash: 'LMD8@H:NNZKk}uwaWBSi5~EUs;xT',
   ),
   ProjectModel(
     title: 'Temopedia',
@@ -195,7 +183,6 @@ const _projects = <ProjectModel>[
     ],
     imageUrl:
         'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/projects/temopedia.png',
-    imageBlurHash: 'L17x8zD;9b00DQaxE3-mHXbVAIui',
   ),
   ProjectModel(
     title: 'Photo UI Challenge',
@@ -204,7 +191,6 @@ const _projects = <ProjectModel>[
     links: [LinkData.gitlab('https://gitlab.com/G_Roux/photo-ui-challenge')],
     imageUrl:
         'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/projects/ui_chall.png',
-    imageBlurHash: 'L4Lgksns00^P00~B00E#00E9_L9D',
   ),
   ProjectModel(
     title: 'Flutter Pokedex',
@@ -212,7 +198,6 @@ const _projects = <ProjectModel>[
     links: [LinkData.gitlab('https://gitlab.com/G_Roux/flutter_pokedex')],
     imageUrl:
         'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/projects/pokedex.png',
-    imageBlurHash: 'LfNT?pTI%4wc-.jERjWsPEwOV?Sw',
   ),
 ];
 

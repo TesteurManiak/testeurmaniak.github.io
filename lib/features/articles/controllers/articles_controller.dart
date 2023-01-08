@@ -1,11 +1,13 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:my_portfolio/core/loadable.dart';
 import 'package:my_portfolio/core/models/rss_feed.dart';
 import 'package:my_portfolio/features/articles/services/articles_service.dart';
 
 part 'articles_controller.freezed.dart';
 
-class ArticleListController extends StateNotifier<ArticleListState> {
+class ArticleListController extends StateNotifier<ArticleListState>
+    with Loadable {
   ArticleListController({
     required ArticlesService articlesService,
   })  : _articlesService = articlesService,
@@ -13,7 +15,8 @@ class ArticleListController extends StateNotifier<ArticleListState> {
 
   final ArticlesService _articlesService;
 
-  Future<void> fetchArticles() async {
+  @override
+  Future<void> load() async {
     state = const ArticleListState.loading();
 
     final result = await _articlesService.fetchArticles();
