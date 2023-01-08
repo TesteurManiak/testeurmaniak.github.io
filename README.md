@@ -7,7 +7,6 @@
 
 * Improve design for "Projects" section
 * Add animations
-* Complete localization in french
 * Add language switcher
 * Improve responsiveness
 

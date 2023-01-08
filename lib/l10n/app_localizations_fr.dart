@@ -47,7 +47,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get about_section_description => 'Je suis un développeur Flutter basé à Lyon. Je suis passionné par le développement mobile et j\'aime créer des applications qui sont simples et efficaces. J\'utilise la technologie Flutter depuis septembre 2018 et j\'ai eu l\'occasion de travailler sur de nombreux projets personnels et professionnels.';
 
   @override
-  String get contact_section_title => 'Entrons en contact !';
+  String get contact_section_title => 'Restons en contact !';
 
   @override
   String get contact_section_firstname => 'Prénom';
