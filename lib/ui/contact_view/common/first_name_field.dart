@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'my_input_field.dart';
+import 'package:my_portfolio/ui/contact_view/common/my_input_field.dart';
 
 class FirstNameField extends StatelessWidget {
   final TextEditingController controller;

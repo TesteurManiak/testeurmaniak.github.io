@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/core/size_utils.dart';
+import 'package:my_portfolio/style/my_colors.dart';
+import 'package:my_portfolio/style/text_styles.dart';
 import 'package:seo_renderer/seo_renderer.dart';
 import 'package:url_launcher/url_launcher_string.dart';
-
-import '../../../core/size_utils.dart';
-import '../../../style/my_colors.dart';
-import '../../../style/text_styles.dart';
 
 const _kTitle = 'About me';
 const _kAboutMe =

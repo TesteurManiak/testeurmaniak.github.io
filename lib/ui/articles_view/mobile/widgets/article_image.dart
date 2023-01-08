@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../../about_view/common/blurred_image.dart';
+import 'package:my_portfolio/ui/about_view/common/blurred_image.dart';
 
 class ArticleImage extends StatelessWidget {
   final String imageUrl;

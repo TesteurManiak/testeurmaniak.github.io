@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-
-import '../common/responsive_layout.dart';
-import 'desktop/about_desktop.dart';
-import 'mobile/about_mobile.dart';
+import 'package:my_portfolio/ui/about_view/desktop/about_desktop.dart';
+import 'package:my_portfolio/ui/about_view/mobile/about_mobile.dart';
+import 'package:my_portfolio/ui/common/responsive_layout.dart';
 
 class AboutView extends StatelessWidget {
   const AboutView({Key? key}) : super(key: key);

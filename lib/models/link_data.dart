@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/core/icons/my_portfolio_icons.dart';
 import 'package:url_launcher/url_launcher_string.dart';
-
-import '../core/icons/my_portfolio_icons.dart';
 
 @immutable
 class LinkData {

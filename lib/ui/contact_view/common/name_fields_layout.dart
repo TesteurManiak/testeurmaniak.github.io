@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
-import 'first_name_field.dart';
-import 'last_name_field.dart';
+import 'package:my_portfolio/ui/contact_view/common/first_name_field.dart';
+import 'package:my_portfolio/ui/contact_view/common/last_name_field.dart';
 
 class NameFieldsLayout extends StatelessWidget {
   final TextEditingController firstNameController;

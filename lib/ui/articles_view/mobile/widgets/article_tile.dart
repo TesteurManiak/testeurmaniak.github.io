@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/models/article_model.dart';
+import 'package:my_portfolio/ui/articles_view/common/article_date.dart';
+import 'package:my_portfolio/ui/articles_view/common/article_description.dart';
+import 'package:my_portfolio/ui/articles_view/mobile/widgets/article_image.dart';
 import 'package:seo_renderer/seo_renderer.dart';
 import 'package:url_launcher/url_launcher_string.dart';
-
-import '../../../../models/article_model.dart';
-import '../../common/article_date.dart';
-import '../../common/article_description.dart';
-import 'article_image.dart';
 
 class ArticleTile extends StatelessWidget {
   final ArticleModel article;

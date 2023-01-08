@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-
-import '../../../bloc/bloc_provider.dart';
-import '../../../bloc/navigation_bloc.dart';
-import '../../../core/size_utils.dart';
+import 'package:my_portfolio/bloc/bloc_provider.dart';
+import 'package:my_portfolio/bloc/navigation_bloc.dart';
+import 'package:my_portfolio/core/size_utils.dart';
 
 class MyButtons extends StatelessWidget {
   const MyButtons({Key? key}) : super(key: key);

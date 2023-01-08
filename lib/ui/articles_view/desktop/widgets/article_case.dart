@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/models/article_model.dart';
+import 'package:my_portfolio/ui/about_view/common/blurred_image.dart';
+import 'package:my_portfolio/ui/articles_view/common/article_date.dart';
+import 'package:my_portfolio/ui/articles_view/common/article_description.dart';
 import 'package:seo_renderer/seo_renderer.dart';
 import 'package:url_launcher/url_launcher_string.dart';
-
-import '../../../../models/article_model.dart';
-import '../../../about_view/common/blurred_image.dart';
-import '../../common/article_date.dart';
-import '../../common/article_description.dart';
 
 const _kSpacing = 16.0;
 

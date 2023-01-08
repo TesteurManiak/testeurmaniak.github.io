@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-
-import '../common/responsive_layout.dart';
-import 'desktop/home_desktop.dart';
-import 'mobile/home_mobile.dart';
+import 'package:my_portfolio/ui/common/responsive_layout.dart';
+import 'package:my_portfolio/ui/home_view/desktop/home_desktop.dart';
+import 'package:my_portfolio/ui/home_view/mobile/home_mobile.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({Key? key}) : super(key: key);

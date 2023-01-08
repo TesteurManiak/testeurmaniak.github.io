@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../style/text_styles.dart';
+import 'package:my_portfolio/style/text_styles.dart';
 
 class CustomTab extends StatelessWidget {
   final String label;

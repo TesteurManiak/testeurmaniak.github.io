@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/models/project_model.dart';
+import 'package:my_portfolio/style/text_styles.dart';
+import 'package:my_portfolio/ui/about_view/common/blurred_image.dart';
+import 'package:my_portfolio/ui/common/responsive_layout.dart';
 import 'package:url_launcher/url_launcher_string.dart';
-
-import '../../../models/project_model.dart';
-import '../../../style/text_styles.dart';
-import '../../about_view/common/blurred_image.dart';
-import '../../common/responsive_layout.dart';
 
 class ProjectWidget extends StatelessWidget {
   final ProjectModel projectModel;

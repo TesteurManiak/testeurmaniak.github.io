@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
-import '../../../core/articles.dart';
-import 'widgets/article_tile.dart';
+import 'package:my_portfolio/core/articles.dart';
+import 'package:my_portfolio/ui/articles_view/mobile/widgets/article_tile.dart';
 
 class ArticlesMobile extends StatefulWidget {
   const ArticlesMobile({Key? key}) : super(key: key);

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
-import '../../../core/projects.dart';
-import '../common/project_widget.dart';
+import 'package:my_portfolio/core/projects.dart';
+import 'package:my_portfolio/ui/projects_view/common/project_widget.dart';
 
 class ProjectsMobile extends StatefulWidget {
   const ProjectsMobile({Key? key}) : super(key: key);

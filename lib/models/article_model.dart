@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'link_data.dart';
+import 'package:my_portfolio/models/link_data.dart';
 
 @immutable
 class ArticleModel {

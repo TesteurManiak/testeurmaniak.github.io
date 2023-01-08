@@ -26,6 +26,7 @@ analyzer:
 
 linter:
   rules:
+    - always_use_package_imports
     - always_declare_return_types
     - avoid_bool_literals_in_conditional_expressions
     - avoid_escaping_inner_quotes
@@ -36,7 +37,6 @@ linter:
     - use_is_even_rather_than_modulo
     - use_named_constants
     - use_to_and_as_if_applicable
-    - prefer_relative_imports
     - avoid_unused_constructor_parameters
     - sort_child_properties_last
     - directives_ordering

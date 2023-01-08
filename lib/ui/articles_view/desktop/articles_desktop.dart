@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
-import '../../../core/articles.dart';
-import 'widgets/article_case.dart';
+import 'package:my_portfolio/core/articles.dart';
+import 'package:my_portfolio/ui/articles_view/desktop/widgets/article_case.dart';
 
 const _kSpacing = 12.0;
 

@@ -1,5 +1,5 @@
-import '../models/link_data.dart';
-import '../models/project_model.dart';
+import 'package:my_portfolio/models/link_data.dart';
+import 'package:my_portfolio/models/project_model.dart';
 
 const projects = <ProjectModel>[
   ProjectModel(

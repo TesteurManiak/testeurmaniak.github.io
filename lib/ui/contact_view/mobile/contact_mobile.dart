@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-
-import '../common/contact_header.dart';
-import '../common/message_field.dart';
-import '../common/name_fields_layout.dart';
-import '../common/submit_button.dart';
+import 'package:my_portfolio/ui/contact_view/common/contact_header.dart';
+import 'package:my_portfolio/ui/contact_view/common/message_field.dart';
+import 'package:my_portfolio/ui/contact_view/common/name_fields_layout.dart';
+import 'package:my_portfolio/ui/contact_view/common/submit_button.dart';
 
 class ContactMobile extends StatelessWidget {
   final TextEditingController firstNameController;

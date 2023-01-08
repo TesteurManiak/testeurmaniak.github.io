@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../common/responsive_layout.dart';
+import 'package:my_portfolio/ui/common/responsive_layout.dart';
 
 class SubmitButton extends StatelessWidget {
   final VoidCallback onPressed;

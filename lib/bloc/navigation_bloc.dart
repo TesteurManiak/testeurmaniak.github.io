@@ -1,14 +1,13 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/bloc/bloc.dart';
+import 'package:my_portfolio/ui/about_view/about_view.dart';
+import 'package:my_portfolio/ui/articles_view/articles_view.dart';
+import 'package:my_portfolio/ui/contact_view/contact_view.dart';
+import 'package:my_portfolio/ui/home_view/home_view.dart';
+import 'package:my_portfolio/ui/projects_view/projects_view.dart';
 import 'package:rxdart/rxdart.dart';
-
-import '../ui/about_view/about_view.dart';
-import '../ui/articles_view/articles_view.dart';
-import '../ui/contact_view/contact_view.dart';
-import '../ui/home_view/home_view.dart';
-import '../ui/projects_view/projects_view.dart';
-import 'bloc.dart';
 
 enum NavigationIndex { home, about, articles, projects, contact }
 

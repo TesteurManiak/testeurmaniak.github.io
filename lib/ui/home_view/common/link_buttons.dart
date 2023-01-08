@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/models/link_data.dart';
+import 'package:my_portfolio/style/text_styles.dart';
 import 'package:seo_renderer/seo_renderer.dart';
-
-import '../../../models/link_data.dart';
-import '../../../style/text_styles.dart';
 
 const _links = <LinkData>[
   LinkData.medium('https://rouxguillaume.medium.com/'),

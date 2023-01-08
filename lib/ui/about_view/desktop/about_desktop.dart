@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../common/about_section.dart';
+import 'package:my_portfolio/ui/about_view/common/about_section.dart';
 
 class AboutDesktop extends StatelessWidget {
   const AboutDesktop({Key? key}) : super(key: key);

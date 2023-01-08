@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-
-import '../common/header_widget.dart';
-import '../common/link_buttons.dart';
-import '../common/my_buttons.dart';
-import '../common/profile_picture.dart';
+import 'package:my_portfolio/ui/home_view/common/header_widget.dart';
+import 'package:my_portfolio/ui/home_view/common/link_buttons.dart';
+import 'package:my_portfolio/ui/home_view/common/my_buttons.dart';
+import 'package:my_portfolio/ui/home_view/common/profile_picture.dart';
 
 class HomeDesktop extends StatelessWidget {
   const HomeDesktop({Key? key}) : super(key: key);

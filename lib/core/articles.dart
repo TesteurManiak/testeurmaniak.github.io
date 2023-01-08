@@ -1,5 +1,5 @@
-import '../models/article_model.dart';
-import '../models/link_data.dart';
+import 'package:my_portfolio/models/article_model.dart';
+import 'package:my_portfolio/models/link_data.dart';
 
 const articles = <ArticleModel>[
   ArticleModel(

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-
-import '../../bloc/bloc_provider.dart';
-import '../../bloc/navigation_bloc.dart';
-import 'custom_tab.dart';
+import 'package:my_portfolio/bloc/bloc_provider.dart';
+import 'package:my_portfolio/bloc/navigation_bloc.dart';
+import 'package:my_portfolio/ui/common/custom_tab.dart';
 
 class CustomTabBar extends StatelessWidget {
   final TabController controller;
