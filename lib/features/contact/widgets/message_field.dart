@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/core/widgets/responsive_layout.dart';
-import 'package:my_portfolio/ui/contact_view/common/my_input_field.dart';
+import 'package:my_portfolio/features/contact/widgets/my_input_field.dart';
 
 class MessageField extends StatelessWidget {
   const MessageField({

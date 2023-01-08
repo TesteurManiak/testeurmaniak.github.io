@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/ui/home_view/common/header_widget.dart';
-import 'package:my_portfolio/ui/home_view/common/link_buttons.dart';
-import 'package:my_portfolio/ui/home_view/common/my_buttons.dart';
-import 'package:my_portfolio/ui/home_view/common/profile_picture.dart';
+import 'package:my_portfolio/features/home/widgets/header_widget.dart';
+import 'package:my_portfolio/features/home/widgets/link_buttons.dart';
+import 'package:my_portfolio/features/home/widgets/my_buttons.dart';
+import 'package:my_portfolio/features/home/widgets/profile_picture.dart';
 
 class HomeMobile extends StatelessWidget {
   const HomeMobile({super.key});

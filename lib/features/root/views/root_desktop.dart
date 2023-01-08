@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:my_portfolio/core/extensions/build_context_extensions.dart';
 import 'package:my_portfolio/features/about/views/about_view.dart';
 import 'package:my_portfolio/features/articles/views/articles_view.dart';
+import 'package:my_portfolio/features/contact/views/contact_view.dart';
+import 'package:my_portfolio/features/home/views/home_view.dart';
 import 'package:my_portfolio/features/root/widgets/credits_widget.dart';
 import 'package:my_portfolio/style/text_styles.dart';
-import 'package:my_portfolio/ui/contact_view/contact_view.dart';
-import 'package:my_portfolio/ui/home_view/home_view.dart';
 import 'package:my_portfolio/ui/projects_view/projects_view.dart';
 
 class RootDesktop extends StatelessWidget {

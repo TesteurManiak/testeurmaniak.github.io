@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/ui/contact_view/common/my_input_field.dart';
+import 'package:my_portfolio/features/contact/widgets/my_input_field.dart';
 
 class LastNameField extends StatelessWidget {
   const LastNameField({
