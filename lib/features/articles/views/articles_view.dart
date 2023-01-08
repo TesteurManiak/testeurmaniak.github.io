@@ -6,7 +6,7 @@ import 'package:my_portfolio/features/articles/views/articles_desktop.dart';
 import 'package:my_portfolio/features/articles/views/articles_mobile.dart';
 
 class ArticlesView extends ConsumerStatefulWidget {
-  const ArticlesView({Key? key}) : super(key: key);
+  const ArticlesView({super.key});
 
   @override
   ConsumerState<ArticlesView> createState() => _ArticlesViewState();

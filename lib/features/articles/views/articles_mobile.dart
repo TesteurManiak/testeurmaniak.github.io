@@ -6,7 +6,7 @@ import 'package:my_portfolio/features/articles/widgets/articles_error.dart';
 import 'package:my_portfolio/features/articles/widgets/articles_loading_indicator.dart';
 
 class ArticlesMobile extends ConsumerStatefulWidget {
-  const ArticlesMobile({Key? key}) : super(key: key);
+  const ArticlesMobile({super.key});
 
   @override
   ConsumerState<ArticlesMobile> createState() => _ArticlesMobileState();

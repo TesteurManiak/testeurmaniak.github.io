@@ -3,17 +3,6 @@ import 'package:my_portfolio/models/link_data.dart';
 
 @immutable
 class ProjectModel {
-  final String title;
-  final String? description;
-  final List<LinkData> links;
-  final String? imageUrl;
-  final String? iconUrl;
-  final String? imageBlurHash;
-  final String? iconBlurHash;
-
-  bool get hasImage => imageUrl != null && imageBlurHash != null;
-  bool get hasIcon => iconUrl != null && iconBlurHash != null;
-
   const ProjectModel({
     required this.title,
     required this.links,
@@ -30,4 +19,15 @@ class ProjectModel {
           (iconUrl != null && iconBlurHash != null) || iconUrl == null,
           'You must provide both an iconAsset and an iconBlurHash',
         );
+
+  final String title;
+  final String? description;
+  final List<LinkData> links;
+  final String? imageUrl;
+  final String? iconUrl;
+  final String? imageBlurHash;
+  final String? iconBlurHash;
+
+  bool get hasImage => imageUrl != null && imageBlurHash != null;
+  bool get hasIcon => iconUrl != null && iconBlurHash != null;
 }

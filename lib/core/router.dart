@@ -27,6 +27,7 @@ final router = GoRouter(
 enum AppRoute {
   home('/');
 
-  final String path;
   const AppRoute(this.path);
+
+  final String path;
 }

@@ -6,9 +6,9 @@ import 'package:my_portfolio/style/text_styles.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class ProjectWidget extends StatelessWidget {
-  final ProjectModel projectModel;
+  const ProjectWidget(this.projectModel, {super.key});
 
-  const ProjectWidget(this.projectModel, {Key? key}) : super(key: key);
+  final ProjectModel projectModel;
 
   @override
   Widget build(BuildContext context) {

@@ -1,16 +1,8 @@
 import 'package:flutter/material.dart';
 
 class MyInputField extends StatelessWidget {
-  final String? label;
-  final String? hint;
-  final bool required;
-  final TextInputType? keyboardType;
-  final int? maxLines;
-  final FormFieldValidator<String>? validator;
-  final TextEditingController? controller;
-
   const MyInputField({
-    Key? key,
+    super.key,
     this.label,
     this.hint,
     this.keyboardType,
@@ -18,7 +10,15 @@ class MyInputField extends StatelessWidget {
     this.maxLines,
     this.validator,
     this.controller,
-  }) : super(key: key);
+  });
+
+  final String? label;
+  final String? hint;
+  final bool required;
+  final TextInputType? keyboardType;
+  final int? maxLines;
+  final FormFieldValidator<String>? validator;
+  final TextEditingController? controller;
 
   @override
   Widget build(BuildContext context) {

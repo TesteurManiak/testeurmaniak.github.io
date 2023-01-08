@@ -4,7 +4,7 @@ import 'package:my_portfolio/core/widgets/responsive_layout.dart';
 import 'package:my_portfolio/style/my_colors.dart';
 
 class ProfilePicture extends StatelessWidget {
-  const ProfilePicture({Key? key}) : super(key: key);
+  const ProfilePicture({super.key});
 
   @override
   Widget build(BuildContext context) {

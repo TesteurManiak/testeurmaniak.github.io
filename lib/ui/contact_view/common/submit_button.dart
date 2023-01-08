@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:my_portfolio/core/widgets/responsive_layout.dart';
 
 class SubmitButton extends StatelessWidget {
-  final VoidCallback onPressed;
+  const SubmitButton({super.key, required this.onPressed});
 
-  const SubmitButton({Key? key, required this.onPressed}) : super(key: key);
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {

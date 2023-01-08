@@ -5,7 +5,7 @@ import 'package:my_portfolio/ui/projects_view/desktop/projects_desktop.dart';
 import 'package:my_portfolio/ui/projects_view/mobile/projects_mobile.dart';
 
 class ProjectsView extends StatefulWidget {
-  const ProjectsView({Key? key}) : super(key: key);
+  const ProjectsView({super.key});
 
   @override
   State<ProjectsView> createState() => _ProjectsViewState();

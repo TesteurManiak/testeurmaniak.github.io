@@ -4,14 +4,14 @@ const _kTabletMinWidth = 650.0;
 const _kDesktopMinWidth = 1100.0;
 
 class ResponsiveLayout extends StatelessWidget {
-  final Widget mobile;
-  final Widget desktop;
-
   const ResponsiveLayout({
-    Key? key,
+    super.key,
     required this.mobile,
     required this.desktop,
-  }) : super(key: key);
+  });
+
+  final Widget mobile;
+  final Widget desktop;
 
   static bool isMobile(BuildContext context) =>
       MediaQuery.of(context).size.width < _kTabletMinWidth;

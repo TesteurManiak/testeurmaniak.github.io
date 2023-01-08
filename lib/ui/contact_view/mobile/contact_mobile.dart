@@ -5,18 +5,18 @@ import 'package:my_portfolio/ui/contact_view/common/name_fields_layout.dart';
 import 'package:my_portfolio/ui/contact_view/common/submit_button.dart';
 
 class ContactMobile extends StatelessWidget {
-  final TextEditingController firstNameController;
-  final TextEditingController lastNameController;
-  final TextEditingController messageController;
-  final VoidCallback submitForm;
-
   const ContactMobile({
-    Key? key,
+    super.key,
     required this.firstNameController,
     required this.lastNameController,
     required this.messageController,
     required this.submitForm,
-  }) : super(key: key);
+  });
+
+  final TextEditingController firstNameController;
+  final TextEditingController lastNameController;
+  final TextEditingController messageController;
+  final VoidCallback submitForm;
 
   @override
   Widget build(BuildContext context) {

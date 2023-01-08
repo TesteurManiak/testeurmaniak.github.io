@@ -5,7 +5,7 @@ import 'package:my_portfolio/ui/contact_view/mobile/contact_mobile.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class ContactView extends StatefulWidget {
-  const ContactView({Key? key}) : super(key: key);
+  const ContactView({super.key});
 
   @override
   State<ContactView> createState() => _ContactViewState();

@@ -9,7 +9,7 @@ import 'package:my_portfolio/ui/home_view/home_view.dart';
 import 'package:my_portfolio/ui/projects_view/projects_view.dart';
 
 class RootDesktop extends StatelessWidget {
-  const RootDesktop({Key? key}) : super(key: key);
+  const RootDesktop({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -81,9 +81,9 @@ class _CustomTabBar extends StatelessWidget {
 }
 
 class _Tab extends StatelessWidget {
-  final String label;
+  const _Tab({required this.label});
 
-  const _Tab({Key? key, required this.label}) : super(key: key);
+  final String label;
 
   @override
   Widget build(BuildContext context) {

@@ -3,14 +3,14 @@ import 'package:my_portfolio/ui/contact_view/common/first_name_field.dart';
 import 'package:my_portfolio/ui/contact_view/common/last_name_field.dart';
 
 class NameFieldsLayout extends StatelessWidget {
-  final TextEditingController firstNameController;
-  final TextEditingController lastNameController;
-
   const NameFieldsLayout({
-    Key? key,
+    super.key,
     required this.firstNameController,
     required this.lastNameController,
-  }) : super(key: key);
+  });
+
+  final TextEditingController firstNameController;
+  final TextEditingController lastNameController;
 
   @override
   Widget build(BuildContext context) {

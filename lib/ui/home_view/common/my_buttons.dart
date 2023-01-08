@@ -4,7 +4,7 @@ import 'package:my_portfolio/core/extensions/build_context_extensions.dart';
 import 'package:my_portfolio/core/size_utils.dart';
 
 class MyButtons extends ConsumerWidget {
-  const MyButtons({Key? key}) : super(key: key);
+  const MyButtons({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

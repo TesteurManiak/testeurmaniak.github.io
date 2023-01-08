@@ -6,7 +6,7 @@ import 'package:my_portfolio/features/articles/widgets/article_case.dart';
 const _kSpacing = 12.0;
 
 class ArticlesDesktop extends ConsumerWidget {
-  const ArticlesDesktop({Key? key}) : super(key: key);
+  const ArticlesDesktop({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -30,7 +30,7 @@ class ArticlesDesktop extends ConsumerWidget {
           itemCount: articles.length,
           itemBuilder: (context, index) {
             final article = articles[index];
-            return ArticleCase(article, width: caseWidth);
+            return ArticleCase(article: article, width: caseWidth);
           },
         );
       },

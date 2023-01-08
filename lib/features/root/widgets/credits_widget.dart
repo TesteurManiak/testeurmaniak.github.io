@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:super_banners/super_banners.dart';
 
 class CreditsWidget extends StatelessWidget {
-  const CreditsWidget({Key? key}) : super(key: key);
+  const CreditsWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

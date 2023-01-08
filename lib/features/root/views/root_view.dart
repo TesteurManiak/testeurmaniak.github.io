@@ -4,7 +4,7 @@ import 'package:my_portfolio/features/root/views/root_desktop.dart';
 import 'package:my_portfolio/features/root/views/root_mobile.dart';
 
 class RootView extends StatelessWidget {
-  const RootView({Key? key}) : super(key: key);
+  const RootView({super.key});
 
   @override
   Widget build(BuildContext context) {

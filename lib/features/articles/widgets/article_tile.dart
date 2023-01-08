@@ -5,9 +5,9 @@ import 'package:my_portfolio/features/articles/widgets/article_image.dart';
 import 'package:seo_renderer/seo_renderer.dart';
 
 class ArticleTile extends StatelessWidget {
-  final RssItem article;
+  const ArticleTile(this.article, {super.key});
 
-  const ArticleTile(this.article, {Key? key}) : super(key: key);
+  final RssItem article;
 
   @override
   Widget build(BuildContext context) {

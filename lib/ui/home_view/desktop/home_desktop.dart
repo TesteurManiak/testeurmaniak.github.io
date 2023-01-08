@@ -5,7 +5,7 @@ import 'package:my_portfolio/ui/home_view/common/my_buttons.dart';
 import 'package:my_portfolio/ui/home_view/common/profile_picture.dart';
 
 class HomeDesktop extends StatelessWidget {
-  const HomeDesktop({Key? key}) : super(key: key);
+  const HomeDesktop({super.key});
 
   @override
   Widget build(BuildContext context) {

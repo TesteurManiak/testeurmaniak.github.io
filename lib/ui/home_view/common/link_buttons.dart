@@ -18,7 +18,7 @@ const _links = <LinkData>[
 ];
 
 class LinkButtons extends StatelessWidget {
-  const LinkButtons({Key? key}) : super(key: key);
+  const LinkButtons({super.key});
 
   @override
   Widget build(BuildContext context) {

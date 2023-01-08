@@ -7,10 +7,14 @@ import 'package:seo_renderer/seo_renderer.dart';
 const _kSpacing = 16.0;
 
 class ArticleCase extends StatelessWidget {
+  const ArticleCase({
+    super.key,
+    required this.article,
+    this.width,
+  });
+
   final RssItem article;
   final double? width;
-
-  const ArticleCase(this.article, {Key? key, this.width}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

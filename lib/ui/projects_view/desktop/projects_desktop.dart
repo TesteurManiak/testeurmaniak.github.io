@@ -3,7 +3,7 @@ import 'package:my_portfolio/core/projects.dart';
 import 'package:my_portfolio/ui/projects_view/common/project_widget.dart';
 
 class ProjectsDesktop extends StatefulWidget {
-  const ProjectsDesktop({Key? key}) : super(key: key);
+  const ProjectsDesktop({super.key});
 
   @override
   State<ProjectsDesktop> createState() => _ProjectsDesktopState();

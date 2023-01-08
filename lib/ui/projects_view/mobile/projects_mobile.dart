@@ -3,7 +3,7 @@ import 'package:my_portfolio/core/projects.dart';
 import 'package:my_portfolio/ui/projects_view/common/project_widget.dart';
 
 class ProjectsMobile extends StatefulWidget {
-  const ProjectsMobile({Key? key}) : super(key: key);
+  const ProjectsMobile({super.key});
 
   @override
   State<ProjectsMobile> createState() => _ProjectsMobileState();

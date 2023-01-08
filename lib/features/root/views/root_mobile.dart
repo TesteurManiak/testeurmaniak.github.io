@@ -7,7 +7,7 @@ import 'package:my_portfolio/ui/home_view/home_view.dart';
 import 'package:my_portfolio/ui/projects_view/projects_view.dart';
 
 class RootMobile extends StatelessWidget {
-  const RootMobile({Key? key}) : super(key: key);
+  const RootMobile({super.key});
 
   @override
   Widget build(BuildContext context) {

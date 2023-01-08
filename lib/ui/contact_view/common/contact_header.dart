@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ContactHeader extends StatelessWidget {
-  const ContactHeader({Key? key}) : super(key: key);
+  const ContactHeader({super.key});
 
   @override
   Widget build(BuildContext context) {
