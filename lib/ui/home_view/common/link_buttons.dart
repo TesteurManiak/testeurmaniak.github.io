@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/core/extensions/build_context_extensions.dart';
 import 'package:my_portfolio/models/link_data.dart';
 import 'package:my_portfolio/style/text_styles.dart';
 import 'package:seo_renderer/seo_renderer.dart';
@@ -21,13 +22,16 @@ class LinkButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final strings = context.strings;
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         TextRenderer(
+          text: strings.home_find_me_on,
           child: Text(
-            'Find Me on',
+            strings.home_find_me_on,
             style: TextStyles.selectSubHeadline(context),
           ),
         ),

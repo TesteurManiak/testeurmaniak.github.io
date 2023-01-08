@@ -122,6 +122,48 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Contact'**
   String get contact_tab;
+
+  /// No description provided for @home_header_hello.
+  ///
+  /// In en, this message translates to:
+  /// **'Hello, I am'**
+  String get home_header_hello;
+
+  /// No description provided for @home_header_position.
+  ///
+  /// In en, this message translates to:
+  /// **'Flutter Software Engineer'**
+  String get home_header_position;
+
+  /// No description provided for @global_firstname.
+  ///
+  /// In en, this message translates to:
+  /// **'Guillaume'**
+  String get global_firstname;
+
+  /// No description provided for @global_lastname.
+  ///
+  /// In en, this message translates to:
+  /// **'Roux'**
+  String get global_lastname;
+
+  /// No description provided for @home_find_me_on.
+  ///
+  /// In en, this message translates to:
+  /// **'Find me on'**
+  String get home_find_me_on;
+
+  /// No description provided for @contact_me.
+  ///
+  /// In en, this message translates to:
+  /// **'Contact me'**
+  String get contact_me;
+
+  /// No description provided for @portfolio.
+  ///
+  /// In en, this message translates to:
+  /// **'Portfolio'**
+  String get portfolio;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

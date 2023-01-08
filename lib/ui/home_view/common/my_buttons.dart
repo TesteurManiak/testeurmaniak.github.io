@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:my_portfolio/core/extensions/build_context_extensions.dart';
 import 'package:my_portfolio/core/size_utils.dart';
 
 class MyButtons extends ConsumerWidget {
@@ -22,7 +23,7 @@ class MyButtons extends ConsumerWidget {
           onPressed: () {
             DefaultTabController.of(context)?.animateTo(4);
           },
-          child: const Text('Contact me'),
+          child: Text(context.strings.contact_me),
         ),
         SizedBox(width: spacing(size.width)),
         OutlinedButton(

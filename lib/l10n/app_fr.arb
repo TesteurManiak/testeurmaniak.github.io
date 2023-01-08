@@ -4,5 +4,12 @@
     "about_tab": "À propos",
     "articles_tab": "Articles",
     "projects_tab": "Projets",
-    "contact_tab": "Contactez-moi"
+    "contact_tab": "Contact",
+    "home_header_hello": "Bonjour, je suis",
+    "home_header_position": "Flutter Software Engineer",
+    "global_firstname": "Guillaume",
+    "global_lastname": "Roux",
+    "home_find_me_on": "Vous pouvez me trouver sur",
+    "contact_me": "Contactez-moi",
+    "portfolio": "Portfolio"
 }

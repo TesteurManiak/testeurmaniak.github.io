@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/core/extensions/build_context_extensions.dart';
 import 'package:my_portfolio/core/size_utils.dart';
 import 'package:my_portfolio/style/my_colors.dart';
 import 'package:my_portfolio/style/text_styles.dart';
@@ -8,7 +9,6 @@ import 'package:url_launcher/url_launcher_string.dart';
 const _kTitle = 'About me';
 const _kAboutMe =
     "I've been using Flutter since September 2018. Since then I've been able to work on a lot of projects each with its own problematics. You will find on this website some applications made during my spare time and some made as part of my job as a mobile developer. You will also find some articles related to Dart and Flutter that I am writting on the site Medium.com and Dart/Flutter packages I have released on Pub.dev.";
-const _kButtonText = 'Contact me';
 const _kButtonLink =
     'https://drive.google.com/file/d/1aeMIfW6Ee7u8HQJaqIGWYXOeiicvUP1t/view?usp=sharing';
 
@@ -18,6 +18,7 @@ class AboutSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
+    final strings = context.strings;
 
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -51,7 +52,7 @@ class AboutSection extends StatelessWidget {
         ),
         SizedBox(height: size.height * 0.05),
         LinkRenderer(
-          text: _kButtonText,
+          text: strings.contact_me,
           href: _kButtonLink,
           child: OutlinedButton(
             style: OutlinedButton.styleFrom(
@@ -61,7 +62,7 @@ class AboutSection extends StatelessWidget {
               ),
             ),
             onPressed: () => launchUrlString(_kButtonLink),
-            child: const Text(_kButtonText),
+            child: Text(strings.contact_me),
           ),
         ),
       ],

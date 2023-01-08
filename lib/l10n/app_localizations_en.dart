@@ -18,4 +18,25 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get contact_tab => 'Contact';
+
+  @override
+  String get home_header_hello => 'Hello, I am';
+
+  @override
+  String get home_header_position => 'Flutter Software Engineer';
+
+  @override
+  String get global_firstname => 'Guillaume';
+
+  @override
+  String get global_lastname => 'Roux';
+
+  @override
+  String get home_find_me_on => 'Find me on';
+
+  @override
+  String get contact_me => 'Contact me';
+
+  @override
+  String get portfolio => 'Portfolio';
 }
