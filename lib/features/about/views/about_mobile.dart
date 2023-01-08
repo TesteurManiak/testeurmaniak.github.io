@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/ui/about_view/common/about_section.dart';
+import 'package:my_portfolio/features/about/widgets/about_section.dart';
 
 class AboutMobile extends StatelessWidget {
   const AboutMobile({Key? key}) : super(key: key);

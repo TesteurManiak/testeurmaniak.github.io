@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/ui/common/responsive_layout.dart';
+import 'package:my_portfolio/core/widgets/responsive_layout.dart';
 
 class TextStyles {
   static TextStyle headerLine(BuildContext context) {

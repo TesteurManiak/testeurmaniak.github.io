@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/ui/common/responsive_layout.dart';
+import 'package:my_portfolio/core/widgets/responsive_layout.dart';
 import 'package:my_portfolio/ui/home_view/desktop/home_desktop.dart';
 import 'package:my_portfolio/ui/home_view/mobile/home_mobile.dart';
 

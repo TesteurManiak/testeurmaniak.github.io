@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/bloc/bloc_provider.dart';
 import 'package:my_portfolio/bloc/navigation_bloc.dart';
-import 'package:my_portfolio/ui/common/responsive_layout.dart';
+import 'package:my_portfolio/core/widgets/responsive_layout.dart';
 import 'package:my_portfolio/ui/root_view/desktop/root_desktop.dart';
 import 'package:my_portfolio/ui/root_view/mobile/root_mobile.dart';
 

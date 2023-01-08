@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/core/widgets/blurred_image.dart';
+import 'package:my_portfolio/core/widgets/responsive_layout.dart';
 import 'package:my_portfolio/style/my_colors.dart';
-import 'package:my_portfolio/ui/about_view/common/blurred_image.dart';
-import 'package:my_portfolio/ui/common/responsive_layout.dart';
 
 class ProfilePicture extends StatelessWidget {
   const ProfilePicture({Key? key}) : super(key: key);

@@ -2,8 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/bloc/bloc.dart';
+import 'package:my_portfolio/features/about/views/about_view.dart';
 import 'package:my_portfolio/features/articles/views/articles_view.dart';
-import 'package:my_portfolio/ui/about_view/about_view.dart';
 import 'package:my_portfolio/ui/contact_view/contact_view.dart';
 import 'package:my_portfolio/ui/home_view/home_view.dart';
 import 'package:my_portfolio/ui/projects_view/projects_view.dart';
