@@ -14,6 +14,7 @@ class ProjectWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final isDesktop = ResponsiveLayout.isDesktop(context);
     final description = projectModel.description;
+
     return ClipRRect(
       borderRadius: BorderRadius.circular(40),
       child: Stack(
