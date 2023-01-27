@@ -14,12 +14,6 @@ _$_RssResponse _$$_RssResponseFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_RssResponseToJson(_$_RssResponse instance) =>
-    <String, dynamic>{
-      'status': instance.status,
-      'items': instance.items,
-    };
-
 _$_RssItem _$$_RssItemFromJson(Map<String, dynamic> json) => _$_RssItem(
       title: json['title'] as String?,
       pubDate: json['pubDate'] == null
@@ -31,12 +25,3 @@ _$_RssItem _$$_RssItemFromJson(Map<String, dynamic> json) => _$_RssItem(
           ?.map((e) => e as String)
           .toList(),
     );
-
-Map<String, dynamic> _$$_RssItemToJson(_$_RssItem instance) =>
-    <String, dynamic>{
-      'title': instance.title,
-      'pubDate': instance.pubDate?.toIso8601String(),
-      'link': instance.link,
-      'thumbnail': instance.thumbnail,
-      'categories': instance.categories,
-    };

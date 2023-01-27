@@ -5,22 +5,22 @@ class TextStyles {
   static TextStyle headerLine(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     return ResponsiveLayoutBuilder.isDesktop(context)
-        ? textTheme.headline3!
-        : textTheme.headline5!;
+        ? textTheme.displaySmall!
+        : textTheme.headlineSmall!;
   }
 
   static TextStyle headerName(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     return ResponsiveLayoutBuilder.isDesktop(context)
-        ? textTheme.headline1!
-        : textTheme.headline3!;
+        ? textTheme.displayLarge!
+        : textTheme.displaySmall!;
   }
 
   static TextStyle selectSubHeadline(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     return ResponsiveLayoutBuilder.isDesktop(context)
-        ? textTheme.subtitle1!
-        : textTheme.subtitle2!;
+        ? textTheme.titleMedium!
+        : textTheme.titleSmall!;
   }
 
   static const tab = TextStyle(fontSize: 16);

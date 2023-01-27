@@ -25,7 +25,6 @@ mixin _$RssResponse {
   @JsonKey(name: 'items')
   List<RssItem>? get items => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $RssResponseCopyWith<RssResponse> get copyWith =>
       throw _privateConstructorUsedError;
@@ -112,7 +111,7 @@ class __$$_RssResponseCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+@JsonSerializable(createToJson: false)
 class _$_RssResponse implements _RssResponse {
   const _$_RssResponse(
       {@JsonKey(name: 'status') required this.status,
@@ -160,13 +159,6 @@ class _$_RssResponse implements _RssResponse {
   @pragma('vm:prefer-inline')
   _$$_RssResponseCopyWith<_$_RssResponse> get copyWith =>
       __$$_RssResponseCopyWithImpl<_$_RssResponse>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_RssResponseToJson(
-      this,
-    );
-  }
 }
 
 abstract class _RssResponse implements RssResponse {
@@ -207,7 +199,6 @@ mixin _$RssItem {
   @JsonKey(name: 'categories')
   List<String>? get categories => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $RssItemCopyWith<RssItem> get copyWith => throw _privateConstructorUsedError;
 }
@@ -326,7 +317,7 @@ class __$$_RssItemCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+@JsonSerializable(createToJson: false)
 class _$_RssItem extends _RssItem {
   const _$_RssItem(
       {@JsonKey(name: 'title') required this.title,
@@ -392,13 +383,6 @@ class _$_RssItem extends _RssItem {
   @pragma('vm:prefer-inline')
   _$$_RssItemCopyWith<_$_RssItem> get copyWith =>
       __$$_RssItemCopyWithImpl<_$_RssItem>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_RssItemToJson(
-      this,
-    );
-  }
 }
 
 abstract class _RssItem extends RssItem {

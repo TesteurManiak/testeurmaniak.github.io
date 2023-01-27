@@ -21,7 +21,7 @@ class MyButtons extends ConsumerWidget {
             ),
           ),
           onPressed: () {
-            DefaultTabController.of(context)?.animateTo(4);
+            DefaultTabController.maybeOf(context)?.animateTo(4);
           },
           child: Text(context.strings.contact_me),
         ),
@@ -33,7 +33,7 @@ class MyButtons extends ConsumerWidget {
               horizontal: paddingHorizontal(size.width),
             ),
           ),
-          onPressed: () => DefaultTabController.of(context)?.animateTo(3),
+          onPressed: () => DefaultTabController.maybeOf(context)?.animateTo(3),
           child: const Text('Portfolio'),
         ),
       ],

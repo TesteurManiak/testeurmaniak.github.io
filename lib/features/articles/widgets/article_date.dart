@@ -16,7 +16,7 @@ class ArticleDate extends StatelessWidget {
 
     return TextRenderer(
       text: formattedDate,
-      child: Text(formattedDate, style: theme.textTheme.caption),
+      child: Text(formattedDate, style: theme.textTheme.bodySmall),
     );
   }
 }
