@@ -112,11 +112,11 @@ class _ShimmerArticleCase extends StatelessWidget {
               ),
             ),
             Container(
-              height: textTheme.caption?.fontSize,
+              height: textTheme.bodySmall?.fontSize,
               width: 60,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
-                color: textTheme.caption?.color?.withOpacity(opacity),
+                color: textTheme.bodySmall?.color?.withOpacity(opacity),
               ),
             ),
           ],

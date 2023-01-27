@@ -11,7 +11,7 @@ class ContactHeader extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 32),
       child: Text(
         context.strings.contact_section_title,
-        style: theme.textTheme.headline3,
+        style: theme.textTheme.displaySmall,
       ),
     );
   }

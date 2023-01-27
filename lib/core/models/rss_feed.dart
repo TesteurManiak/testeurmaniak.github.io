@@ -4,7 +4,7 @@ import 'package:url_launcher/url_launcher_string.dart';
 part 'rss_feed.freezed.dart';
 part 'rss_feed.g.dart';
 
-@freezed
+@Freezed(toJson: false)
 class RssResponse with _$RssResponse {
   const factory RssResponse({
     @JsonKey(name: 'status') required String? status,
@@ -15,7 +15,7 @@ class RssResponse with _$RssResponse {
       _$RssResponseFromJson(json);
 }
 
-@freezed
+@Freezed(toJson: false)
 class RssItem with _$RssItem {
   const factory RssItem({
     @JsonKey(name: 'title') required String? title,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/core/mixins/default_tab_controller_listener.dart';
 import 'package:my_portfolio/features/about/views/about_view.dart';
 import 'package:my_portfolio/features/articles/views/articles_view.dart';
 import 'package:my_portfolio/features/contact/views/contact_view.dart';
@@ -38,24 +39,9 @@ class _BottomBar extends StatefulWidget {
   State<_BottomBar> createState() => _BottomBarState();
 }
 
-class _BottomBarState extends State<_BottomBar> {
-  TabController? tabController;
+class _BottomBarState extends State<_BottomBar>
+    with DefaultTabControllerListenerMixin {
   int selectedIndex = 0;
-
-  @override
-  void initState() {
-    super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      tabController = DefaultTabController.of(context);
-      tabController?.addListener(tabListener);
-    });
-  }
-
-  @override
-  void dispose() {
-    tabController?.removeListener(tabListener);
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -84,15 +70,12 @@ class _BottomBarState extends State<_BottomBar> {
           label: 'Contact',
         ),
       ],
-      onTap: (index) {
-        DefaultTabController.of(context)?.animateTo(index);
-      },
+      onTap: tabController?.animateTo,
     );
   }
 
-  void tabListener() {
-    setState(() {
-      selectedIndex = DefaultTabController.of(context)?.index ?? 0;
-    });
+  @override
+  void handleTabChanged() {
+    setState(() => selectedIndex = tabController?.index ?? 0);
   }
 }
