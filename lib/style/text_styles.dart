@@ -2,25 +2,28 @@ import 'package:flutter/material.dart';
 import 'package:my_portfolio/core/widgets/responsive_layout.dart';
 
 class TextStyles {
-  static TextStyle headerLine(BuildContext context) {
+  static TextStyle? headerLine(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
+
     return ResponsiveLayoutBuilder.isDesktop(context)
-        ? textTheme.displaySmall!
-        : textTheme.headlineSmall!;
+        ? textTheme.displaySmall
+        : textTheme.headlineSmall;
   }
 
-  static TextStyle headerName(BuildContext context) {
+  static TextStyle? headerName(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
+
     return ResponsiveLayoutBuilder.isDesktop(context)
-        ? textTheme.displayLarge!
-        : textTheme.displaySmall!;
+        ? textTheme.displayLarge
+        : textTheme.displaySmall;
   }
 
-  static TextStyle selectSubHeadline(BuildContext context) {
+  static TextStyle? selectSubHeadline(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
+
     return ResponsiveLayoutBuilder.isDesktop(context)
-        ? textTheme.titleMedium!
-        : textTheme.titleSmall!;
+        ? textTheme.titleMedium
+        : textTheme.titleSmall;
   }
 
   static const tab = TextStyle(fontSize: 16);

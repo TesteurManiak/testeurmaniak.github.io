@@ -1,13 +1,13 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:my_portfolio/core/loadable.dart';
+import 'package:my_portfolio/core/mixins/loadable.dart';
 import 'package:my_portfolio/core/models/rss_feed.dart';
 import 'package:my_portfolio/features/articles/services/articles_service.dart';
 
 part 'articles_controller.freezed.dart';
 
 class ArticleListController extends StateNotifier<ArticleListState>
-    with Loadable {
+    with LoadableMixin {
   ArticleListController({
     required ArticlesService articlesService,
   })  : _articlesService = articlesService,

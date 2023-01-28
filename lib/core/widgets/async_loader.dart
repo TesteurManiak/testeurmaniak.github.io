@@ -1,8 +1,5 @@
-import 'dart:async';
-
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-
-typedef AsyncLoaderCallback = FutureOr<void> Function();
 
 class AsyncLoader extends StatefulWidget {
   const AsyncLoader({
@@ -11,7 +8,7 @@ class AsyncLoader extends StatefulWidget {
     required this.child,
   });
 
-  final AsyncLoaderCallback operation;
+  final AsyncCallback operation;
   final Widget child;
 
   @override

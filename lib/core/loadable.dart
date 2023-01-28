@@ -1,11 +1,6 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/core/mixins/loadable.dart';
 import 'package:my_portfolio/core/widgets/async_loader.dart';
-
-mixin Loadable on Object {
-  FutureOr<void> load();
-}
 
 class LoadableLoader extends StatelessWidget {
   const LoadableLoader({
@@ -14,7 +9,7 @@ class LoadableLoader extends StatelessWidget {
     required this.child,
   });
 
-  final Loadable loadable;
+  final LoadableMixin loadable;
   final Widget child;
 
   @override

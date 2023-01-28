@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:my_portfolio/core/icons/my_portfolio_icons.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
-@immutable
 class LinkData {
   const LinkData({
     this.icon = MyPortfolio.link,
