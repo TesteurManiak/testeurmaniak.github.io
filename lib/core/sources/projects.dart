@@ -15,6 +15,8 @@ const _projects = <ProjectModel>[
         'https://apps.apple.com/fr/app/the-ring-io/id1479375224',
       ),
     ],
+    iconUrl:
+        'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/icons/dailyn.png',
   ),
   ProjectModel(
     title: 'MyPREIM',
@@ -26,6 +28,8 @@ const _projects = <ProjectModel>[
       ),
       LinkData.appStore('https://apps.apple.com/fr/app/mypreim/id1658749867'),
     ],
+    iconUrl:
+        'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/icons/my_preim.png',
   ),
   ProjectModel(
     title: 'StrasApp',
