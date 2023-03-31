@@ -17,6 +17,8 @@ const _projects = <ProjectModel>[
     ],
     iconUrl:
         'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/icons/dailyn.png',
+    imageUrl:
+        'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/projects/dailyn.png',
   ),
   ProjectModel(
     title: 'MyPREIM',
@@ -30,6 +32,8 @@ const _projects = <ProjectModel>[
     ],
     iconUrl:
         'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/icons/my_preim.png',
+    imageUrl:
+        'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/projects/mypreim.png',
   ),
   ProjectModel(
     title: 'StrasApp',
@@ -49,7 +53,7 @@ const _projects = <ProjectModel>[
   ProjectModel(
     title: 'MyUCA - Université Clermont Auvergne',
     description:
-        "L’application mobile MyUCA dédiée aux étudiants de l’UCA s’offre une nouvelle ergonomie et de nouvelles fonctionnalités.",
+        "L'application mobile MyUCA dédiée aux étudiants de l'UCA s'offre une nouvelle ergonomie et de nouvelles fonctionnalités.",
     links: [
       LinkData.android(
         'https://play.google.com/store/apps/details?id=fr.uca.mobile&hl=fr&gl=US',
@@ -174,6 +178,8 @@ const _projects = <ProjectModel>[
         'https://play.google.com/store/apps/details?id=com.drinkingdev.drinking&hl=fr&gl=US',
       ),
     ],
+    iconUrl:
+        'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/icons/drinking.png',
     imageUrl:
         'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/projects/drinking.png',
   ),
@@ -187,6 +193,8 @@ const _projects = <ProjectModel>[
         'https://play.google.com/store/apps/details?id=com.maniak.todo_list',
       ),
     ],
+    iconUrl:
+        'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/icons/todolist.png',
     imageUrl:
         'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/projects/todo.png',
   ),
@@ -210,7 +218,7 @@ const _projects = <ProjectModel>[
     description: "Pokedex app built with Flutter (with lots of animations)",
     links: [LinkData.gitlab('https://gitlab.com/G_Roux/flutter_pokedex')],
     iconUrl:
-        'https://gitlab.com/G_Roux/flutter_pokedex/-/raw/master/assets/images/ic_launcher.png',
+        'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/icons/pokedex.png',
     imageUrl:
         'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/projects/pokedex.png',
   ),
