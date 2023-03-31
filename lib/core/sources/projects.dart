@@ -7,7 +7,7 @@ const _projects = <ProjectModel>[
     title: 'Dailyn',
     description: 'Paye et gagne du cashback dans ta ville',
     links: [
-      LinkData.website('https://dailyn.app/'),
+      LinkData(url: 'https://dailyn.app/', name: 'Website'),
       LinkData.android(
         'https://play.google.com/store/apps/details?id=io.thering.app',
       ),
@@ -97,6 +97,23 @@ const _projects = <ProjectModel>[
         'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/projects/manga.png',
     iconUrl:
         'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/icons/manga.png',
+  ),
+  ProjectModel(
+    title: 'Flutter Map',
+    links: [
+      LinkData.github('https://github.com/fleaflet/flutter_map'),
+      LinkData.package('https://pub.dev/packages/flutter_map'),
+      LinkData(name: 'Documentation', url: 'https://docs.fleaflet.dev/'),
+    ],
+  ),
+  ProjectModel(
+    title: 'Matomo Tracker',
+    description:
+        'A fully cross-platform wrap of the Matomo tracking client for Flutter, using the Matomo Tracking API.',
+    links: [
+      LinkData.github('https://github.com/Floating-Dartists/matomo-tracker'),
+      LinkData.package('https://pub.dev/packages/matomo_tracker'),
+    ],
   ),
   ProjectModel(
     title: 'icon_decoration',
