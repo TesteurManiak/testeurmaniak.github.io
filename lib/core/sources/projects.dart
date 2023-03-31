@@ -100,11 +100,15 @@ const _projects = <ProjectModel>[
   ),
   ProjectModel(
     title: 'Flutter Map',
+    description:
+        "A versatile mapping package for Flutter, based off leaflet.js, that's simple and easy to learn, yet completely customizable and configurable.",
     links: [
       LinkData.github('https://github.com/fleaflet/flutter_map'),
       LinkData.package('https://pub.dev/packages/flutter_map'),
       LinkData(name: 'Documentation', url: 'https://docs.fleaflet.dev/'),
     ],
+    iconUrl:
+        'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/icons/flutter_map.png',
   ),
   ProjectModel(
     title: 'Matomo Tracker',
@@ -114,6 +118,8 @@ const _projects = <ProjectModel>[
       LinkData.github('https://github.com/Floating-Dartists/matomo-tracker'),
       LinkData.package('https://pub.dev/packages/matomo_tracker'),
     ],
+    iconUrl:
+        'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/icons/matomo.png',
   ),
   ProjectModel(
     title: 'icon_decoration',
