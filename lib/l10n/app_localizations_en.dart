@@ -63,4 +63,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get contact_section_send => 'Send';
+
+  @override
+  String get my_resume_button => 'See my resume';
+
+  @override
+  String get my_resume_link => 'https://drive.google.com/file/d/1aeMIfW6Ee7u8HQJaqIGWYXOeiicvUP1t/view?usp=sharing';
 }

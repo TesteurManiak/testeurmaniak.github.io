@@ -19,5 +19,7 @@
     "contact_section_lastname": "Last name",
     "contact_section_message": "Message",
     "contact_section_message_hint": "Type your message here",
-    "contact_section_send": "Send"
+    "contact_section_send": "Send",
+    "my_resume_button": "See my resume",
+    "my_resume_link": "https://drive.google.com/file/d/1aeMIfW6Ee7u8HQJaqIGWYXOeiicvUP1t/view?usp=sharing"
 }

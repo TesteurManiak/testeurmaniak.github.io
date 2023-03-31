@@ -212,6 +212,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Send'**
   String get contact_section_send;
+
+  /// No description provided for @my_resume_button.
+  ///
+  /// In en, this message translates to:
+  /// **'See my resume'**
+  String get my_resume_button;
+
+  /// No description provided for @my_resume_link.
+  ///
+  /// In en, this message translates to:
+  /// **'https://drive.google.com/file/d/1aeMIfW6Ee7u8HQJaqIGWYXOeiicvUP1t/view?usp=sharing'**
+  String get my_resume_link;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

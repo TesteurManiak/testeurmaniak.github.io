@@ -6,9 +6,6 @@ import 'package:my_portfolio/style/text_styles.dart';
 import 'package:seo_renderer/seo_renderer.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
-const _kButtonLink =
-    'https://drive.google.com/file/d/1aeMIfW6Ee7u8HQJaqIGWYXOeiicvUP1t/view?usp=sharing';
-
 class AboutSection extends StatelessWidget {
   const AboutSection({super.key});
 
@@ -53,7 +50,7 @@ class AboutSection extends StatelessWidget {
         SizedBox(height: size.height * 0.05),
         LinkRenderer(
           text: strings.contact_me,
-          href: _kButtonLink,
+          href: strings.my_resume_link,
           child: OutlinedButton(
             style: OutlinedButton.styleFrom(
               padding: EdgeInsets.symmetric(
@@ -61,8 +58,8 @@ class AboutSection extends StatelessWidget {
                 horizontal: paddingHorizontal(size.width),
               ),
             ),
-            onPressed: () => launchUrlString(_kButtonLink),
-            child: Text(strings.contact_me),
+            onPressed: () => launchUrlString(strings.my_resume_link),
+            child: Text(strings.my_resume_button),
           ),
         ),
       ],

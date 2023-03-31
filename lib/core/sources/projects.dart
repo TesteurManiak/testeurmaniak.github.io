@@ -4,6 +4,30 @@ import 'package:my_portfolio/core/models/project_model.dart';
 
 const _projects = <ProjectModel>[
   ProjectModel(
+    title: 'Dailyn',
+    description: 'Paye et gagne du cashback dans ta ville',
+    links: [
+      LinkData.website('https://dailyn.app/'),
+      LinkData.android(
+        'https://play.google.com/store/apps/details?id=io.thering.app',
+      ),
+      LinkData.appStore(
+        'https://apps.apple.com/fr/app/the-ring-io/id1479375224',
+      ),
+    ],
+  ),
+  ProjectModel(
+    title: 'MyPREIM',
+    description:
+        "MyPREIM : l'application de Primonial REIM France destinée aux associés de ses SCPI.",
+    links: [
+      LinkData.android(
+        'https://play.google.com/store/apps/details?id=com.primonial.reim',
+      ),
+      LinkData.appStore('https://apps.apple.com/fr/app/mypreim/id1658749867'),
+    ],
+  ),
+  ProjectModel(
     title: 'StrasApp',
     description: "Toute l'Eurométropole de Strasbourg dans une appli",
     links: [
@@ -138,15 +162,6 @@ const _projects = <ProjectModel>[
     ],
   ),
   ProjectModel(
-    title: 'text_chunk_styling',
-    description:
-        'Flutter package which allows to style specific parts of a String.',
-    links: [
-      LinkData.github('https://github.com/TesteurManiak/text_chunk_styling'),
-      LinkData.package('https://pub.dev/packages/text_chunk_styling'),
-    ],
-  ),
-  ProjectModel(
     title: "Drin'King",
     description:
         "Plus besoin de jeux de cartes de dés ou encore de télécharger une application par jeux pour s'amuser ! Voici Drin'King !",
@@ -176,26 +191,22 @@ const _projects = <ProjectModel>[
     description:
         "Mobile app companion for Temtem to get an easy access to creature's information.",
     links: [
-      LinkData.gitlab('https://gitlab.com/G_Roux/temopedia'),
+      LinkData.github('https://github.com/TesteurManiak/temopedia'),
       LinkData.android(
         'https://play.google.com/store/apps/details?id=com.maniak.temopedia',
       ),
     ],
+    iconUrl:
+        'https://raw.githubusercontent.com/TesteurManiak/temopedia/dev/assets/launcher_icon/icon.png',
     imageUrl:
         'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/projects/temopedia.png',
-  ),
-  ProjectModel(
-    title: 'Photo UI Challenge',
-    description:
-        "Personnal challenge, recreation of some designs found on dribbble in Flutter.",
-    links: [LinkData.gitlab('https://gitlab.com/G_Roux/photo-ui-challenge')],
-    imageUrl:
-        'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/projects/ui_chall.png',
   ),
   ProjectModel(
     title: 'Flutter Pokedex',
     description: "Pokedex app built with Flutter (with lots of animations)",
     links: [LinkData.gitlab('https://gitlab.com/G_Roux/flutter_pokedex')],
+    iconUrl:
+        'https://gitlab.com/G_Roux/flutter_pokedex/-/raw/master/assets/images/ic_launcher.png',
     imageUrl:
         'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/projects/pokedex.png',
   ),

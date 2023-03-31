@@ -45,6 +45,10 @@ class LinkData {
       : icon = MyPortfolio.android,
         name = 'Play Store';
 
+  const LinkData.website(this.url)
+      : name = 'Website',
+        icon = MyPortfolio.link;
+
   final IconData icon;
   final String url;
   final String name;
