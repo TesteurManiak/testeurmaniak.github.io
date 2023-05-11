@@ -9,7 +9,6 @@ class AboutDesktop extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         SizedBox(
           width: size.width * 0.45,

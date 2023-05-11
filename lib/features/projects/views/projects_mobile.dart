@@ -12,7 +12,6 @@ class ProjectsMobile extends ConsumerWidget {
     final projects = ref.watch(projectsProvider);
 
     return ListView.separated(
-      addAutomaticKeepAlives: true,
       padding: EdgeInsets.symmetric(
         vertical: size.height * 0.05,
         horizontal: size.width * 0.05,

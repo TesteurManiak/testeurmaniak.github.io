@@ -19,7 +19,6 @@ class RootDesktop extends StatelessWidget {
       body: Stack(
         children: [
           Column(
-            mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               SizedBox(

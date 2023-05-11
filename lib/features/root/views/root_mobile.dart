@@ -13,10 +13,10 @@ class RootMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      bottomNavigationBar: const _BottomBar(),
+    return const Scaffold(
+      bottomNavigationBar: _BottomBar(),
       body: Stack(
-        children: const [
+        children: [
           TabBarView(
             children: [
               HomeView(),

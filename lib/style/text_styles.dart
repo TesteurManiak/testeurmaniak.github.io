@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:my_portfolio/core/widgets/responsive_layout.dart';
 
 class TextStyles {
+  const TextStyles._();
+
   static TextStyle? headerLine(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
 

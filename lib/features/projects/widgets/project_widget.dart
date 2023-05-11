@@ -34,7 +34,7 @@ class ProjectWidget extends StatelessWidget {
               children: [
                 if (iconUrl != null)
                   Padding(
-                    padding: const EdgeInsets.only(bottom: 8.0),
+                    padding: const EdgeInsets.only(bottom: 8),
                     child: _AppIconImage(
                       src: iconUrl,
                       isDesktop: isDesktop,

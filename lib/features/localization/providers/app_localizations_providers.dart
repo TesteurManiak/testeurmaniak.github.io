@@ -8,7 +8,7 @@ import 'package:my_portfolio/l10n/app_localizations.dart';
 class AppLocalizationsController extends StateNotifier<Locale> {
   AppLocalizationsController({
     required this.supportedLocales,
-  }) : super(ui.window.locale);
+  }) : super(ui.PlatformDispatcher.instance.locale);
 
   final List<Locale> supportedLocales;
 
@@ -28,7 +28,7 @@ final supportedLocalesProvider =
     Provider<List<Locale>>((ref) => AppLocalizations.supportedLocales);
 
 final appLocalizationsProvider = Provider<AppLocalizations>((ref) {
-  final locale = ui.window.locale;
+  final locale = ui.PlatformDispatcher.instance.locale;
 
   ref.state = lookupAppLocalizations(locale);
 
