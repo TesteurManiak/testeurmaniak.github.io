@@ -18,13 +18,14 @@ class MyThemes {
         backgroundColor: Colors.transparent,
         elevation: 0,
       ),
-      indicatorColor: MyColors.indicator,
+      tabBarTheme: _baseDark.tabBarTheme.copyWith(
+        indicatorColor: MyColors.indicator,
+      ),
       bottomNavigationBarTheme: _baseDark.bottomNavigationBarTheme.copyWith(
         selectedItemColor: MyColors.indicator,
         unselectedItemColor: Colors.white,
         backgroundColor: MyColors.darkBlue,
       ),
-      dialogBackgroundColor: MyColors.scaffold,
       dialogTheme: _baseDark.dialogTheme.copyWith(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       ),

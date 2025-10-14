@@ -8,9 +8,10 @@ class MyButtons extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final size = MediaQuery.of(context).size;
+    final size = MediaQuery.sizeOf(context);
 
     return Row(
+      spacing: spacing(size.width),
       mainAxisSize: MainAxisSize.min,
       children: [
         ElevatedButton(
@@ -25,7 +26,6 @@ class MyButtons extends ConsumerWidget {
           },
           child: Text(context.strings.contact_me),
         ),
-        SizedBox(width: spacing(size.width)),
         OutlinedButton(
           style: OutlinedButton.styleFrom(
             padding: EdgeInsets.symmetric(

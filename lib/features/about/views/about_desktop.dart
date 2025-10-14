@@ -6,15 +6,12 @@ class AboutDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
+    final size = MediaQuery.sizeOf(context);
     return Row(
+      spacing: size.width * .03,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        SizedBox(
-          width: size.width * 0.45,
-          child: const AboutSection(),
-        ),
-        SizedBox(width: size.width * 0.03),
+        SizedBox(width: size.width * .45, child: const AboutSection()),
         const FlutterLogo(size: 400),
       ],
     );

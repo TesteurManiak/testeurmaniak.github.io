@@ -1,51 +1,40 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:my_portfolio/core/mixins/loadable.dart';
+import 'package:my_portfolio/core/models/result.dart';
 import 'package:my_portfolio/core/models/rss_feed.dart';
 import 'package:my_portfolio/features/articles/services/articles_service.dart';
 
 part 'articles_controller.freezed.dart';
 
-class ArticleListController extends StateNotifier<ArticleListState>
+class ArticleListController extends Notifier<ArticleListState>
     with LoadableMixin {
-  ArticleListController({
-    required ArticlesService articlesService,
-  })  : _articlesService = articlesService,
-        super(const ArticleListState.loading());
-
-  final ArticlesService _articlesService;
+  @override
+  ArticleListState build() => const ArticleListState.loading();
 
   @override
   Future<void> load() async {
     state = const ArticleListState.loading();
 
-    final result = await _articlesService.fetchArticles();
+    final articlesService = ref.read(articlesServiceProvider);
+    final result = await articlesService.fetchArticles();
 
-    result.map(
-      success: (success) {
-        state = ArticleListState.loaded(success.value);
-      },
-      failure: (failure) {
-        state = ArticleListState.error(failure.error.error ?? '');
-      },
-    );
+    state = switch (result) {
+      Success(value: final success) => ArticleListState.loaded(success),
+      Failure(:final error) => ArticleListState.error(error.error ?? ''),
+    };
   }
 }
 
 final articleListControllerProvider =
-    StateNotifierProvider<ArticleListController, ArticleListState>(
-  (ref) {
-    final articlesService = ref.watch(articlesServiceProvider);
-
-    return ArticleListController(
-      articlesService: articlesService,
-    );
-  },
-);
+    NotifierProvider<ArticleListController, ArticleListState>(() {
+      return ArticleListController();
+    });
 
 @freezed
-class ArticleListState with _$ArticleListState {
-  const factory ArticleListState.loading() = _Loading;
-  const factory ArticleListState.loaded(List<RssItem> articles) = _Loaded;
-  const factory ArticleListState.error(String message) = _Error;
+sealed class ArticleListState with _$ArticleListState {
+  const factory ArticleListState.loading() = ArticleListStateLoading;
+  const factory ArticleListState.loaded(List<RssItem> articles) =
+      ArticleListStateLoaded;
+  const factory ArticleListState.error(String message) = ArticleListStateError;
 }

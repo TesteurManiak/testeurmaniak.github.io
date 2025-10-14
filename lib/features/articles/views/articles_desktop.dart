@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:my_portfolio/core/widgets/separated_column.dart';
 import 'package:my_portfolio/features/articles/controllers/articles_controller.dart';
 import 'package:my_portfolio/features/articles/widgets/article_case.dart';
 import 'package:shimmer/shimmer.dart';
@@ -13,7 +12,7 @@ class ArticlesDesktop extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final state = ref.watch(articleListControllerProvider);
-    final size = MediaQuery.of(context).size;
+    final size = MediaQuery.sizeOf(context);
     final caseWidth = size.width * 0.2;
     final crossAxisCount = (size.width / caseWidth).floor();
 
@@ -47,10 +46,7 @@ class ArticlesDesktop extends ConsumerWidget {
 }
 
 class _ShimmerGrid extends StatelessWidget {
-  const _ShimmerGrid({
-    required this.crossAxisCount,
-    required this.caseWidth,
-  });
+  const _ShimmerGrid({required this.crossAxisCount, required this.caseWidth});
 
   final int crossAxisCount;
   final double caseWidth;
@@ -63,18 +59,14 @@ class _ShimmerGrid extends StatelessWidget {
       crossAxisSpacing: _kSpacing,
       children: List.generate(
         7,
-        (index) => _ShimmerArticleCase(
-          width: caseWidth,
-        ),
+        (index) => _ShimmerArticleCase(width: caseWidth),
       ),
     );
   }
 }
 
 class _ShimmerArticleCase extends StatelessWidget {
-  const _ShimmerArticleCase({
-    required this.width,
-  });
+  const _ShimmerArticleCase({required this.width});
 
   final double width;
 
@@ -89,17 +81,17 @@ class _ShimmerArticleCase extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(16),
         constraints: BoxConstraints(maxWidth: width),
-        child: SeparatedColumn(
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
-          separator: const SizedBox(height: 16),
+          spacing: 16,
           children: [
             Container(
               height: textTheme.titleLarge?.fontSize,
               width: double.maxFinite,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
-                color: textTheme.titleLarge?.color?.withOpacity(opacity),
+                color: textTheme.titleLarge?.color?.withValues(alpha: opacity),
               ),
             ),
             Expanded(
@@ -116,7 +108,7 @@ class _ShimmerArticleCase extends StatelessWidget {
               width: 60,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
-                color: textTheme.bodySmall?.color?.withOpacity(opacity),
+                color: textTheme.bodySmall?.color?.withValues(alpha: opacity),
               ),
             ),
           ],

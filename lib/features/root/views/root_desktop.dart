@@ -13,7 +13,7 @@ class RootDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
+    final size = MediaQuery.sizeOf(context);
 
     return Scaffold(
       body: Stack(
@@ -51,7 +51,7 @@ class _CustomTabBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
+    final size = MediaQuery.sizeOf(context);
     final currentTheme = Theme.of(context);
     final strings = context.strings;
 
@@ -86,8 +86,6 @@ class _Tab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Tab(
-      child: Text(label, style: TextStyles.tab),
-    );
+    return Tab(child: Text(label, style: TextStyles.tab));
   }
 }

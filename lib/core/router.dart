@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:my_portfolio/features/root/views/root_view.dart';
-import 'package:seo_renderer/seo_renderer.dart';
 
 final _rootNavigatorKey = GlobalKey<NavigatorState>();
 
@@ -13,7 +12,7 @@ final router = GoRouter(
     GoRoute(
       name: AppRoute.home.name,
       path: AppRoute.home.path,
-      builder: (_, __) => const RootView(),
+      builder: (_, _) => const RootView(),
     ),
   ],
   errorBuilder: (_, state) => Scaffold(
@@ -21,7 +20,6 @@ final router = GoRouter(
       child: Text(state.error.toString(), textAlign: TextAlign.center),
     ),
   ),
-  observers: [seoRouteObserver],
 );
 
 enum AppRoute {

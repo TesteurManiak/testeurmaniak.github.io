@@ -23,7 +23,7 @@ class _ArticlesMobileState extends ConsumerState<ArticlesMobile> {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
+    final size = MediaQuery.sizeOf(context);
     final state = ref.watch(articleListControllerProvider);
 
     return state.map(
@@ -38,7 +38,7 @@ class _ArticlesMobileState extends ConsumerState<ArticlesMobile> {
             horizontal: size.width * 0.05,
           ),
           itemBuilder: (_, index) => ArticleTile(articles[index]),
-          separatorBuilder: (_, __) => const Divider(),
+          separatorBuilder: (_, _) => const Divider(),
           itemCount: articles.length,
         );
       },

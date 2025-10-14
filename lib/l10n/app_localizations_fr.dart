@@ -1,4 +1,8 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
 import 'app_localizations.dart';
+
+// ignore_for_file: type=lint
 
 /// The translations for French (`fr`).
 class AppLocalizationsFr extends AppLocalizations {
@@ -44,7 +48,8 @@ class AppLocalizationsFr extends AppLocalizations {
   String get about_section_title => 'À propos de moi';
 
   @override
-  String get about_section_description => 'Je suis un développeur Flutter basé à Lyon. Je suis passionné par le développement mobile et j\'aime créer des applications qui sont simples et efficaces. J\'utilise la technologie Flutter depuis septembre 2018 et j\'ai eu l\'occasion de travailler sur de nombreux projets personnels et professionnels.';
+  String get about_section_description =>
+      'Je suis un développeur Flutter basé à Lyon. Je suis passionné par le développement mobile et j\'aime créer des applications qui sont simples et efficaces. J\'utilise la technologie Flutter depuis septembre 2018 et j\'ai eu l\'occasion de travailler sur de nombreux projets personnels et professionnels.';
 
   @override
   String get contact_section_title => 'Restons en contact !';
@@ -68,5 +73,6 @@ class AppLocalizationsFr extends AppLocalizations {
   String get my_resume_button => 'Voir mon CV';
 
   @override
-  String get my_resume_link => 'https://drive.google.com/file/d/1hUsMF6gvOiMeC6lUzfK1TWPYIkaZoVlp/view?usp=sharing';
+  String get my_resume_link =>
+      'https://drive.google.com/file/d/1hUsMF6gvOiMeC6lUzfK1TWPYIkaZoVlp/view?usp=sharing';
 }

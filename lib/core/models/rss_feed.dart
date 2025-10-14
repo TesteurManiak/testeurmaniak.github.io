@@ -5,10 +5,10 @@ part 'rss_feed.freezed.dart';
 part 'rss_feed.g.dart';
 
 @Freezed(toJson: false)
-class RssResponse with _$RssResponse {
+abstract class RssResponse with _$RssResponse {
   const factory RssResponse({
-    @JsonKey(name: 'status') required String? status,
-    @JsonKey(name: 'items') required List<RssItem>? items,
+    required String? status,
+    required List<RssItem>? items,
   }) = _RssResponse;
 
   factory RssResponse.fromJson(Map<String, dynamic> json) =>
@@ -16,13 +16,13 @@ class RssResponse with _$RssResponse {
 }
 
 @Freezed(toJson: false)
-class RssItem with _$RssItem {
+abstract class RssItem with _$RssItem {
   const factory RssItem({
-    @JsonKey(name: 'title') required String? title,
-    @JsonKey(name: 'pubDate') required DateTime? pubDate,
-    @JsonKey(name: 'link') required String? link,
-    @JsonKey(name: 'thumbnail') required String? thumbnail,
-    @JsonKey(name: 'categories') required List<String>? categories,
+    required String? title,
+    required DateTime? pubDate,
+    required String? link,
+    required String? thumbnail,
+    required List<String>? categories,
   }) = _RssItem;
 
   const RssItem._();

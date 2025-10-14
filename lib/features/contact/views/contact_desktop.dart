@@ -20,7 +20,7 @@ class ContactDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
+    final size = MediaQuery.sizeOf(context);
     final width = size.width * 0.45;
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,

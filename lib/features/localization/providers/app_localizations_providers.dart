@@ -5,41 +5,39 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:my_portfolio/core/extensions/iterable_extensions.dart';
 import 'package:my_portfolio/l10n/app_localizations.dart';
 
-class AppLocalizationsController extends StateNotifier<Locale> {
-  AppLocalizationsController({
-    required this.supportedLocales,
-  }) : super(ui.PlatformDispatcher.instance.locale);
+class AppLocalizationsController extends Notifier<Locale> {
+  AppLocalizationsController();
 
-  final List<Locale> supportedLocales;
+  @override
+  ui.Locale build() => ui.PlatformDispatcher.instance.locale;
 
   void setLocale(Locale locale) {
+    final supportedLocales = ref.read(supportedLocalesProvider);
     state = supportedLocales.firstMatch(locale);
   }
 }
 
 final appLocalizationsControllerProvider =
-    StateNotifierProvider<AppLocalizationsController, Locale>((ref) {
-  return AppLocalizationsController(
-    supportedLocales: ref.watch(supportedLocalesProvider),
-  );
-});
+    NotifierProvider<AppLocalizationsController, Locale>(() {
+      return AppLocalizationsController();
+    });
 
-final supportedLocalesProvider =
-    Provider<List<Locale>>((ref) => AppLocalizations.supportedLocales);
+final supportedLocalesProvider = Provider<List<Locale>>(
+  (ref) => AppLocalizations.supportedLocales,
+);
 
 final appLocalizationsProvider = Provider<AppLocalizations>((ref) {
   final locale = ui.PlatformDispatcher.instance.locale;
-
-  ref.state = lookupAppLocalizations(locale);
+  final strings = lookupAppLocalizations(locale);
 
   final observer = _LocaleObserver((locales) {
-    ref.state = lookupAppLocalizations(locale);
+    ref.invalidateSelf();
   });
-  final binding = WidgetsBinding.instance..addObserver(observer);
 
+  final binding = WidgetsBinding.instance..addObserver(observer);
   ref.onDispose(() => binding.removeObserver(observer));
 
-  return ref.state;
+  return strings;
 });
 
 class _LocaleObserver extends WidgetsBindingObserver {

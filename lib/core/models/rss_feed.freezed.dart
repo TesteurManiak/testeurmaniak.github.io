@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,415 +9,553 @@ part of 'rss_feed.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-RssResponse _$RssResponseFromJson(Map<String, dynamic> json) {
-  return _RssResponse.fromJson(json);
-}
 
 /// @nodoc
 mixin _$RssResponse {
-  @JsonKey(name: 'status')
-  String? get status => throw _privateConstructorUsedError;
-  @JsonKey(name: 'items')
-  List<RssItem>? get items => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
-  $RssResponseCopyWith<RssResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+ String? get status; List<RssItem>? get items;
+/// Create a copy of RssResponse
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$RssResponseCopyWith<RssResponse> get copyWith => _$RssResponseCopyWithImpl<RssResponse>(this as RssResponse, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is RssResponse&&(identical(other.status, status) || other.status == status)&&const DeepCollectionEquality().equals(other.items, items));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,status,const DeepCollectionEquality().hash(items));
+
+@override
+String toString() {
+  return 'RssResponse(status: $status, items: $items)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $RssResponseCopyWith<$Res> {
-  factory $RssResponseCopyWith(
-          RssResponse value, $Res Function(RssResponse) then) =
-      _$RssResponseCopyWithImpl<$Res, RssResponse>;
-  @useResult
-  $Res call(
-      {@JsonKey(name: 'status') String? status,
-      @JsonKey(name: 'items') List<RssItem>? items});
-}
+abstract mixin class $RssResponseCopyWith<$Res>  {
+  factory $RssResponseCopyWith(RssResponse value, $Res Function(RssResponse) _then) = _$RssResponseCopyWithImpl;
+@useResult
+$Res call({
+ String? status, List<RssItem>? items
+});
 
+
+
+
+}
 /// @nodoc
-class _$RssResponseCopyWithImpl<$Res, $Val extends RssResponse>
+class _$RssResponseCopyWithImpl<$Res>
     implements $RssResponseCopyWith<$Res> {
-  _$RssResponseCopyWithImpl(this._value, this._then);
+  _$RssResponseCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final RssResponse _self;
+  final $Res Function(RssResponse) _then;
 
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? status = freezed,
-    Object? items = freezed,
-  }) {
-    return _then(_value.copyWith(
-      status: freezed == status
-          ? _value.status
-          : status // ignore: cast_nullable_to_non_nullable
-              as String?,
-      items: freezed == items
-          ? _value.items
-          : items // ignore: cast_nullable_to_non_nullable
-              as List<RssItem>?,
-    ) as $Val);
-  }
+/// Create a copy of RssResponse
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? status = freezed,Object? items = freezed,}) {
+  return _then(_self.copyWith(
+status: freezed == status ? _self.status : status // ignore: cast_nullable_to_non_nullable
+as String?,items: freezed == items ? _self.items : items // ignore: cast_nullable_to_non_nullable
+as List<RssItem>?,
+  ));
 }
 
-/// @nodoc
-abstract class _$$_RssResponseCopyWith<$Res>
-    implements $RssResponseCopyWith<$Res> {
-  factory _$$_RssResponseCopyWith(
-          _$_RssResponse value, $Res Function(_$_RssResponse) then) =
-      __$$_RssResponseCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {@JsonKey(name: 'status') String? status,
-      @JsonKey(name: 'items') List<RssItem>? items});
 }
 
-/// @nodoc
-class __$$_RssResponseCopyWithImpl<$Res>
-    extends _$RssResponseCopyWithImpl<$Res, _$_RssResponse>
-    implements _$$_RssResponseCopyWith<$Res> {
-  __$$_RssResponseCopyWithImpl(
-      _$_RssResponse _value, $Res Function(_$_RssResponse) _then)
-      : super(_value, _then);
 
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? status = freezed,
-    Object? items = freezed,
-  }) {
-    return _then(_$_RssResponse(
-      status: freezed == status
-          ? _value.status
-          : status // ignore: cast_nullable_to_non_nullable
-              as String?,
-      items: freezed == items
-          ? _value._items
-          : items // ignore: cast_nullable_to_non_nullable
-              as List<RssItem>?,
-    ));
-  }
+/// Adds pattern-matching-related methods to [RssResponse].
+extension RssResponsePatterns on RssResponse {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _RssResponse value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _RssResponse() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _RssResponse value)  $default,){
+final _that = this;
+switch (_that) {
+case _RssResponse():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _RssResponse value)?  $default,){
+final _that = this;
+switch (_that) {
+case _RssResponse() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? status,  List<RssItem>? items)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _RssResponse() when $default != null:
+return $default(_that.status,_that.items);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? status,  List<RssItem>? items)  $default,) {final _that = this;
+switch (_that) {
+case _RssResponse():
+return $default(_that.status,_that.items);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? status,  List<RssItem>? items)?  $default,) {final _that = this;
+switch (_that) {
+case _RssResponse() when $default != null:
+return $default(_that.status,_that.items);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 @JsonSerializable(createToJson: false)
-class _$_RssResponse implements _RssResponse {
-  const _$_RssResponse(
-      {@JsonKey(name: 'status') required this.status,
-      @JsonKey(name: 'items') required final List<RssItem>? items})
-      : _items = items;
 
-  factory _$_RssResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_RssResponseFromJson(json);
+class _RssResponse implements RssResponse {
+  const _RssResponse({required this.status, required final  List<RssItem>? items}): _items = items;
+  factory _RssResponse.fromJson(Map<String, dynamic> json) => _$RssResponseFromJson(json);
 
-  @override
-  @JsonKey(name: 'status')
-  final String? status;
-  final List<RssItem>? _items;
-  @override
-  @JsonKey(name: 'items')
-  List<RssItem>? get items {
-    final value = _items;
-    if (value == null) return null;
-    if (_items is EqualUnmodifiableListView) return _items;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  String toString() {
-    return 'RssResponse(status: $status, items: $items)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_RssResponse &&
-            (identical(other.status, status) || other.status == status) &&
-            const DeepCollectionEquality().equals(other._items, _items));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType, status, const DeepCollectionEquality().hash(_items));
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$_RssResponseCopyWith<_$_RssResponse> get copyWith =>
-      __$$_RssResponseCopyWithImpl<_$_RssResponse>(this, _$identity);
+@override final  String? status;
+ final  List<RssItem>? _items;
+@override List<RssItem>? get items {
+  final value = _items;
+  if (value == null) return null;
+  if (_items is EqualUnmodifiableListView) return _items;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(value);
 }
 
-abstract class _RssResponse implements RssResponse {
-  const factory _RssResponse(
-          {@JsonKey(name: 'status') required final String? status,
-          @JsonKey(name: 'items') required final List<RssItem>? items}) =
-      _$_RssResponse;
 
-  factory _RssResponse.fromJson(Map<String, dynamic> json) =
-      _$_RssResponse.fromJson;
+/// Create a copy of RssResponse
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$RssResponseCopyWith<_RssResponse> get copyWith => __$RssResponseCopyWithImpl<_RssResponse>(this, _$identity);
 
-  @override
-  @JsonKey(name: 'status')
-  String? get status;
-  @override
-  @JsonKey(name: 'items')
-  List<RssItem>? get items;
-  @override
-  @JsonKey(ignore: true)
-  _$$_RssResponseCopyWith<_$_RssResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _RssResponse&&(identical(other.status, status) || other.status == status)&&const DeepCollectionEquality().equals(other._items, _items));
 }
 
-RssItem _$RssItemFromJson(Map<String, dynamic> json) {
-  return _RssItem.fromJson(json);
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,status,const DeepCollectionEquality().hash(_items));
+
+@override
+String toString() {
+  return 'RssResponse(status: $status, items: $items)';
 }
+
+
+}
+
+/// @nodoc
+abstract mixin class _$RssResponseCopyWith<$Res> implements $RssResponseCopyWith<$Res> {
+  factory _$RssResponseCopyWith(_RssResponse value, $Res Function(_RssResponse) _then) = __$RssResponseCopyWithImpl;
+@override @useResult
+$Res call({
+ String? status, List<RssItem>? items
+});
+
+
+
+
+}
+/// @nodoc
+class __$RssResponseCopyWithImpl<$Res>
+    implements _$RssResponseCopyWith<$Res> {
+  __$RssResponseCopyWithImpl(this._self, this._then);
+
+  final _RssResponse _self;
+  final $Res Function(_RssResponse) _then;
+
+/// Create a copy of RssResponse
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? status = freezed,Object? items = freezed,}) {
+  return _then(_RssResponse(
+status: freezed == status ? _self.status : status // ignore: cast_nullable_to_non_nullable
+as String?,items: freezed == items ? _self._items : items // ignore: cast_nullable_to_non_nullable
+as List<RssItem>?,
+  ));
+}
+
+
+}
+
 
 /// @nodoc
 mixin _$RssItem {
-  @JsonKey(name: 'title')
-  String? get title => throw _privateConstructorUsedError;
-  @JsonKey(name: 'pubDate')
-  DateTime? get pubDate => throw _privateConstructorUsedError;
-  @JsonKey(name: 'link')
-  String? get link => throw _privateConstructorUsedError;
-  @JsonKey(name: 'thumbnail')
-  String? get thumbnail => throw _privateConstructorUsedError;
-  @JsonKey(name: 'categories')
-  List<String>? get categories => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
-  $RssItemCopyWith<RssItem> get copyWith => throw _privateConstructorUsedError;
+ String? get title; DateTime? get pubDate; String? get link; String? get thumbnail; List<String>? get categories;
+/// Create a copy of RssItem
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$RssItemCopyWith<RssItem> get copyWith => _$RssItemCopyWithImpl<RssItem>(this as RssItem, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is RssItem&&(identical(other.title, title) || other.title == title)&&(identical(other.pubDate, pubDate) || other.pubDate == pubDate)&&(identical(other.link, link) || other.link == link)&&(identical(other.thumbnail, thumbnail) || other.thumbnail == thumbnail)&&const DeepCollectionEquality().equals(other.categories, categories));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,title,pubDate,link,thumbnail,const DeepCollectionEquality().hash(categories));
+
+@override
+String toString() {
+  return 'RssItem(title: $title, pubDate: $pubDate, link: $link, thumbnail: $thumbnail, categories: $categories)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $RssItemCopyWith<$Res> {
-  factory $RssItemCopyWith(RssItem value, $Res Function(RssItem) then) =
-      _$RssItemCopyWithImpl<$Res, RssItem>;
-  @useResult
-  $Res call(
-      {@JsonKey(name: 'title') String? title,
-      @JsonKey(name: 'pubDate') DateTime? pubDate,
-      @JsonKey(name: 'link') String? link,
-      @JsonKey(name: 'thumbnail') String? thumbnail,
-      @JsonKey(name: 'categories') List<String>? categories});
-}
+abstract mixin class $RssItemCopyWith<$Res>  {
+  factory $RssItemCopyWith(RssItem value, $Res Function(RssItem) _then) = _$RssItemCopyWithImpl;
+@useResult
+$Res call({
+ String? title, DateTime? pubDate, String? link, String? thumbnail, List<String>? categories
+});
 
+
+
+
+}
 /// @nodoc
-class _$RssItemCopyWithImpl<$Res, $Val extends RssItem>
+class _$RssItemCopyWithImpl<$Res>
     implements $RssItemCopyWith<$Res> {
-  _$RssItemCopyWithImpl(this._value, this._then);
+  _$RssItemCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final RssItem _self;
+  final $Res Function(RssItem) _then;
 
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? title = freezed,
-    Object? pubDate = freezed,
-    Object? link = freezed,
-    Object? thumbnail = freezed,
-    Object? categories = freezed,
-  }) {
-    return _then(_value.copyWith(
-      title: freezed == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String?,
-      pubDate: freezed == pubDate
-          ? _value.pubDate
-          : pubDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      link: freezed == link
-          ? _value.link
-          : link // ignore: cast_nullable_to_non_nullable
-              as String?,
-      thumbnail: freezed == thumbnail
-          ? _value.thumbnail
-          : thumbnail // ignore: cast_nullable_to_non_nullable
-              as String?,
-      categories: freezed == categories
-          ? _value.categories
-          : categories // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-    ) as $Val);
-  }
+/// Create a copy of RssItem
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? title = freezed,Object? pubDate = freezed,Object? link = freezed,Object? thumbnail = freezed,Object? categories = freezed,}) {
+  return _then(_self.copyWith(
+title: freezed == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
+as String?,pubDate: freezed == pubDate ? _self.pubDate : pubDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,link: freezed == link ? _self.link : link // ignore: cast_nullable_to_non_nullable
+as String?,thumbnail: freezed == thumbnail ? _self.thumbnail : thumbnail // ignore: cast_nullable_to_non_nullable
+as String?,categories: freezed == categories ? _self.categories : categories // ignore: cast_nullable_to_non_nullable
+as List<String>?,
+  ));
 }
 
-/// @nodoc
-abstract class _$$_RssItemCopyWith<$Res> implements $RssItemCopyWith<$Res> {
-  factory _$$_RssItemCopyWith(
-          _$_RssItem value, $Res Function(_$_RssItem) then) =
-      __$$_RssItemCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {@JsonKey(name: 'title') String? title,
-      @JsonKey(name: 'pubDate') DateTime? pubDate,
-      @JsonKey(name: 'link') String? link,
-      @JsonKey(name: 'thumbnail') String? thumbnail,
-      @JsonKey(name: 'categories') List<String>? categories});
 }
 
-/// @nodoc
-class __$$_RssItemCopyWithImpl<$Res>
-    extends _$RssItemCopyWithImpl<$Res, _$_RssItem>
-    implements _$$_RssItemCopyWith<$Res> {
-  __$$_RssItemCopyWithImpl(_$_RssItem _value, $Res Function(_$_RssItem) _then)
-      : super(_value, _then);
 
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? title = freezed,
-    Object? pubDate = freezed,
-    Object? link = freezed,
-    Object? thumbnail = freezed,
-    Object? categories = freezed,
-  }) {
-    return _then(_$_RssItem(
-      title: freezed == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String?,
-      pubDate: freezed == pubDate
-          ? _value.pubDate
-          : pubDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      link: freezed == link
-          ? _value.link
-          : link // ignore: cast_nullable_to_non_nullable
-              as String?,
-      thumbnail: freezed == thumbnail
-          ? _value.thumbnail
-          : thumbnail // ignore: cast_nullable_to_non_nullable
-              as String?,
-      categories: freezed == categories
-          ? _value._categories
-          : categories // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-    ));
-  }
+/// Adds pattern-matching-related methods to [RssItem].
+extension RssItemPatterns on RssItem {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _RssItem value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _RssItem() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _RssItem value)  $default,){
+final _that = this;
+switch (_that) {
+case _RssItem():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _RssItem value)?  $default,){
+final _that = this;
+switch (_that) {
+case _RssItem() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? title,  DateTime? pubDate,  String? link,  String? thumbnail,  List<String>? categories)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _RssItem() when $default != null:
+return $default(_that.title,_that.pubDate,_that.link,_that.thumbnail,_that.categories);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? title,  DateTime? pubDate,  String? link,  String? thumbnail,  List<String>? categories)  $default,) {final _that = this;
+switch (_that) {
+case _RssItem():
+return $default(_that.title,_that.pubDate,_that.link,_that.thumbnail,_that.categories);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? title,  DateTime? pubDate,  String? link,  String? thumbnail,  List<String>? categories)?  $default,) {final _that = this;
+switch (_that) {
+case _RssItem() when $default != null:
+return $default(_that.title,_that.pubDate,_that.link,_that.thumbnail,_that.categories);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 @JsonSerializable(createToJson: false)
-class _$_RssItem extends _RssItem {
-  const _$_RssItem(
-      {@JsonKey(name: 'title') required this.title,
-      @JsonKey(name: 'pubDate') required this.pubDate,
-      @JsonKey(name: 'link') required this.link,
-      @JsonKey(name: 'thumbnail') required this.thumbnail,
-      @JsonKey(name: 'categories') required final List<String>? categories})
-      : _categories = categories,
-        super._();
 
-  factory _$_RssItem.fromJson(Map<String, dynamic> json) =>
-      _$$_RssItemFromJson(json);
+class _RssItem extends RssItem {
+  const _RssItem({required this.title, required this.pubDate, required this.link, required this.thumbnail, required final  List<String>? categories}): _categories = categories,super._();
+  factory _RssItem.fromJson(Map<String, dynamic> json) => _$RssItemFromJson(json);
 
-  @override
-  @JsonKey(name: 'title')
-  final String? title;
-  @override
-  @JsonKey(name: 'pubDate')
-  final DateTime? pubDate;
-  @override
-  @JsonKey(name: 'link')
-  final String? link;
-  @override
-  @JsonKey(name: 'thumbnail')
-  final String? thumbnail;
-  final List<String>? _categories;
-  @override
-  @JsonKey(name: 'categories')
-  List<String>? get categories {
-    final value = _categories;
-    if (value == null) return null;
-    if (_categories is EqualUnmodifiableListView) return _categories;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  String toString() {
-    return 'RssItem(title: $title, pubDate: $pubDate, link: $link, thumbnail: $thumbnail, categories: $categories)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_RssItem &&
-            (identical(other.title, title) || other.title == title) &&
-            (identical(other.pubDate, pubDate) || other.pubDate == pubDate) &&
-            (identical(other.link, link) || other.link == link) &&
-            (identical(other.thumbnail, thumbnail) ||
-                other.thumbnail == thumbnail) &&
-            const DeepCollectionEquality()
-                .equals(other._categories, _categories));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(runtimeType, title, pubDate, link, thumbnail,
-      const DeepCollectionEquality().hash(_categories));
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$_RssItemCopyWith<_$_RssItem> get copyWith =>
-      __$$_RssItemCopyWithImpl<_$_RssItem>(this, _$identity);
+@override final  String? title;
+@override final  DateTime? pubDate;
+@override final  String? link;
+@override final  String? thumbnail;
+ final  List<String>? _categories;
+@override List<String>? get categories {
+  final value = _categories;
+  if (value == null) return null;
+  if (_categories is EqualUnmodifiableListView) return _categories;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(value);
 }
 
-abstract class _RssItem extends RssItem {
-  const factory _RssItem(
-      {@JsonKey(name: 'title')
-          required final String? title,
-      @JsonKey(name: 'pubDate')
-          required final DateTime? pubDate,
-      @JsonKey(name: 'link')
-          required final String? link,
-      @JsonKey(name: 'thumbnail')
-          required final String? thumbnail,
-      @JsonKey(name: 'categories')
-          required final List<String>? categories}) = _$_RssItem;
-  const _RssItem._() : super._();
 
-  factory _RssItem.fromJson(Map<String, dynamic> json) = _$_RssItem.fromJson;
+/// Create a copy of RssItem
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$RssItemCopyWith<_RssItem> get copyWith => __$RssItemCopyWithImpl<_RssItem>(this, _$identity);
 
-  @override
-  @JsonKey(name: 'title')
-  String? get title;
-  @override
-  @JsonKey(name: 'pubDate')
-  DateTime? get pubDate;
-  @override
-  @JsonKey(name: 'link')
-  String? get link;
-  @override
-  @JsonKey(name: 'thumbnail')
-  String? get thumbnail;
-  @override
-  @JsonKey(name: 'categories')
-  List<String>? get categories;
-  @override
-  @JsonKey(ignore: true)
-  _$$_RssItemCopyWith<_$_RssItem> get copyWith =>
-      throw _privateConstructorUsedError;
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _RssItem&&(identical(other.title, title) || other.title == title)&&(identical(other.pubDate, pubDate) || other.pubDate == pubDate)&&(identical(other.link, link) || other.link == link)&&(identical(other.thumbnail, thumbnail) || other.thumbnail == thumbnail)&&const DeepCollectionEquality().equals(other._categories, _categories));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,title,pubDate,link,thumbnail,const DeepCollectionEquality().hash(_categories));
+
+@override
+String toString() {
+  return 'RssItem(title: $title, pubDate: $pubDate, link: $link, thumbnail: $thumbnail, categories: $categories)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$RssItemCopyWith<$Res> implements $RssItemCopyWith<$Res> {
+  factory _$RssItemCopyWith(_RssItem value, $Res Function(_RssItem) _then) = __$RssItemCopyWithImpl;
+@override @useResult
+$Res call({
+ String? title, DateTime? pubDate, String? link, String? thumbnail, List<String>? categories
+});
+
+
+
+
+}
+/// @nodoc
+class __$RssItemCopyWithImpl<$Res>
+    implements _$RssItemCopyWith<$Res> {
+  __$RssItemCopyWithImpl(this._self, this._then);
+
+  final _RssItem _self;
+  final $Res Function(_RssItem) _then;
+
+/// Create a copy of RssItem
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? title = freezed,Object? pubDate = freezed,Object? link = freezed,Object? thumbnail = freezed,Object? categories = freezed,}) {
+  return _then(_RssItem(
+title: freezed == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
+as String?,pubDate: freezed == pubDate ? _self.pubDate : pubDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,link: freezed == link ? _self.link : link // ignore: cast_nullable_to_non_nullable
+as String?,thumbnail: freezed == thumbnail ? _self.thumbnail : thumbnail // ignore: cast_nullable_to_non_nullable
+as String?,categories: freezed == categories ? _self._categories : categories // ignore: cast_nullable_to_non_nullable
+as List<String>?,
+  ));
+}
+
+
+}
+
+// dart format on
