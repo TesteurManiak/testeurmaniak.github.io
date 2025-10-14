@@ -16,16 +16,14 @@ class ArticlesDesktop extends ConsumerWidget {
     final caseWidth = size.width * 0.2;
     final crossAxisCount = (size.width / caseWidth).floor();
 
-    return state.map(
-      loading: (_) {
+    return state.when(
+      loading: () {
         return _ShimmerGrid(
           caseWidth: caseWidth,
           crossAxisCount: crossAxisCount,
         );
       },
-      loaded: (loaded) {
-        final articles = loaded.articles;
-
+      data: (articles) {
         return GridView.builder(
           padding: const EdgeInsets.all(32),
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -40,7 +38,7 @@ class ArticlesDesktop extends ConsumerWidget {
           },
         );
       },
-      error: (error) => Center(child: Text(error.message)),
+      error: (e, s) => Center(child: Text(e.toString())),
     );
   }
 }

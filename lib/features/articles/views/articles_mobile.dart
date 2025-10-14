@@ -26,11 +26,9 @@ class _ArticlesMobileState extends ConsumerState<ArticlesMobile> {
     final size = MediaQuery.sizeOf(context);
     final state = ref.watch(articleListControllerProvider);
 
-    return state.map(
-      loading: (_) => const ArticlesLoadingIndicator(),
-      loaded: (loaded) {
-        final articles = loaded.articles;
-
+    return state.when(
+      loading: () => const ArticlesLoadingIndicator(),
+      data: (articles) {
         return ListView.separated(
           controller: _scrollController,
           padding: EdgeInsets.symmetric(
@@ -42,7 +40,7 @@ class _ArticlesMobileState extends ConsumerState<ArticlesMobile> {
           itemCount: articles.length,
         );
       },
-      error: (error) => ArticlesError(error.message),
+      error: (e, s) => ArticlesError(e.toString()),
     );
   }
 }
