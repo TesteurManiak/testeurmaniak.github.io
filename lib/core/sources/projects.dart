@@ -21,14 +21,16 @@ const _projects = <ProjectModel>[
         'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/projects/dailyn.png',
   ),
   ProjectModel(
-    title: 'MyPREIM',
+    title: 'My Praemia',
     description:
-        "MyPREIM : l'application de Primonial REIM France destinée aux associés de ses SCPI.",
+        "My Praemia : l'application de Primonial REIM France destinée aux associés de ses SCPI.",
     links: [
       LinkData.android(
-        'https://play.google.com/store/apps/details?id=com.primonial.reim',
+        'https://play.google.com/store/apps/details?id=com.praemia.reim',
       ),
-      LinkData.appStore('https://apps.apple.com/fr/app/mypreim/id1658749867'),
+      LinkData.appStore(
+        'https://apps.apple.com/fr/app/my-praemia/id6503942026',
+      ),
     ],
     iconUrl:
         'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/icons/my_preim.png',
@@ -83,22 +85,6 @@ const _projects = <ProjectModel>[
         'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/icons/m.png',
   ),
   ProjectModel(
-    title: 'My Manga Collection',
-    description:
-        "Follow and track your manga collection easily with a simple Flutter application using Kitsu API.",
-    links: [
-      LinkData.github('https://github.com/TesteurManiak/my-manga-collection'),
-      LinkData(
-        url: 'https://itsallwidgets.com/mymangacollection',
-        name: 'ItsAllWidgets',
-      ),
-    ],
-    imageUrl:
-        'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/projects/manga.png',
-    iconUrl:
-        'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/icons/manga.png',
-  ),
-  ProjectModel(
     title: 'Flutter Map',
     description:
         "A versatile mapping package for Flutter, based off leaflet.js, that's simple and easy to learn, yet completely customizable and configurable.",
@@ -120,15 +106,6 @@ const _projects = <ProjectModel>[
     ],
     iconUrl:
         'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/icons/matomo.png',
-  ),
-  ProjectModel(
-    title: 'icon_decoration',
-    description:
-        'Add decoration capabilities for the Icon widget with shadows, borders, gradients.',
-    links: [
-      LinkData.github('https://github.com/TesteurManiak/icon_decoration'),
-      LinkData.package('https://pub.dev/packages/icon_decoration'),
-    ],
   ),
   ProjectModel(
     title: 'icalendar_parser',
@@ -169,20 +146,7 @@ const _projects = <ProjectModel>[
     imageUrl:
         'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/projects/ygo_collection_manager.png',
   ),
-  ProjectModel(
-    title: 'Maniak Game Deals',
-    description:
-        'A cross-platform application using CheapShark API to display videogames deals on different websites.',
-    links: [
-      LinkData.github('https://github.com/TesteurManiak/game_deals_flutter'),
-      LinkData(
-        url: 'https://testeurmaniak.github.io/game_deals_flutter/#/',
-        name: 'Game Deals Flutter',
-      ),
-    ],
-    imageUrl:
-        'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/projects/game_deals.png',
-  ),
+
   ProjectModel(
     title: 'twitch_api_flutter',
     description:
@@ -207,21 +171,6 @@ const _projects = <ProjectModel>[
         'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/projects/drinking.png',
   ),
   ProjectModel(
-    title: 'ToDoList Flutter',
-    description:
-        'ToDo list made in flutter for training purpose in the use of local SQLite database and UI.',
-    links: [
-      LinkData.gitlab('https://gitlab.com/G_Roux/todolist-flutter'),
-      LinkData.android(
-        'https://play.google.com/store/apps/details?id=com.maniak.todo_list',
-      ),
-    ],
-    iconUrl:
-        'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/icons/todolist.png',
-    imageUrl:
-        'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/projects/todo.png',
-  ),
-  ProjectModel(
     title: 'Temopedia',
     description:
         "Mobile app companion for Temtem to get an easy access to creature's information.",
@@ -235,15 +184,6 @@ const _projects = <ProjectModel>[
         'https://raw.githubusercontent.com/TesteurManiak/temopedia/dev/assets/launcher_icon/icon.png',
     imageUrl:
         'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/projects/temopedia.png',
-  ),
-  ProjectModel(
-    title: 'Flutter Pokedex',
-    description: "Pokedex app built with Flutter (with lots of animations)",
-    links: [LinkData.gitlab('https://gitlab.com/G_Roux/flutter_pokedex')],
-    iconUrl:
-        'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/icons/pokedex.png',
-    imageUrl:
-        'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/projects/pokedex.png',
   ),
 ];
 
