@@ -35,12 +35,12 @@ class AboutSection extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(height: size.height * 0.03),
+        SizedBox(height: size.height * .03),
         Text(
           strings.about_section_description,
           style: TextStyles.selectSubHeadline(context),
         ),
-        SizedBox(height: size.height * 0.05),
+        SizedBox(height: size.height * .05),
         OutlinedButton(
           style: OutlinedButton.styleFrom(
             padding: EdgeInsets.symmetric(

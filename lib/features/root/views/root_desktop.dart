@@ -21,10 +21,7 @@ class RootDesktop extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              SizedBox(
-                height: size.height * 0.05,
-                child: const _CustomTabBar(),
-              ),
+              SizedBox(height: size.height * .05, child: const _CustomTabBar()),
               const Expanded(
                 child: TabBarView(
                   physics: NeverScrollableScrollPhysics(),

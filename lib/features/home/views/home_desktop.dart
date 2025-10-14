@@ -14,20 +14,19 @@ class HomeDesktop extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         SizedBox(
-          width: size.width * 0.45,
+          width: size.width * .45,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
+            spacing: size.height * .05,
             children: [
               const HeaderWidget(),
-              SizedBox(height: size.height * 0.05),
               const LinkButtons(),
-              SizedBox(height: size.height * 0.05),
               const MyButtons(),
             ],
           ),
         ),
-        SizedBox(width: size.width * 0.03),
+        SizedBox(width: size.width * .03),
         const ProfilePicture(),
       ],
     );
