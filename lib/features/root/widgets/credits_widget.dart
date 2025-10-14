@@ -9,7 +9,7 @@ class CreditsWidget extends StatelessWidget {
     return BuiltWithFlutterCornerBanner(
       bannerPosition: CornerBannerPosition.topLeft,
       bannerColor: const Color(0xFF222222),
-      shadowColor: Colors.black.withOpacity(0.8),
+      shadowColor: Colors.black.withValues(alpha: .8),
       elevation: 5,
     );
   }

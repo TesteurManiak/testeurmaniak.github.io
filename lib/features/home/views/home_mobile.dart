@@ -9,17 +9,15 @@ class HomeMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
+    final size = MediaQuery.sizeOf(context);
     return SingleChildScrollView(
       padding: const EdgeInsets.all(16),
       child: Column(
+        spacing: size.height * .02,
         children: [
           const ProfilePicture(),
-          SizedBox(height: size.height * 0.02),
           const HeaderWidget(),
-          SizedBox(height: size.height * 0.02),
           const LinkButtons(),
-          SizedBox(height: size.height * 0.02),
           const MyButtons(),
         ],
       ),

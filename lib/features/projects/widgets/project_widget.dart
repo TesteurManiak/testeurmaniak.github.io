@@ -22,23 +22,18 @@ class ProjectWidget extends StatelessWidget {
       child: Stack(
         children: [
           if (imageUrl != null)
-            Positioned.fill(
-              child: _BackgroundImage(imageUrl),
-            ),
+            Positioned.fill(child: _BackgroundImage(imageUrl)),
           Container(
             padding: const EdgeInsets.all(16),
             alignment: Alignment.center,
-            color: Colors.white.withOpacity(0.2),
+            color: Colors.white.withValues(alpha: .2),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
                 if (iconUrl != null)
                   Padding(
                     padding: const EdgeInsets.only(bottom: 8),
-                    child: _AppIconImage(
-                      src: iconUrl,
-                      isDesktop: isDesktop,
-                    ),
+                    child: _AppIconImage(src: iconUrl, isDesktop: isDesktop),
                   ),
                 Text(
                   projectModel.title,
@@ -58,7 +53,7 @@ class ProjectWidget extends StatelessWidget {
                 const SizedBox(height: 8),
                 Wrap(
                   children: projectModel.links
-                      .map<Widget>(
+                      .map(
                         (e) => IconButton(
                           onPressed: () => launchUrlString(e.url),
                           icon: Icon(e.icon),
@@ -84,7 +79,7 @@ class _BackgroundImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return ColorFiltered(
       colorFilter: ColorFilter.mode(
-        Colors.black.withOpacity(0.1),
+        Colors.black.withValues(alpha: .1),
         BlendMode.dstATop,
       ),
       child: Image.network(
@@ -101,10 +96,8 @@ class _BackgroundImage extends StatelessWidget {
 }
 
 class _AppIconImage extends StatelessWidget {
-  const _AppIconImage({
-    required this.src,
-    required bool isDesktop,
-  }) : size = isDesktop ? 100 : 50;
+  const _AppIconImage({required this.src, required bool isDesktop})
+    : size = isDesktop ? 100 : 50;
 
   final String src;
   final double size;
@@ -132,18 +125,12 @@ class _AppIconImage extends StatelessWidget {
 }
 
 class _Placeholder extends StatelessWidget {
-  const _Placeholder({
-    this.size,
-  });
+  const _Placeholder({this.size});
 
   final double? size;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white,
-      height: size,
-      width: size,
-    );
+    return Container(color: Colors.white, height: size, width: size);
   }
 }

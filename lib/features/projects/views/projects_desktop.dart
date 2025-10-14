@@ -8,7 +8,7 @@ class ProjectsDesktop extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final size = MediaQuery.of(context).size;
+    final size = MediaQuery.sizeOf(context);
     final projects = ref.watch(projectsProvider);
 
     return GridView.builder(

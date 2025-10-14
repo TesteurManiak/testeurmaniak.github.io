@@ -1,4 +1,8 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
 import 'app_localizations.dart';
+
+// ignore_for_file: type=lint
 
 /// The translations for English (`en`).
 class AppLocalizationsEn extends AppLocalizations {
@@ -44,7 +48,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get about_section_title => 'About me';
 
   @override
-  String get about_section_description => 'I\'ve been using Flutter since September 2018. Since then I\'ve been able to work on a lot of projects each with its own problematics. You will find on this website some applications made during my spare time and some made as part of my job as a mobile developer. You will also find some articles related to Dart and Flutter that I am writting on the site Medium.com and Dart/Flutter packages I have released on Pub.dev.';
+  String get about_section_description =>
+      'I\'ve been using Flutter since September 2018. Since then I\'ve been able to work on a lot of projects each with its own problematics. You will find on this website some applications made during my spare time and some made as part of my job as a mobile developer. You will also find some articles related to Dart and Flutter that I am writting on the site Medium.com and Dart/Flutter packages I have released on Pub.dev.';
 
   @override
   String get contact_section_title => 'Let\'s get in touch!';
@@ -68,5 +73,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get my_resume_button => 'See my resume';
 
   @override
-  String get my_resume_link => 'https://drive.google.com/file/d/1aeMIfW6Ee7u8HQJaqIGWYXOeiicvUP1t/view?usp=sharing';
+  String get my_resume_link =>
+      'https://drive.google.com/file/d/1aeMIfW6Ee7u8HQJaqIGWYXOeiicvUP1t/view?usp=sharing';
 }

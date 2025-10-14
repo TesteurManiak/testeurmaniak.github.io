@@ -8,7 +8,7 @@ class ProjectsMobile extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final size = MediaQuery.of(context).size;
+    final size = MediaQuery.sizeOf(context);
     final projects = ref.watch(projectsProvider);
 
     return ListView.separated(
@@ -18,7 +18,7 @@ class ProjectsMobile extends ConsumerWidget {
       ),
       itemCount: projects.length,
       itemBuilder: (_, index) => ProjectWidget(projects[index]),
-      separatorBuilder: (_, __) => const SizedBox(height: 16),
+      separatorBuilder: (_, _) => const SizedBox(height: 16),
     );
   }
 }

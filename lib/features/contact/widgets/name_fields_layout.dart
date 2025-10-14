@@ -15,14 +15,10 @@ class NameFieldsLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      spacing: 16,
       children: [
         Expanded(child: FirstNameField(controller: firstNameController)),
-        const SizedBox(width: 16),
-        Expanded(
-          child: LastNameField(
-            controller: lastNameController,
-          ),
-        ),
+        Expanded(child: LastNameField(controller: lastNameController)),
       ],
     );
   }

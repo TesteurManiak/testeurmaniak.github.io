@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:my_portfolio/core/models/rss_feed.dart';
 import 'package:my_portfolio/features/articles/widgets/article_date.dart';
 import 'package:my_portfolio/features/articles/widgets/article_image.dart';
-import 'package:seo_renderer/seo_renderer.dart';
 
 class ArticleTile extends StatelessWidget {
   const ArticleTile(this.article, {super.key});
@@ -25,20 +24,13 @@ class ArticleTile extends StatelessWidget {
           children: [
             Expanded(
               child: Column(
+                spacing: 8,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   if (title != null)
-                    TextRenderer(
-                      text: article.title,
-                      child: Text(
-                        title,
-                        style: theme.textTheme.titleMedium,
-                      ),
-                    ),
-                  const SizedBox(height: 8),
+                    Text(title, style: theme.textTheme.titleMedium),
                   if (thumbnail != null) ArticleImage(src: thumbnail),
-                  const SizedBox(height: 8),
                   if (date != null) ArticleDate(date),
                 ],
               ),

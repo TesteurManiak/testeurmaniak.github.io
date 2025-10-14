@@ -6,15 +6,12 @@ class AboutMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
+    final size = MediaQuery.sizeOf(context);
     return SingleChildScrollView(
       padding: const EdgeInsets.all(16),
       child: Column(
-        children: [
-          const FlutterLogo(size: 200),
-          SizedBox(height: size.height * 0.02),
-          const AboutSection(),
-        ],
+        spacing: size.height * .02,
+        children: [const FlutterLogo(size: 200), const AboutSection()],
       ),
     );
   }
