@@ -108,6 +108,17 @@ const _projects = <ProjectModel>[
         'https://raw.githubusercontent.com/TesteurManiak/testeurmaniak.github.io/main/assets/icons/matomo.png',
   ),
   ProjectModel(
+    title: 'Flutter Manga Reader',
+    description: 'A cross-platform manga reader built with Flutter.',
+    links: [
+      LinkData.github('https://github.com/TesteurManiak/flutter_manga_reader'),
+    ],
+    iconUrl:
+        'https://raw.githubusercontent.com/TesteurManiak/flutter_manga_reader/main/assets/splash/splash.png',
+    imageUrl:
+        'https://raw.githubusercontent.com/TesteurManiak/flutter_manga_reader/main/screenshots/dark/explorer.png',
+  ),
+  ProjectModel(
     title: 'icalendar_parser',
     description:
         'Package to parse iCalendar (.ics) files written in pure Dart.',
