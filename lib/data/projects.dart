@@ -14,8 +14,8 @@ const projects = <Project>[
         'https://apps.apple.com/fr/app/the-ring-io/id1479375224',
       ),
     ],
-    iconUrl: '/assets/icons/dailyn.png',
-    imageUrl: '/assets/projects/dailyn.png',
+    iconUrl: '/assets/icons/dailyn.webp',
+    imageUrl: '/assets/projects/dailyn.webp',
   ),
   Project(
     title: 'My Praemia',
@@ -29,8 +29,8 @@ const projects = <Project>[
         'https://apps.apple.com/fr/app/my-praemia/id6503942026',
       ),
     ],
-    iconUrl: '/assets/icons/my_preim.png',
-    imageUrl: '/assets/projects/mypreim.png',
+    iconUrl: '/assets/icons/my_preim.webp',
+    imageUrl: '/assets/projects/mypreim.webp',
   ),
   Project(
     title: 'StrasApp',
@@ -42,8 +42,8 @@ const projects = <Project>[
       LinkData.appStore('https://apps.apple.com/fr/app/strasapp/id1610325996'),
       LinkData(url: 'https://strasapp.eu/', name: 'StrasApp.eu'),
     ],
-    imageUrl: '/assets/projects/strasapp.png',
-    iconUrl: '/assets/icons/strasapp.png',
+    imageUrl: '/assets/projects/strasapp.webp',
+    iconUrl: '/assets/icons/strasapp.webp',
   ),
   Project(
     title: 'MyUCA - Université Clermont Auvergne',
@@ -55,8 +55,8 @@ const projects = <Project>[
       ),
       LinkData.appStore('https://apps.apple.com/fr/app/myuca/id1061989308'),
     ],
-    imageUrl: '/assets/projects/myuca.png',
-    iconUrl: '/assets/icons/myuca.png',
+    imageUrl: '/assets/projects/myuca.webp',
+    iconUrl: '/assets/icons/myuca.webp',
   ),
   Project(
     title: 'M - Infos voyageur, Mobilités à Grenoble',
@@ -70,8 +70,8 @@ const projects = <Project>[
         'https://apps.apple.com/fr/app/m-infos-voyageurs/id966169282',
       ),
     ],
-    imageUrl: '/assets/projects/m.png',
-    iconUrl: '/assets/icons/m.png',
+    imageUrl: '/assets/projects/m.webp',
+    iconUrl: '/assets/icons/m.webp',
   ),
   Project(
     title: 'Flutter Map',
@@ -82,7 +82,7 @@ const projects = <Project>[
       LinkData.package('https://pub.dev/packages/flutter_map'),
       LinkData(name: 'Documentation', url: 'https://docs.fleaflet.dev/'),
     ],
-    iconUrl: '/assets/icons/flutter_map.png',
+    iconUrl: '/assets/icons/flutter_map.webp',
   ),
   Project(
     title: 'Matomo Tracker',
@@ -92,7 +92,7 @@ const projects = <Project>[
       LinkData.github('https://github.com/Floating-Dartists/matomo-tracker'),
       LinkData.package('https://pub.dev/packages/matomo_tracker'),
     ],
-    iconUrl: '/assets/icons/matomo.png',
+    iconUrl: '/assets/icons/matomo.webp',
   ),
   Project(
     title: 'Flutter Manga Reader',
@@ -141,7 +141,7 @@ const projects = <Project>[
         'https://github.com/TesteurManiak/ygo_collection_manager',
       ),
     ],
-    imageUrl: '/assets/projects/ygo_collection_manager.png',
+    imageUrl: '/assets/projects/ygo_collection_manager.webp',
   ),
 
   Project(
@@ -162,8 +162,8 @@ const projects = <Project>[
         'https://play.google.com/store/apps/details?id=com.drinkingdev.drinking&hl=fr&gl=US',
       ),
     ],
-    iconUrl: '/assets/icons/drinking.png',
-    imageUrl: '/assets/projects/drinking.png',
+    iconUrl: '/assets/icons/drinking.webp',
+    imageUrl: '/assets/projects/drinking.webp',
   ),
   Project(
     title: 'Temopedia',
@@ -177,6 +177,6 @@ const projects = <Project>[
     ],
     iconUrl:
         'https://raw.githubusercontent.com/TesteurManiak/temopedia/dev/assets/launcher_icon/icon.png',
-    imageUrl: '/assets/projects/temopedia.png',
+    imageUrl: '/assets/projects/temopedia.webp',
   ),
 ];
