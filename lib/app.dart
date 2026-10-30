@@ -29,6 +29,8 @@ enum AppTab {
   };
 }
 
+const _languageKey = 'language';
+
 @client
 class App extends StatefulComponent {
   const App({super.key});
@@ -45,11 +47,23 @@ class _AppState extends State<App> {
   void initState() {
     super.initState();
     if (kIsWeb) {
-      _strings = AppStrings.forLocale(web.window.navigator.language);
+      final saved = web.window.localStorage.getItem(_languageKey);
+      _strings = AppStrings.forLocale(saved ?? web.window.navigator.language);
     }
   }
 
   void _select(AppTab tab) => setState(() => _current = tab);
+
+  AppStrings get _nextStrings {
+    const all = AppStrings.supported;
+    return all[(all.indexOf(_strings) + 1) % all.length];
+  }
+
+  void _switchLanguage() {
+    final next = _nextStrings;
+    web.window.localStorage.setItem(_languageKey, next.languageCode);
+    setState(() => _strings = next);
+  }
 
   Component _panel(AppTab tab, Component child) {
     return section(
@@ -83,6 +97,18 @@ class _AppState extends State<App> {
                 ]),
               ],
             ),
+          button(
+            classes: 'lang-switch',
+            attributes: {
+              'type': 'button',
+              'aria-label': _strings.switchLanguageLabel,
+              'title': _strings.switchLanguageLabel,
+            },
+            onClick: _switchLanguage,
+            [
+              Component.text(_nextStrings.languageCode.toUpperCase()),
+            ],
+          ),
         ],
       ),
       div(classes: 'panels', [

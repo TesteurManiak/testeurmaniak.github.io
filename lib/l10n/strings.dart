@@ -1,6 +1,7 @@
 class AppStrings {
   const AppStrings({
     required this.languageCode,
+    required this.switchLanguageLabel,
     required this.homeTab,
     required this.aboutTab,
     required this.articlesTab,
@@ -29,6 +30,7 @@ class AppStrings {
   });
 
   final String languageCode;
+  final String switchLanguageLabel;
   final String homeTab;
   final String aboutTab;
   final String articlesTab;
@@ -76,6 +78,7 @@ class AppStrings {
 
   static const en = AppStrings(
     languageCode: 'en',
+    switchLanguageLabel: 'Switch to French',
     homeTab: 'Home',
     aboutTab: 'About',
     articlesTab: 'Articles',
@@ -120,6 +123,7 @@ class AppStrings {
 
   static const fr = AppStrings(
     languageCode: 'fr',
+    switchLanguageLabel: 'Passer en anglais',
     homeTab: 'Accueil',
     aboutTab: 'À propos',
     articlesTab: 'Articles',

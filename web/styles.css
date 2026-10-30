@@ -18,6 +18,7 @@ html,
 body {
   margin: 0;
   height: 100%;
+  height: 100dvh;
   background: var(--scaffold);
   color: #fff;
   font-family: Roboto, system-ui, sans-serif;
@@ -83,7 +84,10 @@ h1, h2, h3, p {
   to { opacity: 1; transform: none; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .panel.active { animation: none; }
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
 }
 
 /* Navigation: bottom bar on small screens */
@@ -91,7 +95,29 @@ h1, h2, h3, p {
   order: 2;
   display: flex;
   background: var(--dark-blue);
+  padding-bottom: env(safe-area-inset-bottom);
 }
+
+.lang-switch {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  z-index: 10;
+  min-width: 44px;
+  height: 36px;
+  padding: 0 12px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 18px;
+  background: rgba(4, 2, 33, 0.7);
+  color: #fff;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+.lang-switch:hover { background: var(--indicator); border-color: var(--indicator); }
 
 .tab {
   flex: 1;
@@ -110,6 +136,8 @@ h1, h2, h3, p {
 .tab .icon {
   font-size: 22px;
 }
+.tab { transition: color 0.2s, border-color 0.2s; }
+.tab:hover { color: var(--indicator); }
 .tab.active {
   color: var(--indicator);
 }
@@ -138,6 +166,9 @@ h2 { font-size: 24px; }
   letter-spacing: 0.08em;
   cursor: pointer;
 }
+.btn { transition: filter 0.2s, background 0.2s, transform 0.2s; }
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: none; }
 .btn-primary { background: var(--indicator); }
 .btn-primary:hover { filter: brightness(1.15); }
 .btn-outlined { border-color: #fff; background: transparent; }
@@ -158,7 +189,8 @@ h2 { font-size: 24px; }
   font-size: 24px;
   text-decoration: none;
 }
-.icon-button:hover { background: rgba(255, 255, 255, 0.1); }
+.icon-button { transition: background 0.2s, transform 0.2s; }
+.icon-button:hover { background: rgba(255, 255, 255, 0.1); transform: scale(1.12); }
 
 /* Home */
 .home {
@@ -268,13 +300,31 @@ h2 { font-size: 24px; }
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 24px;
+  gap: 20px;
   padding: 16px;
 }
 .project {
   position: relative;
-  border-radius: 40px;
+  border-radius: 28px;
   overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.04));
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.panel.active .project { animation: card-in 400ms ease-out backwards; }
+.panel.active .project:nth-child(2) { animation-delay: 60ms; }
+.panel.active .project:nth-child(3) { animation-delay: 120ms; }
+.panel.active .project:nth-child(4) { animation-delay: 180ms; }
+.panel.active .project:nth-child(n+5) { animation-delay: 240ms; }
+@keyframes card-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: none; }
+}
+.project:hover,
+.project:focus-within {
+  transform: translateY(-4px);
+  border-color: var(--indicator);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
 }
 .project-background {
   position: absolute;
@@ -282,23 +332,34 @@ h2 { font-size: 24px; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.1;
+  opacity: 0.12;
+  transition: opacity 0.25s ease, transform 0.4s ease;
 }
+.project:hover .project-background { opacity: 0.22; transform: scale(1.05); }
 .project-content {
   position: relative;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 8px;
-  padding: 16px;
-  background: rgba(255, 255, 255, 0.2);
+  padding: 24px 16px 12px;
   text-align: center;
 }
-.project-icon { width: 50px; height: 50px; border-radius: 12px; }
-.project h3 { font-size: 24px; }
-.project-description { font-size: 14px; }
+.project-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+.project h3 { font-size: 22px; font-weight: 500; }
+.project-description { font-size: 14px; color: rgba(255, 255, 255, 0.8); }
+.project .icon-links {
+  justify-content: center;
+  margin-top: auto;
+  padding-top: 8px;
+}
 
 /* Contact */
 .contact {
@@ -348,10 +409,31 @@ h2 { font-size: 24px; }
   z-index: 10;
 }
 
+@media (max-width: 380px) {
+  .hero-name { font-size: 30px; }
+  .hero-line { font-size: 20px; }
+  .avatar { width: 200px; height: 200px; }
+  .buttons .btn { padding: 16px 20px; font-size: 13px; }
+  .tab { font-size: 11px; }
+}
+
+@media (max-height: 520px) and (orientation: landscape) and (max-width: 1099px) {
+  .avatar { width: 140px; height: 140px; }
+  .home { flex-direction: row; justify-content: center; gap: 24px; text-align: left; }
+  .home-text, .find-me { align-items: flex-start; }
+  .buttons { justify-content: flex-start; }
+}
+
 @media (min-width: 650px) {
-  .projects { grid-template-columns: repeat(2, 1fr); }
+  .panel { padding: 24px; }
+  .avatar { width: 300px; height: 300px; }
+  .hero-name { font-size: 48px; }
+  .about-text { max-width: 560px; }
+  .about-logo img { width: 200px; height: 200px; }
+  .projects { grid-template-columns: repeat(2, 1fr); gap: 24px; padding: 24px; }
   .contact-names { flex-direction: row; }
 }
+
 
 /* Desktop */
 @media (min-width: 1100px) {
@@ -370,6 +452,7 @@ h2 { font-size: 24px; }
   }
   .tab .icon { display: none; }
   .tab.active { color: #fff; border-bottom-color: var(--indicator); }
+  .lang-switch { position: static; margin-left: 12px; align-self: center; }
 
   .hero-line { font-size: 36px; }
   .hero-name { font-size: 57px; }
@@ -390,7 +473,8 @@ h2 { font-size: 24px; }
 
   .projects { grid-template-columns: repeat(3, 1fr); gap: 3vw; padding: 5vh 5vw; }
   .project { min-height: 320px; }
-  .project-icon { width: 100px; height: 100px; }
+  .project-content { padding: 32px 20px 16px; }
+  .project-icon { width: 88px; height: 88px; border-radius: 20px; }
   .project h3 {
     font-size: 36px;
     display: -webkit-box;
