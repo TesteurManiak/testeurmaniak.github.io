@@ -12,6 +12,10 @@ const _description =
     "Hi, I'm Guillaume Roux! Welcome to my Flutter Portfolio, showcasing articles, projects and contributions to the open source community.";
 const _url = 'https://rouxguillau.me/';
 const _image = '${_url}assets/avatar.png';
+const _jsonLd =
+    '{"@context":"https://schema.org","@type":"Person","name":"Guillaume Roux",'
+    '"url":"$_url","image":"$_image","jobTitle":"Flutter Developer",'
+    '"sameAs":["https://github.com/TesteurManiak","https://twitter.com/testeurmaniak"]}';
 
 void main() {
   Jaspr.initializeApp(options: defaultServerOptions);
@@ -24,6 +28,8 @@ void main() {
         'description': _description,
         'keywords':
             'flutter, dart, developer, software engineer, portfolio, open source, guillaume, roux',
+        'robots': 'index, follow',
+        'author': 'Guillaume Roux',
         'theme-color': '#0E0C38',
         'twitter:card': 'summary_large_image',
         'twitter:site': '@testeurmaniak',
@@ -35,6 +41,16 @@ void main() {
         'apple-mobile-web-app-title': _title,
       },
       head: [
+        const meta(attributes: {'property': 'og:type', 'content': 'website'}),
+        const meta(
+          attributes: {'property': 'og:site_name', 'content': 'Guillaume Roux'},
+        ),
+        const meta(attributes: {'property': 'og:locale', 'content': 'en_US'}),
+        const link(href: _url, rel: 'canonical'),
+        const script(
+          content: _jsonLd,
+          attributes: {'type': 'application/ld+json'},
+        ),
         const meta(attributes: {'property': 'og:title', 'content': _title}),
         const meta(
           attributes: {'property': 'og:description', 'content': _description},
