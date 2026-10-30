@@ -47,12 +47,32 @@ class _AppState extends State<App> {
   void initState() {
     super.initState();
     if (kIsWeb) {
-      final saved = web.window.localStorage.getItem(_languageKey);
-      _strings = AppStrings.forLocale(saved ?? web.window.navigator.language);
+      _strings = AppStrings.forLocale(
+        _readSavedLanguage() ?? web.window.navigator.language,
+      );
     }
   }
 
-  void _select(AppTab tab) => setState(() => _current = tab);
+  String? _readSavedLanguage() {
+    try {
+      return web.window.localStorage.getItem(_languageKey);
+    } catch (_) {
+      return null;
+    }
+  }
+
+  void _saveLanguage(String code) {
+    try {
+      web.window.localStorage.setItem(_languageKey, code);
+    } catch (_) {
+      // Persistence is best-effort (storage may be blocked or full).
+    }
+  }
+
+  void _select(AppTab tab) {
+    setState(() => _current = tab);
+    web.document.querySelector('.panels')?.scrollTop = 0;
+  }
 
   AppStrings get _nextStrings {
     const all = AppStrings.supported;
@@ -61,7 +81,7 @@ class _AppState extends State<App> {
 
   void _switchLanguage() {
     final next = _nextStrings;
-    web.window.localStorage.setItem(_languageKey, next.languageCode);
+    _saveLanguage(next.languageCode);
     setState(() => _strings = next);
   }
 
@@ -79,15 +99,15 @@ class _AppState extends State<App> {
       Document.html(attributes: {'lang': _strings.languageCode}),
       nav(
         classes: 'tabs',
-        attributes: {'role': 'tablist'},
+        attributes: {'aria-label': 'Sections'},
         [
           for (final tab in AppTab.values)
             button(
               classes: _current == tab ? 'tab active' : 'tab',
               attributes: {
-                'role': 'tab',
-                'aria-selected': '${_current == tab}',
+                'type': 'button',
                 'aria-controls': tab.name,
+                if (_current == tab) 'aria-current': 'page',
               },
               onClick: () => _select(tab),
               [
